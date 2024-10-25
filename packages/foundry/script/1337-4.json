@@ -1,0 +1,170 @@
+[
+    {
+      "BACKGROUND": {
+        "_id": "67140d267a534003b84f5397",
+        "addr": "",
+        "builder_id": "6705f94a758ab5da90e32e1d",
+        "date": "2024-10-19",
+        "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
+        "name": "Plain RED",
+        "rarity": 0,
+        "type2": "BACKGROUND"
+      },
+      "HEAD": {
+        "_id": "67140ee47a534003b84f53a4",
+        "addr": "",
+        "builder_id": "6705f94a758ab5da90e32e1d",
+        "date": "2024-10-19",
+        "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAALdJREFUWIXtkk0KwjAQRr+Kx0iXVnBXLyJUsOhBpJsgko03EVxIb9KdoNvkHuMiNBapTZSa1TwY8svMYxKAYRgmEJ2DdA6KXvSTRDSZbkGqBbUS7TyKQDeoFkREdhxBIgmVEAdhFyuNXbnGYp65c6lOQXn6mPgKA0DaIDFHAwAwS1vrdn+4ULL6uQte8/cW72cFAOB8uX6dq4+p70LavBL/49MNPsGQzHZTuH0lqxGVGIZhGIaJzBOgHFYBaCWuugAAAABJRU5ErkJggg==",
+        "name": "Flamewrought Visage",
+        "rarity": 0,
+        "type2": "HEAD"
+      },
+      "WEAPON": {
+        "_id": "671413117a534003b84f53c6",
+        "addr": "",
+        "builder_id": "6705f94a758ab5da90e32e1d",
+        "date": "2024-10-19",
+        "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHNJREFUWIVjYBgFo2AUjIJRMNxBc23Ff3zyLDS0+z8WNiO6IiYaWs6IZCGMjTc0qGk50XyMIKHU8v//Ue1jZGRkwCZGA7txOwqfJK3SANFg1AH0cgDOdEBTB0SGBf2PDAvCq2bAo4AegC6l3ygYBaNg6AIA7sgWh++IClkAAAAASUVORK5CYII=",
+        "name": "Crossbow",
+        "rarity": 0,
+        "type2": "WEAPON"
+      },
+      "ARMOR": {
+        "_id": "671417097a534003b84f53ec",
+        "addr": "",
+        "builder_id": "6705f94a758ab5da90e32e1d",
+        "date": "2024-10-19",
+        "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAMpJREFUWIXtkjEOwyAMRX+qniWRchwGJG6ShYklN4mUIceJlFyGLgU5CBKTturiNxmw7M+3AUEQBEEQhD/TnD0arTwA9F0b76wbs7nODjFetx3TvJzWZgmgIgBgmpdDM+vGQ2y0Cnms5gDwvEp4F/P0bt32Ui63bzWeiAixd3bwhTc2LKvCGKgbwe6+a8NeNHRcJP+UR43apDiA8lJyudyBEsEBo1UUU7N8HwsgzapmnlI9AqNV/H3u/BMBd6z9qoCciHTj07MgcHkBZL5OmKtUiO4AAAAASUVORK5CYII=",
+        "name": "Champion's Shield",
+        "rarity": 0,
+        "type2": "ARMOR"
+      }
+    },
+    {
+      "BACKGROUND": {
+        "_id": "67140d267a534003b84f5397",
+        "addr": "",
+        "builder_id": "6705f94a758ab5da90e32e1d",
+        "date": "2024-10-19",
+        "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
+        "name": "Plain RED",
+        "rarity": 0,
+        "type2": "BACKGROUND"
+      },
+      "HEAD": {
+        "_id": "67140ec47a534003b84f53a3",
+        "addr": "",
+        "builder_id": "6705f94a758ab5da90e32e1d",
+        "date": "2024-10-19",
+        "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAJRJREFUWIXt0rEJwzAQheE/IWu4dALutIoKgxcxblypySaGFFklQ2iQS2Hk3jqDMbwPhFChuydOICJXlQOWA+atcz8iyCkBxjYyttHTG4Cb464B5LAeml9dLfcIahsXj5pLQx+3uXevpzXp7Qqxu3lZrGOwNE/VH3F38vL65fN114ID/oBXdYChj6R5Ath2ERERuaQ/9y0jFh/gflsAAAAASUVORK5CYII=",
+        "name": "Falling Glory",
+        "rarity": 0,
+        "type2": "HEAD"
+      },
+      "WEAPON": {
+        "_id": "671415a67a534003b84f53dd",
+        "addr": "",
+        "builder_id": "6705f94a758ab5da90e32e1d",
+        "date": "2024-10-19",
+        "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAFhJREFUWIXt1TsKACEMRdE4S7QQ3Mk0U7nwWPthUj0EuacWvRhQMwAQqiV7tOZRR7Tv/Y2QB0QIIIAAAo4HJOHe8xOsPGuvluzRh3R8BGpu6ygG198AgFAHolMLkb3e8jYAAAAASUVORK5CYII=",
+        "name": "Sword",
+        "rarity": 0,
+        "type2": "WEAPON"
+      },
+      "ARMOR": {
+        "_id": "671419967a534003b84f5403",
+        "addr": "",
+        "builder_id": "6705f94a758ab5da90e32e1d",
+        "date": "2024-10-19",
+        "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAMVJREFUWIXtkjsOgzAQRB9RzgISx3FhyTehoaLJTZAoOA4SXMYpIicGGbz5oDT7Oktjz+x4QVEURVEU5c8UElHXNh5gmhf6YUxqnDXUVQlA291E7wJcJebTvOQMCQHDHWmIS06QMv/lHWlVPtL7rm1WJnVVhtpjnYjsF8CjboB+GHHWMM3Ls354TRx0IUg/jNkgogApwr9vjN9GVJWzJp7I78jEtcdkl/CA4lPTrwI4a1aVb8+nBJAs06kBUiHCXuydFUXKHaarR86H9hxLAAAAAElFTkSuQmCC",
+        "name": "The Chosen Shield",
+        "rarity": 0,
+        "type2": "ARMOR"
+      }
+    },
+    {
+      "BACKGROUND": {
+        "_id": "67140d267a534003b84f5397",
+        "addr": "",
+        "builder_id": "6705f94a758ab5da90e32e1d",
+        "date": "2024-10-19",
+        "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
+        "name": "Plain RED",
+        "rarity": 0,
+        "type2": "BACKGROUND"
+      },
+      "HEAD": {
+        "_id": "67140ee47a534003b84f53a4",
+        "addr": "",
+        "builder_id": "6705f94a758ab5da90e32e1d",
+        "date": "2024-10-19",
+        "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAALdJREFUWIXtkk0KwjAQRr+Kx0iXVnBXLyJUsOhBpJsgko03EVxIb9KdoNvkHuMiNBapTZSa1TwY8svMYxKAYRgmEJ2DdA6KXvSTRDSZbkGqBbUS7TyKQDeoFkREdhxBIgmVEAdhFyuNXbnGYp65c6lOQXn6mPgKA0DaIDFHAwAwS1vrdn+4ULL6uQte8/cW72cFAOB8uX6dq4+p70LavBL/49MNPsGQzHZTuH0lqxGVGIZhGIaJzBOgHFYBaCWuugAAAABJRU5ErkJggg==",
+        "name": "Flamewrought Visage",
+        "rarity": 0,
+        "type2": "HEAD"
+      },
+      "WEAPON": {
+        "_id": "6714165a7a534003b84f53e5",
+        "addr": "",
+        "builder_id": "6705f94a758ab5da90e32e1d",
+        "date": "2024-10-19",
+        "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGRJREFUWIXt1kEKwCAMBdGf0hO6ELz/QdJVoQglJY2UwryloBl0o4S/84t5ffTmd/tO+5vBT9YiW9XwLKs6aI4yM5PklTMywptKPUElAggggAACCFgaMHpT9Cv6/AZW4z8AIHQAw4EoDdYtaJwAAAAASUVORK5CYII=",
+        "name": "White Flag",
+        "rarity": 0,
+        "type2": "WEAPON"
+      },
+      "ARMOR": {
+        "_id": "671417987a534003b84f53ef",
+        "addr": "",
+        "builder_id": "6705f94a758ab5da90e32e1d",
+        "date": "2024-10-19",
+        "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAMNJREFUWIXtkzEKwzAMRZ0epoUex4PBN+niyUtuYsjg4xTay7iTiv2xw9eURQ8CcfKRvn4U5wzDMAzDMC5mY0Q5vZrcp7yvNK7TUHUpAzH4hs/KUYemKe8uBo8aygTrdDCBzZ6POyZDJ3BjhX1hSUB4f76qpmoDODEihkQXg2+zTzfj1DUWKUfdVoVn75g9OE1gVkCmLUf9X72eXT4VEGlz41LiefrnrNAuIYUmBcpAXzAGPywlnrXQCeBUGLMmdsPo+QEU5FOYsu1vDwAAAABJRU5ErkJggg==",
+        "name": "Embellished Protector",
+        "rarity": 0,
+        "type2": "ARMOR"
+      }
+    },
+    {
+      "BACKGROUND": {
+        "_id": "67140d267a534003b84f5397",
+        "addr": "",
+        "builder_id": "6705f94a758ab5da90e32e1d",
+        "date": "2024-10-19",
+        "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
+        "name": "Plain RED",
+        "rarity": 0,
+        "type2": "BACKGROUND"
+      },
+      "HEAD": {
+        "_id": "671411c27a534003b84f53bb",
+        "addr": "",
+        "builder_id": "6705f94a758ab5da90e32e1d",
+        "date": "2024-10-19",
+        "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGRJREFUWIVjYBgFo2AUjIJRMFRBZFjQ/+baiv+UmsNIruUwtpa6GkNtcwdZ5pDlAGTLqeEIFnI0MTAwMCxftY5crSiAiVyNkWFBcHZzbQXZDiA7BNAdMQpGwSgYBaNgFIyCIQsAbCIR/SCuycEAAAAASUVORK5CYII=",
+        "name": "Veil Of Silence",
+        "rarity": 0,
+        "type2": "HEAD"
+      },
+      "WEAPON": {
+        "_id": "6714128a7a534003b84f53c1",
+        "addr": "",
+        "builder_id": "6705f94a758ab5da90e32e1d",
+        "date": "2024-10-19",
+        "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAFJJREFUWIVjYBgFo2AUDHPwn5ACJnq4YtQBow4YdcCoAwbMAc21FQPrAGLAqANo6oBrN28xRIYF4a0RBzwEaAqaaysItgdoDUYbJKMOGAWDHwAAPyMKnZPW4z8AAAAASUVORK5CYII=",
+        "name": "Bō Staff",
+        "rarity": 0,
+        "type2": "WEAPON"
+      },
+      "ARMOR": {
+        "_id": "671418ae7a534003b84f53fb",
+        "addr": "",
+        "builder_id": "6705f94a758ab5da90e32e1d",
+        "date": "2024-10-19",
+        "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAMdJREFUWIXtkzEKwzAMRb9Lr+HRLXTLVTQEsvUUpkumLMEXCWTw1Ht4K7QZc5B0aHGGBiw36VDQA4ORZPH1kQFBEARBEIR/YiwwAcvnnctGcQub+jIBwPnaxpgOwFi87tYQTscD6qZl92QLqEr6mM4NPgqwhmI8V8SOW8jldn9EtzYRsDQ9RwR3J7Ic6Hq/Kr9awC/YVEBVErreZ/2CfarADbOtrgAso2nXe+W22gEdoKwhWEPQgdNyfsepSzoAINr6zY8QhBRPzXM+cLq4678AAAAASUVORK5CYII=",
+        "name": "Priests's Mantle (red)",
+        "rarity": 0,
+        "type2": "ARMOR"
+      }
+    }
+  ]

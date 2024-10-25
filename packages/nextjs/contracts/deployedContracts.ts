@@ -4,6 +4,1068 @@
  */
 import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 
-const deployedContracts = {} as const;
+const deployedContracts = {
+  31337: {
+    Farcastles: {
+      address: "0x2138ec1c1e81326a91907179c8294e4c46765403",
+      abi: [
+        {
+          type: "constructor",
+          inputs: [
+            {
+              name: "params",
+              type: "tuple",
+              internalType: "struct ScaffoldERC721A.ScaffoldERC721AParameters",
+              components: [
+                {
+                  name: "owner",
+                  type: "address",
+                  internalType: "address",
+                },
+                {
+                  name: "name",
+                  type: "string",
+                  internalType: "string",
+                },
+                {
+                  name: "symbol",
+                  type: "string",
+                  internalType: "string",
+                },
+                {
+                  name: "baseURI",
+                  type: "string",
+                  internalType: "string",
+                },
+                {
+                  name: "mintStartTimestamp",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "mintEndTimestamp",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "mintPrice",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "maxTokenCount",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "maxMintCountPerUser",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "mintRoyaltyRecipient",
+                  type: "address",
+                  internalType: "address",
+                },
+                {
+                  name: "initialMintRecipients",
+                  type: "address[]",
+                  internalType: "address[]",
+                },
+              ],
+            },
+          ],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "_isWithinConstraints",
+          inputs: [
+            {
+              name: "a",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "b",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "c",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [
+            {
+              name: "value",
+              type: "bool",
+              internalType: "bool",
+            },
+          ],
+          stateMutability: "pure",
+        },
+        {
+          type: "function",
+          name: "addTrait",
+          inputs: [
+            {
+              name: "layer",
+              type: "uint8",
+              internalType: "uint8",
+            },
+            {
+              name: "payload",
+              type: "tuple",
+              internalType: "struct Farcastles.Payload",
+              components: [
+                {
+                  name: "name",
+                  type: "string",
+                  internalType: "string",
+                },
+                {
+                  name: "image",
+                  type: "bytes",
+                  internalType: "bytes",
+                },
+              ],
+            },
+            {
+              name: "rarity",
+              type: "uint16",
+              internalType: "uint16",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "addTraits",
+          inputs: [
+            {
+              name: "layer",
+              type: "uint8",
+              internalType: "uint8",
+            },
+            {
+              name: "payload",
+              type: "tuple[]",
+              internalType: "struct Farcastles.Payload[]",
+              components: [
+                {
+                  name: "name",
+                  type: "string",
+                  internalType: "string",
+                },
+                {
+                  name: "image",
+                  type: "bytes",
+                  internalType: "bytes",
+                },
+              ],
+            },
+            {
+              name: "traitRarities",
+              type: "uint16[]",
+              internalType: "uint16[]",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "approve",
+          inputs: [
+            {
+              name: "to",
+              type: "address",
+              internalType: "address",
+            },
+            {
+              name: "tokenId",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [],
+          stateMutability: "payable",
+        },
+        {
+          type: "function",
+          name: "balanceOf",
+          inputs: [
+            {
+              name: "owner",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "getApproved",
+          inputs: [
+            {
+              name: "tokenId",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "getCurrentTokenCount",
+          inputs: [],
+          outputs: [
+            {
+              name: "mintCount",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "getMaxTokenCount",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "getMintEndTimestamp",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "getMintPrice",
+          inputs: [],
+          outputs: [
+            {
+              name: "mintPrice",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "getMintRoyaltyRecipient",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "getMintStartTimestamp",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "getTrait",
+          inputs: [
+            {
+              name: "layer",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "index",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [
+            {
+              name: "trait",
+              type: "tuple",
+              internalType: "struct Farcastles.Trait",
+              components: [
+                {
+                  name: "image",
+                  type: "bytes",
+                  internalType: "bytes",
+                },
+                {
+                  name: "name",
+                  type: "string",
+                  internalType: "string",
+                },
+              ],
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "getTraitAttributes",
+          inputs: [
+            {
+              name: "tokenID",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [
+            {
+              name: "trait",
+              type: "string",
+              internalType: "string",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "getTraitImage",
+          inputs: [
+            {
+              name: "tokenID",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [
+            {
+              name: "image",
+              type: "string",
+              internalType: "string",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "getTraitImageData",
+          inputs: [
+            {
+              name: "image",
+              type: "bytes",
+              internalType: "bytes",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "string",
+              internalType: "string",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "getTraits",
+          inputs: [
+            {
+              name: "tokenID",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [
+            {
+              name: "knight",
+              type: "tuple",
+              internalType: "struct Farcastles.Knight",
+              components: [
+                {
+                  name: "BACKGROUND",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "ARMOR",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "HEAD",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+                {
+                  name: "WEAPON",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+              ],
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "isApprovedForAll",
+          inputs: [
+            {
+              name: "owner",
+              type: "address",
+              internalType: "address",
+            },
+            {
+              name: "operator",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "bool",
+              internalType: "bool",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "isWithinConstraints",
+          inputs: [],
+          outputs: [
+            {
+              name: "isWithin",
+              type: "bool",
+              internalType: "bool",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "mint",
+          inputs: [
+            {
+              name: "recipient",
+              type: "address",
+              internalType: "address",
+            },
+            {
+              name: "amount",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [],
+          stateMutability: "payable",
+        },
+        {
+          type: "function",
+          name: "name",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "string",
+              internalType: "string",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "owner",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "ownerOf",
+          inputs: [
+            {
+              name: "tokenId",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "renounceOwnership",
+          inputs: [],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "safeTransferFrom",
+          inputs: [
+            {
+              name: "from",
+              type: "address",
+              internalType: "address",
+            },
+            {
+              name: "to",
+              type: "address",
+              internalType: "address",
+            },
+            {
+              name: "tokenId",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [],
+          stateMutability: "payable",
+        },
+        {
+          type: "function",
+          name: "safeTransferFrom",
+          inputs: [
+            {
+              name: "from",
+              type: "address",
+              internalType: "address",
+            },
+            {
+              name: "to",
+              type: "address",
+              internalType: "address",
+            },
+            {
+              name: "tokenId",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "_data",
+              type: "bytes",
+              internalType: "bytes",
+            },
+          ],
+          outputs: [],
+          stateMutability: "payable",
+        },
+        {
+          type: "function",
+          name: "setApprovalForAll",
+          inputs: [
+            {
+              name: "operator",
+              type: "address",
+              internalType: "address",
+            },
+            {
+              name: "approved",
+              type: "bool",
+              internalType: "bool",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "supportsInterface",
+          inputs: [
+            {
+              name: "interfaceId",
+              type: "bytes4",
+              internalType: "bytes4",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "bool",
+              internalType: "bool",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "symbol",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "string",
+              internalType: "string",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "tokenURI",
+          inputs: [
+            {
+              name: "tokenID",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [
+            {
+              name: "metadata",
+              type: "string",
+              internalType: "string",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "totalSupply",
+          inputs: [],
+          outputs: [
+            {
+              name: "result",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "transferFrom",
+          inputs: [
+            {
+              name: "from",
+              type: "address",
+              internalType: "address",
+            },
+            {
+              name: "to",
+              type: "address",
+              internalType: "address",
+            },
+            {
+              name: "tokenId",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [],
+          stateMutability: "payable",
+        },
+        {
+          type: "function",
+          name: "transferOwnership",
+          inputs: [
+            {
+              name: "newOwner",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "withdraw",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "bool",
+              internalType: "bool",
+            },
+          ],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "event",
+          name: "Approval",
+          inputs: [
+            {
+              name: "owner",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "approved",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "tokenId",
+              type: "uint256",
+              indexed: true,
+              internalType: "uint256",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "ApprovalForAll",
+          inputs: [
+            {
+              name: "owner",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "operator",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "approved",
+              type: "bool",
+              indexed: false,
+              internalType: "bool",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "ConsecutiveTransfer",
+          inputs: [
+            {
+              name: "fromTokenId",
+              type: "uint256",
+              indexed: true,
+              internalType: "uint256",
+            },
+            {
+              name: "toTokenId",
+              type: "uint256",
+              indexed: false,
+              internalType: "uint256",
+            },
+            {
+              name: "from",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "to",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "Minted",
+          inputs: [
+            {
+              name: "user",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "startIndex",
+              type: "uint256",
+              indexed: true,
+              internalType: "uint256",
+            },
+            {
+              name: "endIndex",
+              type: "uint256",
+              indexed: true,
+              internalType: "uint256",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "OwnershipTransferred",
+          inputs: [
+            {
+              name: "previousOwner",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "newOwner",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "Transfer",
+          inputs: [
+            {
+              name: "from",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "to",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "tokenId",
+              type: "uint256",
+              indexed: true,
+              internalType: "uint256",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "error",
+          name: "ApprovalCallerNotOwnerNorApproved",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "ApprovalQueryForNonexistentToken",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "BalanceQueryForZeroAddress",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "Farcastles__InvalidToken",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "MintERC2309QuantityExceedsLimit",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "MintToZeroAddress",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "MintZeroQuantity",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "NotCompatibleWithSpotMints",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "OwnableInvalidOwner",
+          inputs: [
+            {
+              name: "owner",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+        },
+        {
+          type: "error",
+          name: "OwnableUnauthorizedAccount",
+          inputs: [
+            {
+              name: "account",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+        },
+        {
+          type: "error",
+          name: "OwnerQueryForNonexistentToken",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "OwnershipNotInitializedForExtraData",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "ScaffoldERC721A__AddressNotZero",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "ScaffoldERC721A__CannotMintThatMany",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "ScaffoldERC721A__DidNotProvideEnoughCapital",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "ScaffoldERC721A__IsNotWithinMintWindow",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "ScaffoldERC721A__NoTokensLeftToMint",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "ScaffoldERC721A__NotEnoughMintableTokensToFulfillRequest",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "ScaffoldERC721A__YouGottaHitUpTheWeedman",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "SequentialMintExceedsLimit",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "SequentialUpToTooSmall",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "SpotMintTokenIdTooSmall",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "TokenAlreadyExists",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "TransferCallerNotOwnerNorApproved",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "TransferFromIncorrectOwner",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "TransferToNonERC721ReceiverImplementer",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "TransferToZeroAddress",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "URIQueryForNonexistentToken",
+          inputs: [],
+        },
+      ],
+      inheritedFunctions: {
+        _isWithinConstraints: "contracts/ScaffoldERC721A.sol",
+        approve: "contracts/ScaffoldERC721A.sol",
+        balanceOf: "contracts/ScaffoldERC721A.sol",
+        getApproved: "contracts/ScaffoldERC721A.sol",
+        getCurrentTokenCount: "contracts/ScaffoldERC721A.sol",
+        getMaxTokenCount: "contracts/ScaffoldERC721A.sol",
+        getMintEndTimestamp: "contracts/ScaffoldERC721A.sol",
+        getMintPrice: "contracts/ScaffoldERC721A.sol",
+        getMintRoyaltyRecipient: "contracts/ScaffoldERC721A.sol",
+        getMintStartTimestamp: "contracts/ScaffoldERC721A.sol",
+        isApprovedForAll: "contracts/ScaffoldERC721A.sol",
+        isWithinConstraints: "contracts/ScaffoldERC721A.sol",
+        mint: "contracts/ScaffoldERC721A.sol",
+        name: "contracts/ScaffoldERC721A.sol",
+        owner: "contracts/ScaffoldERC721A.sol",
+        ownerOf: "contracts/ScaffoldERC721A.sol",
+        renounceOwnership: "contracts/ScaffoldERC721A.sol",
+        safeTransferFrom: "contracts/ScaffoldERC721A.sol",
+        setApprovalForAll: "contracts/ScaffoldERC721A.sol",
+        supportsInterface: "contracts/ScaffoldERC721A.sol",
+        symbol: "contracts/ScaffoldERC721A.sol",
+        tokenURI: "contracts/ScaffoldERC721A.sol",
+        totalSupply: "contracts/ScaffoldERC721A.sol",
+        transferFrom: "contracts/ScaffoldERC721A.sol",
+        transferOwnership: "contracts/ScaffoldERC721A.sol",
+        withdraw: "contracts/ScaffoldERC721A.sol",
+      },
+    },
+  },
+} as const;
 
 export default deployedContracts satisfies GenericContractsDeclaration;

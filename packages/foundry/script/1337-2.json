@@ -1,0 +1,42 @@
+{
+    "BACKGROUND": {
+      "_id": "67140d267a534003b84f5397",
+      "addr": "",
+      "builder_id": "6705f94a758ab5da90e32e1d",
+      "date": "2024-10-19",
+      "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
+      "name": "Plain RED",
+      "rarity": 0,
+      "type2": "BACKGROUND"
+    },
+    "HEAD": {
+      "_id": "67140ee47a534003b84f53a4",
+      "addr": "",
+      "builder_id": "6705f94a758ab5da90e32e1d",
+      "date": "2024-10-19",
+      "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAALdJREFUWIXtkk0KwjAQRr+Kx0iXVnBXLyJUsOhBpJsgko03EVxIb9KdoNvkHuMiNBapTZSa1TwY8svMYxKAYRgmEJ2DdA6KXvSTRDSZbkGqBbUS7TyKQDeoFkREdhxBIgmVEAdhFyuNXbnGYp65c6lOQXn6mPgKA0DaIDFHAwAwS1vrdn+4ULL6uQte8/cW72cFAOB8uX6dq4+p70LavBL/49MNPsGQzHZTuH0lqxGVGIZhGIaJzBOgHFYBaCWuugAAAABJRU5ErkJggg==",
+      "name": "Flamewrought Visage",
+      "rarity": 0,
+      "type2": "HEAD"
+    },
+    "WEAPON": {
+      "_id": "671413117a534003b84f53c6",
+      "addr": "",
+      "builder_id": "6705f94a758ab5da90e32e1d",
+      "date": "2024-10-19",
+      "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHNJREFUWIVjYBgFo2AUjIJRMNxBc23Ff3zyLDS0+z8WNiO6IiYaWs6IZCGMjTc0qGk50XyMIKHU8v//Ue1jZGRkwCZGA7txOwqfJK3SANFg1AH0cgDOdEBTB0SGBf2PDAvCq2bAo4AegC6l3ygYBaNg6AIA7sgWh++IClkAAAAASUVORK5CYII=",
+      "name": "Crossbow",
+      "rarity": 0,
+      "type2": "WEAPON"
+    },
+    "ARMOR": {
+      "_id": "671417097a534003b84f53ec",
+      "addr": "",
+      "builder_id": "6705f94a758ab5da90e32e1d",
+      "date": "2024-10-19",
+      "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAMpJREFUWIXtkjEOwyAMRX+qniWRchwGJG6ShYklN4mUIceJlFyGLgU5CBKTturiNxmw7M+3AUEQBEEQhD/TnD0arTwA9F0b76wbs7nODjFetx3TvJzWZgmgIgBgmpdDM+vGQ2y0Cnms5gDwvEp4F/P0bt32Ui63bzWeiAixd3bwhTc2LKvCGKgbwe6+a8NeNHRcJP+UR43apDiA8lJyudyBEsEBo1UUU7N8HwsgzapmnlI9AqNV/H3u/BMBd6z9qoCciHTj07MgcHkBZL5OmKtUiO4AAAAASUVORK5CYII=",
+      "name": "Champion's Shield",
+      "rarity": 0,
+      "type2": "ARMOR"
+    }
+  }

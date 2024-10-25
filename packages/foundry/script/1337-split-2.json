@@ -1,0 +1,674 @@
+[
+    {
+        "BACKGROUND": {
+          "_id": "67140c847a534003b84f5395",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHNJREFUWIVj/HD27H+GAQRMA2k5AwMDAwuMwXj+A10t/m8owMDAMJhCAAZgLqMVQA/pAQ+BUQeMOmDUAaMOGHXAqANGHTDqgFEHjDpg1AEY/QJcPST+FGeiDf04Zy/5DiDXUlz6CDkG7gBa9YgImTvgaQAAeBIUyWkIozAAAAAASUVORK5CYII=",
+          "name": "Inner Frame (RED)",
+          "rarity": 2,
+          "type2": "BACKGROUND"
+        },
+        "HEAD": {
+          "_id": "67140ffe7a534003b84f53ac",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGdJREFUWIXtzjEKgDAQRNGvh1HwOBaB3CRNqjTeRLDwimujKeyy2ojzIIQlZGZBRET+rvN8imG2aRzqnMviynGJYbbrAAZYycm8ec2bn8Ws2/44C6D3lLe+vbbArZCSE0C9RURE5JMO2VYabS4HYyoAAAAASUVORK5CYII=",
+          "name": "Neck Guard",
+          "rarity": 0,
+          "type2": "HEAD"
+        },
+        "WEAPON": {
+          "_id": "6714128a7a534003b84f53c1",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAFJJREFUWIVjYBgFo2AUDHPwn5ACJnq4YtQBow4YdcCoAwbMAc21FQPrAGLAqANo6oBrN28xRIYF4a0RBzwEaAqaaysItgdoDUYbJKMOGAWDHwAAPyMKnZPW4z8AAAAASUVORK5CYII=",
+          "name": "Bō Staff",
+          "rarity": 0,
+          "type2": "WEAPON"
+        },
+        "ARMOR": {
+          "_id": "671419bc7a534003b84f5404",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAALdJREFUWIXtk0EKhCAUhn+HOUtBx3EheJPZuHLTTYIWHSeoy9QmQxsnXzpBi/dB+Oj96u8vAgzDMAzDME/Hms/ixq2Ofl5/n0PhnRKM0wyt5DJOc/BfK4mmrgAAxrZw/Zj2jFdK0PVDtM7VHRFEnYtUaCW/4m3qCsa2wtfdZsDVWsm9uZ3YN0BeP3kFd5OdQMFaAaQEtJJB5N6GWZteNnBm5oe5/xro+qH4pEUGYiaOzzH2PBmGwgq5gUoAPgVGOwAAAABJRU5ErkJggg==",
+          "name": "The Minimalist",
+          "rarity": 0,
+          "type2": "ARMOR"
+        }
+      },
+      {
+        "BACKGROUND": {
+          "_id": "67140c9f7a534003b84f5396",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGtJREFUWIVj/Dhn73+GAQRMA2k5AwMDAwuM8d9QgK4WM57/wMDAMAhCYNQBow4YdcCoA0YdMOqAUQeMOmDUAaMOGHXAqANYCCuBAAFjY6IN/XD2LHUcQIqluPQRcgzcAbC+GrUBIXMHPA0AAJ4QEId6mvJrAAAAAElFTkSuQmCC",
+          "name": "OUTER FRAME (RED)",
+          "rarity": 2,
+          "type2": "BACKGROUND"
+        },
+        "HEAD": {
+          "_id": "67140ffe7a534003b84f53ac",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGdJREFUWIXtzjEKgDAQRNGvh1HwOBaB3CRNqjTeRLDwimujKeyy2ojzIIQlZGZBRET+rvN8imG2aRzqnMviynGJYbbrAAZYycm8ec2bn8Ws2/44C6D3lLe+vbbArZCSE0C9RURE5JMO2VYabS4HYyoAAAAASUVORK5CYII=",
+          "name": "Neck Guard",
+          "rarity": 0,
+          "type2": "HEAD"
+        },
+        "WEAPON": {
+          "_id": "671413657a534003b84f53ca",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGVJREFUWIXtlEEKwCAMBNc+0YPg/x8SLx6K2uLF3UJ3QGJOOyQoYIwx5idEP7Lw1R0AcBFFljAFYqgcgVryFHrvWRNITz1zBWmodIEpXCEg4fUDOjqBWnL0V6AR+Aq6FewgFzDGNDcbDhTm6spfAAAAAElFTkSuQmCC",
+          "name": "Flail",
+          "rarity": 0,
+          "type2": "WEAPON"
+        },
+        "ARMOR": {
+          "_id": "67141a727a534003b84f540b",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAANNJREFUWIXtlDsOwyAQRIcoZ0mkHIcCiZukceXGN7FEwXGQ7MuQxmutEbGXxFGafRWfMTs7yACKoiiKoih/xuxt9t0z0zhNMwBgDLGq9c7icb+t864fds8+NOCdzeXaGCK8s+ucFySDfE9iYk+wGqCivHvecdcP73RfGaiZMTTmSSwFTaETIRJ6ZzMV4VdDCaRpxhiiAZALY4fnX6ROebwUcZpmKr7RtHBt/mKh9jdIOi4RJ1DBoOGuTzPgnd1EXc5/YuCTaE81UDNRPlS1h0tRJLwAIQtQKpvlQ7EAAAAASUVORK5CYII=",
+          "name": "Warden's Grasp",
+          "rarity": 0,
+          "type2": "ARMOR"
+        }
+      },
+      {
+        "BACKGROUND": {
+          "_id": "67140bcd7a534003b84f5391",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHNJREFUWIVj/Dhn738GJPDfUACZy8B4/gMDLeWZGAYYjDqAhd5xji4/4CEw6gAWesf5aDkw6BwwWg6MOmC0HBh1wGg5MOqA0XJg1AFElwMCxsZEG/pxzl4M/bjMZ8FnEH+KM9GW4tL34exZvGoHPAoG3AEAhDVjz1AZUXsAAAAASUVORK5CYII=",
+          "name": "Red Checkerboard",
+          "rarity": 2,
+          "type2": "BACKGROUND"
+        },
+        "HEAD": {
+          "_id": "67140f507a534003b84f53a6",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAIpJREFUWIVjYBgFo2AUjHTASInmx4YM/2Fs2fPkmcVEDcspAWS5Gt1ycn1PlgNglsueJ98Msh0As7xMNYiBgYGBQUtdjYGBgYGhtrmD9iGAbjky0FJXI9sRLMQqhMVzpCrEIctXrSPHPgxAdi6gFiDbAZFhiKhorq2gimNGwSgYBaNgFIyCUTAgAADuCBwF7hRXzgAAAABJRU5ErkJggg==",
+          "name": "Gladiator's Crest (RED)",
+          "rarity": 0,
+          "type2": "HEAD"
+        },
+        "WEAPON": {
+          "_id": "671416487a534003b84f53e4",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGxJREFUWIVjYBgFo2AUjIJRMNxBc23F/+baiv8DZjk2NjJgop9zsINRBwxvB9Q2dwysA4gBow6gqQMiw4IYIsOC8JaCAx4CLLQ0fPmqdQwMDAyM+NQMeAjQBeCrDQc8BAbcAXQDA9YoGQWEAABHoRVyuqXLjQAAAABJRU5ErkJggg==",
+          "name": "Whip",
+          "rarity": 0,
+          "type2": "WEAPON"
+        },
+        "ARMOR": {
+          "_id": "671417097a534003b84f53ec",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAMpJREFUWIXtkjEOwyAMRX+qniWRchwGJG6ShYklN4mUIceJlFyGLgU5CBKTturiNxmw7M+3AUEQBEEQhD/TnD0arTwA9F0b76wbs7nODjFetx3TvJzWZgmgIgBgmpdDM+vGQ2y0Cnms5gDwvEp4F/P0bt32Ui63bzWeiAixd3bwhTc2LKvCGKgbwe6+a8NeNHRcJP+UR43apDiA8lJyudyBEsEBo1UUU7N8HwsgzapmnlI9AqNV/H3u/BMBd6z9qoCciHTj07MgcHkBZL5OmKtUiO4AAAAASUVORK5CYII=",
+          "name": "Champion's Shield",
+          "rarity": 0,
+          "type2": "ARMOR"
+        }
+      },
+      {
+        "BACKGROUND": {
+          "_id": "67140c4d7a534003b84f5393",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHBJREFUWIXt08EJwCAQBdEYtgBbEdtNKylB0oqpQCuQNRAZD9+zrg9xwnvd7QDXSV6+BcBaiigAfwEcYOGpKAB/ARygCnCAKsABqgAHqAIcoApwgCrAAXgFNrsx5jw9tJbyD+DLpaNzHmZ5Bd58/BN2G88a1wtKo6AAAAAASUVORK5CYII=",
+          "name": "Horizontal Stripes (RED)",
+          "rarity": 2,
+          "type2": "BACKGROUND"
+        },
+        "HEAD": {
+          "_id": "671410fd7a534003b84f53b4",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAFlJREFUWIVjYBgFo2AUjIJRMNIBIzmammsr/iPza5s7yDKHLAdEhgX9RxfTUlcj2xEs5GhiYGBgWL5qHblaUQATVUwZCAdEhgVhZY+CUTAKRsEoGAWjYMgBAHfeDAzir/WWAAAAAElFTkSuQmCC",
+          "name": "Sentinel",
+          "rarity": 0,
+          "type2": "HEAD"
+        },
+        "WEAPON": {
+          "_id": "671416387a534003b84f53e3",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAG1JREFUWIVjYBgFo4CGoLm24j8hNUy0sjwyLIig5TQHkWFB/4kJheHriMiwoP8DFhWjwT8oHDGaBkYdMZoGiHEEzWpDGLh28xZeeUYa2o3uc1rahR0QkwhpHgUDDf4zYEYFChj2ITAKRsEoIAgAg+VGrsbBo84AAAAASUVORK5CYII=",
+          "name": "Wave Blade",
+          "rarity": 0,
+          "type2": "WEAPON"
+        },
+        "ARMOR": {
+          "_id": "671416f77a534003b84f53eb",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAMBJREFUWIXtkjEOwyAMRT9VzwISx2FA4iZdMmXpTSIxcEW64MqxGsVErbr4bYk+9ufzAcMwDMMwjD/jNKJ1eXQAWNbnmQ5Dp5qrMlBy6vx7q43+IwZPC1Fyemti8GoTGlGn4Xw5XyZNDN3XDAAApeBkIsRWm+M65VzctEK26FRTcupHRi8ZKDntYucmYvC7p+E6Daqo6DZbbR+fYKZ0kvvsAXZ7WqiK+ojpDsiYr8Q+bWA0/CeoE5AmZBe0rTcMyQvG9EaPU/DSeAAAAABJRU5ErkJggg==",
+          "name": "Bulwark of the Brave",
+          "rarity": 0,
+          "type2": "ARMOR"
+        }
+      },
+      {
+        "BACKGROUND": {
+          "_id": "67140c677a534003b84f5394",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGVJREFUWIVj/HD27H8GBgYGxvMfGGDgv6EAnE1rcSaGAQajDhh1wKgDRh0w6oBRB4w6YNQBow4YdcCoA0YdMOoAFmIV8qc4E23oxzl7qeMAAWNjog1CBsiO/XD2LF61Ax4FA+4AANW5GYMfyzD1AAAAAElFTkSuQmCC",
+          "name": "Vertical Stripes (RED)",
+          "rarity": 2,
+          "type2": "BACKGROUND"
+        },
+        "HEAD": {
+          "_id": "671412027a534003b84f53bd",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAH9JREFUWIVjYBgFo2AUjAIiQXTew/8DbfnAOQAJUN0RjGQ6gjEyLOi/lroaXLC2uYMcsxiYyNDD+NgQEhLXbt5iuHbzFjn2ku8AmOUDBh4bMvyPDAuCJUpkTBYgJwqoCkh2QJlqEAMDAwNDZFgQXAyZPQpGwSgYBaNgFIyCIQcAgtAgkbpI/4oAAAAASUVORK5CYII=",
+          "name": "Wounded Warrior (red)",
+          "rarity": 0,
+          "type2": "HEAD"
+        },
+        "WEAPON": {
+          "_id": "671412e77a534003b84f53c4",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAF9JREFUWIVjYBgFo2AUjIJRMApGOmCkgx3/I8OC4BwtdTWG2uYOuL1MdHAAXjDqALo4YPmqdTjTGt1CAJcj6BoF+EKCJiAyLOh/ZFjQf3xqBjwR0gOMhsAoGAWjAC8AALdODxHzTh4MAAAAAElFTkSuQmCC",
+          "name": "Butcher's Cleave",
+          "rarity": 0,
+          "type2": "WEAPON"
+        },
+        "ARMOR": {
+          "_id": "671419367a534003b84f53ff",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAK5JREFUWIXtkrENwjAURM+IWUBiHBeRvAlNqjRsEilFxkGCZUwTI+djlMMY0dzrfnSOn+4bEEIIIYT4M44JDf05AsD1dsc4zcVM6DxOxwMAoB8u1H8pgdD5mM9JIL8wyZkcJbFjQgzvmtmCrSq14GwjpvZnrqlAunSpNS7fVplxml/kmDU0W0Et+9qDpZ2zDy/nmwYcPth1M4HQ+dX+7fwTgZpqmwqUJOyLt7MQLA+sQzgZ0ewBBgAAAABJRU5ErkJggg==",
+          "name": "Sentinel's Oath",
+          "rarity": 0,
+          "type2": "ARMOR"
+        }
+      },
+      {
+        "BACKGROUND": {
+          "_id": "67140c677a534003b84f5394",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGVJREFUWIVj/HD27H8GBgYGxvMfGGDgv6EAnE1rcSaGAQajDhh1wKgDRh0w6oBRB4w6YNQBow4YdcCoA0YdMOoAFmIV8qc4E23oxzl7qeMAAWNjog1CBsiO/XD2LF61Ax4FA+4AANW5GYMfyzD1AAAAAElFTkSuQmCC",
+          "name": "Vertical Stripes (RED)",
+          "rarity": 2,
+          "type2": "BACKGROUND"
+        },
+        "HEAD": {
+          "_id": "67140d877a534003b84f5399",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHRJREFUWIVjYBgFo2AUjIIBBoxk6vtPJXMYmMiwEN1yYuQpdgCxBpNkOQMDaUFHrOEkRQfJcRcZFoThEC11NYba5g6y0gELOZoYGBgYlq9aR65WFEBKGqAJINsBkWFBcHZzbQVVHDMKRsEoGAWjYBSMggEBAAftEIIPs70BAAAAAElFTkSuQmCC",
+          "name": "Cowboy's Dream (Red)",
+          "rarity": 0,
+          "type2": "HEAD"
+        },
+        "WEAPON": {
+          "_id": "671412ce7a534003b84f53c3",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAG9JREFUWIXtlUEKgDAMBFcfo+BzcgjkhYIHnyPoZ+pdMVJIqODOpbfusA0pQMjf6aIvNJUyjQO2/cD1nJf1ltdHC9TSXCD8CQCUmrwMgSeJrCwXrw0AH5gBClCAAhRIFTAVmIq7DZs3kA3/AkLIKydduhQhvAqArwAAAABJRU5ErkJggg==",
+          "name": "broom",
+          "rarity": 0,
+          "type2": "WEAPON"
+        },
+        "ARMOR": {
+          "_id": "671416af7a534003b84f53e8",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAALlJREFUWIXt1E0KgzAQhuHX0rMo5DhZBHKTblxl400EFx6n0F4m3RhqUzU/belmnlWEIfmSGQQhhBBCiD9rUgWuv3iA6+0OwDjNm3XWaFTXAtC7IblvdoCF3zss6N1Qsy/n3MJYeBHgLUyJU2F9A882qK5FdW0Ik33rtawXsEYTDg7rozqWlo3TnAxV3IK9IaxVPQNbcm4cK52BtYbKvn8UwBr9Mgfx908C1DztVwNshbBGxz8njxAVHkntLpsuPh94AAAAAElFTkSuQmCC",
+          "name": "Bare Essence",
+          "rarity": 0,
+          "type2": "ARMOR"
+        }
+      },
+      {
+        "BACKGROUND": {
+          "_id": "67140bcd7a534003b84f5391",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHNJREFUWIVj/Dhn738GJPDfUACZy8B4/gMDLeWZGAYYjDqAhd5xji4/4CEw6gAWesf5aDkw6BwwWg6MOmC0HBh1wGg5MOqA0XJg1AFElwMCxsZEG/pxzl4M/bjMZ8FnEH+KM9GW4tL34exZvGoHPAoG3AEAhDVjz1AZUXsAAAAASUVORK5CYII=",
+          "name": "Red Checkerboard",
+          "rarity": 2,
+          "type2": "BACKGROUND"
+        },
+        "HEAD": {
+          "_id": "67140fea7a534003b84f53ab",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAH1JREFUWIXt0TEKgCAYxfF/0FkUOo6D4GGaWrpJ0NBxhLqMLVnSlhANvd8k9vx8JIiIyN81D7Ip54N3qbOGuG4ATPPS3DNvFSB4d2501gAQ141pXmpmPgsH71JeFxfmb+WfeKdAWeJeoGYWQFtz6CgCXM/QD2PtKBEREfnWDsW+HgkIHdbkAAAAAElFTkSuQmCC",
+          "name": "Horned Watcher",
+          "rarity": 0,
+          "type2": "HEAD"
+        },
+        "WEAPON": {
+          "_id": "671412787a534003b84f53c0",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHJJREFUWIXtkjEKgEAMBKOPUfA5KQL5iY2VfxT0M7GyEblcs8Rip17IHHMiBMi+rZFtxmoJqMBxXukGKRCPRE8KpERdAjcVN21u4AmWeWKC5oYJmAANEzBBmmAA3n+/HHnrGzcNN61L8AdqP2EP5QKEkBuVfzhIccY8+wAAAABJRU5ErkJggg==",
+          "name": "Bludgeon",
+          "rarity": 0,
+          "type2": "WEAPON"
+        },
+        "ARMOR": {
+          "_id": "671418c27a534003b84f53fc",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAANFJREFUWIXtlEEKwyAQRb+lZ2mhx3EheJNsXLnJTQIuPI6gl7EbFZu26Zi2dNF5IBgc/vx8BwGGYRiGYZgfIyhF1kwZAEJMWJx/WKOVxOV8AgAYO5N0SQa0krnuF+dboxBTa1ia7jJxpDrdIsT0cP9JclnQSuaSSltdSq2OCvWuqqjojPRx350BwOL8S/3DiNsqrpXE4jxCTDB2hjXTqEyDlECNuPzRs4jJk98znEAxVBsKAG8lsMvAmm9N/g0bkz48+T3D97Z6mMT6e68R5n+5AiqdU6VKUWF2AAAAAElFTkSuQmCC",
+          "name": "Reinforced Valor",
+          "rarity": 0,
+          "type2": "ARMOR"
+        }
+      },
+      {
+        "BACKGROUND": {
+          "_id": "67140c847a534003b84f5395",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHNJREFUWIVj/HD27H+GAQRMA2k5AwMDAwuMwXj+A10t/m8owMDAMJhCAAZgLqMVQA/pAQ+BUQeMOmDUAaMOGHXAqANGHTDqgFEHjDpg1AEY/QJcPST+FGeiDf04Zy/5DiDXUlz6CDkG7gBa9YgImTvgaQAAeBIUyWkIozAAAAAASUVORK5CYII=",
+          "name": "Inner Frame (RED)",
+          "rarity": 2,
+          "type2": "BACKGROUND"
+        },
+        "HEAD": {
+          "_id": "67140fea7a534003b84f53ab",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAH1JREFUWIXt0TEKgCAYxfF/0FkUOo6D4GGaWrpJ0NBxhLqMLVnSlhANvd8k9vx8JIiIyN81D7Ip54N3qbOGuG4ATPPS3DNvFSB4d2501gAQ141pXmpmPgsH71JeFxfmb+WfeKdAWeJeoGYWQFtz6CgCXM/QD2PtKBEREfnWDsW+HgkIHdbkAAAAAElFTkSuQmCC",
+          "name": "Horned Watcher",
+          "rarity": 0,
+          "type2": "HEAD"
+        },
+        "WEAPON": {
+          "_id": "6714150c7a534003b84f53d5",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGNJREFUWIVjYBgFo4DGoLm24j8+eSZ6WopNnCYOIAUw0spgbL6tbe6gmX0kOQQZDHgU0NwB127eGlgHEAKjDhh1wKgDRh1ADzBwdUFkWND/yLAgvGpGo2DAQ2DAHTAKRsEoAABsuxWInK3rcwAAAABJRU5ErkJggg==",
+          "name": "Ranseur",
+          "rarity": 0,
+          "type2": "WEAPON"
+        },
+        "ARMOR": {
+          "_id": "671418557a534003b84f53f8",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAANBJREFUWIXtkzEKwzAMRX9Kz9JCj6NBoJtkyZSlNwlkyHECyWXUoXZwgu24IaGLHhghJKyvjw0YhmEYhmH8maqkqW1qBYBxmtH1Q7RHmPB6PgAATfsuuhcA7iVN4zTvDUz27XHLFd3m6nO/vTAtA8dphjAlnTmMMKkwaSDCC1EAKkyrGNZ+mZN1AIjb2jY1un5YxZj4UwSkRAnTKl5CaHOwkSbOIbIOdP1QIfJV3SNcav5Rni4gIyybny7AOQHgu2248Ta/RMBWhBusudwwSvkAo5dsqSvbpFIAAAAASUVORK5CYII=",
+          "name": "Mouth of the Beast",
+          "rarity": 0,
+          "type2": "ARMOR"
+        }
+      },
+      {
+        "BACKGROUND": {
+          "_id": "67140c4d7a534003b84f5393",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHBJREFUWIXt08EJwCAQBdEYtgBbEdtNKylB0oqpQCuQNRAZD9+zrg9xwnvd7QDXSV6+BcBaiigAfwEcYOGpKAB/ARygCnCAKsABqgAHqAIcoApwgCrAAXgFNrsx5jw9tJbyD+DLpaNzHmZ5Bd58/BN2G88a1wtKo6AAAAAASUVORK5CYII=",
+          "name": "Horizontal Stripes (RED)",
+          "rarity": 2,
+          "type2": "BACKGROUND"
+        },
+        "HEAD": {
+          "_id": "671411ae7a534003b84f53ba",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAJhJREFUWIXtkzEKwzAMRV96j6wpdOtVPBh8kyyevPQmgQ69Sg+Rg7hDSaDd+hVIXPTAeJL09EHwJ1S18LSlRZMCWyDHDwdIYHcBK6b44QAJyAIphppiMAt0StF8/Yy+f2p9JIHv4VYJqSjFUAEu5wGAXG5yAtLw5fG+glryKF/Dz+bL9tP9Ye4FjZ8hJY8A6+84juM4TpO8AGBvInmYDyBzAAAAAElFTkSuQmCC",
+          "name": "The Unseen Plunger (RED)",
+          "rarity": 0,
+          "type2": "HEAD"
+        },
+        "WEAPON": {
+          "_id": "6714132d7a534003b84f53c7",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHpJREFUWIXtlTEKgDAMRaN4wgyB3MSlUxdPKOhl6mJH2y7fiPwH2QJ58H+pCPkrOa1lZG+OloAKiIi4aVMCLtCTeEWgBUwg5W0KFRiVWFDH6wvYj7O5xw6EdyA8ApaQJYTipqX3G6Ip9zwCjcBNxU2ryPsCX6AbASGEXG1vJ0hErJrPAAAAAElFTkSuQmCC",
+          "name": "Dragon Slayer",
+          "rarity": 0,
+          "type2": "WEAPON"
+        },
+        "ARMOR": {
+          "_id": "671417827a534003b84f53ee",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAANZJREFUWIXtkz0OgzAMhV+qngWkHocBiZt0YWLhJpEy5DhIcJl0qExdlx8naqf6m2LZwi95D8AwDMMwDENB1zapa5sEIB2M0UwWTrP8VlcAgGle4EPcmwPN9cN4+l2VgK0b+RDflhH9MKJrGwDAra7UIq5apZJpXtazFMN734L7n/DyW2bjLCdlsBDKQCYAaejva08IPCXbAgoh+Q08/Wdid4O6hTatdBtHZxLAlqmTnw23AJ/PW/T/E5cCMYf1TwT4EJ2oZb9YQLZv/Ll9iE7WxUqMv+UBL4VniF2TUXIAAAAASUVORK5CYII=",
+          "name": "Eldritch Veil",
+          "rarity": 0,
+          "type2": "ARMOR"
+        }
+      },
+      {
+        "BACKGROUND": {
+          "_id": "67140c9f7a534003b84f5396",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGtJREFUWIVj/Dhn73+GAQRMA2k5AwMDAwuM8d9QgK4WM57/wMDAMAhCYNQBow4YdcCoA0YdMOqAUQeMOmDUAaMOGHXAqANYCCuBAAFjY6IN/XD2LHUcQIqluPQRcgzcAbC+GrUBIXMHPA0AAJ4QEId6mvJrAAAAAElFTkSuQmCC",
+          "name": "OUTER FRAME (RED)",
+          "rarity": 2,
+          "type2": "BACKGROUND"
+        },
+        "HEAD": {
+          "_id": "67140e2c7a534003b84f539e",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHJJREFUWIXt0bEJgEAMheFfcRYFx7niwE1srK5xE8HCFWPjgVqZsxDhfW2Sl0BARET+aojBhhjsbU7l7LdjOQB91wIwpbk0zzVwWZ69PaLxLD/CDWBZt3tPrpnniKcHPA10v6D2DmTnV6RpLI0RERGR7+3qdBSG8+MuZgAAAABJRU5ErkJggg==",
+          "name": "Descending Bull",
+          "rarity": 0,
+          "type2": "HEAD"
+        },
+        "WEAPON": {
+          "_id": "671414df7a534003b84f53d3",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAG1JREFUWIVjYBgFo2A4g+baiv+E1DDRwyH4ACOtDEb2fW1zB057BjwEhqcDYMF/7eYtFD7dHEAKoFkijAwLgvt6+ap1NLOHEBj85cCoA0YdMOoAmjogMiwIpUCiuwMGAxgtCUcdMPgdMAoGHAAAa+IXFqbzh94AAAAASUVORK5CYII=",
+          "name": "Pike",
+          "rarity": 0,
+          "type2": "WEAPON"
+        },
+        "ARMOR": {
+          "_id": "67141a9a7a534003b84f540c",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAMNJREFUWIXtlE0KwyAQRj9Lz9JCj+NC8CbdZJVNb1LIoscR9DJ24xQj8RezKMyDQDQD8/wmCDAMwzAM8w+sy9PPrIu51Aq0kt5Yd5pEVYAw1kEr6QFkH2MdemQB4Fr6GBoe7QMAHvfbb29ZXzvZVpoTiHlvn+5GOURjHSUh6J1SiKREUtdEcQQENaOTp83TOhIJUkWGR0AysdgITQmURJJ1c/TEUAIBgY5ZTxPQSu7+gXR9isBItFMFjiTSSyp3aTFMjS/d2FGiKnwahwAAAABJRU5ErkJggg==",
+          "name": "Warden's Plate",
+          "rarity": 0,
+          "type2": "ARMOR"
+        }
+      },
+      {
+        "BACKGROUND": {
+          "_id": "67140bcd7a534003b84f5391",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHNJREFUWIVj/Dhn738GJPDfUACZy8B4/gMDLeWZGAYYjDqAhd5xji4/4CEw6gAWesf5aDkw6BwwWg6MOmC0HBh1wGg5MOqA0XJg1AFElwMCxsZEG/pxzl4M/bjMZ8FnEH+KM9GW4tL34exZvGoHPAoG3AEAhDVjz1AZUXsAAAAASUVORK5CYII=",
+          "name": "Red Checkerboard",
+          "rarity": 2,
+          "type2": "BACKGROUND"
+        },
+        "HEAD": {
+          "_id": "6714119c7a534003b84f53b9",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAFxJREFUWIVjYBgFo2AUjIJRMNIBIzmaIsOC/mupq8H5tc0dZJlDlgMiw4L+o4tpqauR7QgWcjQxMDAwLF+1jlytKICJXI2RYUFY2XRzwCgYBaNgFIyCUTAKhg0AAHkTDAxCqzT+AAAAAElFTkSuQmCC",
+          "name": "The Narrow Gaze",
+          "rarity": 0,
+          "type2": "HEAD"
+        },
+        "WEAPON": {
+          "_id": "6714161c7a534003b84f53e2",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGhJREFUWIVjYBgFo2AUjIJRMApGwXAGzbUV/9H56GJMtHZEZFjQfwYGhv9QGgPQ3AHLV61DoenugMiwIBSargAp2P/D+LiigtYAp6UstLQV5ltc8c/AQIc0MFgAzigYMSEwCkbBKMAJAC9UH29m5YpWAAAAAElFTkSuQmCC",
+          "name": "Warhammer",
+          "rarity": 0,
+          "type2": "WEAPON"
+        },
+        "ARMOR": {
+          "_id": "671418d47a534003b84f53fd",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAMpJREFUWIXtkj0OhCAQRj82exZNPA4FCTexoaLZm5BQcBwTvQzbqMFREX8228xLTNAZmOcMAMMwDMMwzJ8RRwnWtHFad/0A58NmnlYSTV0BAIz9HJ5bJGBNG7t+WHxLBaxp53Wa19RVscQrF9wrrpWEVnIRT8XovhylrZrGILSSMQ2Qts95jwpMRZ0PAkDUSq5ynA8ruTE/S3YEezgfdi/jWd53NlOJkj+mXOrAOAIxPtgayc8EaLE7xYsFrrT2UYEtCXrj6TvDlPIFQ0tKs7Zg1mkAAAAASUVORK5CYII=",
+          "name": "Sentinel",
+          "rarity": 0,
+          "type2": "ARMOR"
+        }
+      },
+      {
+        "BACKGROUND": {
+          "_id": "67140c677a534003b84f5394",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGVJREFUWIVj/HD27H8GBgYGxvMfGGDgv6EAnE1rcSaGAQajDhh1wKgDRh0w6oBRB4w6YNQBow4YdcCoA0YdMOoAFmIV8qc4E23oxzl7qeMAAWNjog1CBsiO/XD2LF61Ax4FA+4AANW5GYMfyzD1AAAAAElFTkSuQmCC",
+          "name": "Vertical Stripes (RED)",
+          "rarity": 2,
+          "type2": "BACKGROUND"
+        },
+        "HEAD": {
+          "_id": "67140e987a534003b84f53a1",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAIBJREFUWIVjYBgFo2AUjAIywWNDhv+PDRn+U2oOE7mWU2oxDLCQY7nseQbGyLAgiCPOr6OWW0gG/6GYIsBIjia47xkYGLTU1RhqmzvIMocsByBbTg1HkJwGYGD5KurEPVm5gJqAbAdEhgXB2c21FVRxzCgYBaNgFIyCUTAKBgQAADuZGz18tJlHAAAAAElFTkSuQmCC",
+          "name": "\nFalling Crest (RED)",
+          "rarity": 0,
+          "type2": "HEAD"
+        },
+        "WEAPON": {
+          "_id": "671414f67a534003b84f53d4",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGVJREFUWIVjYBgFo2AUjIJRMApGOmCkhaGPDRn+o4vJnsduF00cgO4IXJYzMDAwsNDKAWWqQQjO+XW0soYgwIgKdMBED1eMOmDAHBAZFsQQGRaENx0MeAjQGgz+XDAKRsEoGHAAAJ9mDXy6ToqmAAAAAElFTkSuQmCC",
+          "name": "Plunger",
+          "rarity": 0,
+          "type2": "WEAPON"
+        },
+        "ARMOR": {
+          "_id": "671419cc7a534003b84f5405",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAANZJREFUWIXtkzEKhDAQRb/LnkVhj5MikJvYpErjTQQLjyPoZWYbJ5uEGOOi3TwIGvnM/OSPgCAIgiAIQgXO9uRsTwCoIGPNJZozgdEqKjpO85EOAPDpWlg3nNZl3leah80+Xev31g3+fVk3ONtTrYkzEXFD4Hf68LShiUR3i4HICIAmdyvBtXtdZV28aoVMbgaWdUs/0VF8KcUZYIxWh8MXmuIIbsdo5U+0P6P1z+/HXI4goNlXLoLnDOSiKMVzi4Fxmv1UG62irNP9IwZSE3tjKu0FoZYvYPFYid8spbcAAAAASUVORK5CYII=",
+          "name": "The Round Shield",
+          "rarity": 0,
+          "type2": "ARMOR"
+        }
+      },
+      {
+        "BACKGROUND": {
+          "_id": "67140c847a534003b84f5395",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHNJREFUWIVj/HD27H+GAQRMA2k5AwMDAwuMwXj+A10t/m8owMDAMJhCAAZgLqMVQA/pAQ+BUQeMOmDUAaMOGHXAqANGHTDqgFEHjDpg1AEY/QJcPST+FGeiDf04Zy/5DiDXUlz6CDkG7gBa9YgImTvgaQAAeBIUyWkIozAAAAAASUVORK5CYII=",
+          "name": "Inner Frame (RED)",
+          "rarity": 2,
+          "type2": "BACKGROUND"
+        },
+        "HEAD": {
+          "_id": "67140f777a534003b84f53a7",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAJRJREFUWIXt0rEJwzAUhOHf2cOlE0jnVVQYvIhxo0pNNgmk8CoeIoMojW1CIIVPuAi5D4RQIb3T44GZ/btKufRsye/netbekQJ8Fi8NcVKK1zPV0ASGJmyFvwU7Ul5WEaltfRcywPVyBiCmmzwDUvF1sXQhxVHuxO7k6+/vj6n4Ldg5hEeQA/RdIMURYNvNzMzsJ70ANtomSR2qPS0AAAAASUVORK5CYII=",
+          "name": "Gladiator's Honor (RED)",
+          "rarity": 0,
+          "type2": "HEAD"
+        },
+        "WEAPON": {
+          "_id": "671412fd7a534003b84f53c5",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAJVJREFUWIXtlc0KgCAQhHejJ+wg+IRCh15xuiSYWVqoK7HfZUEWZnb8I1L+CgBYsyDXN7USZ2Yu6a1uwIsDuEyfSqSqgVA8TiAQz27LZ/G4JiaGNctpvVsCB0xE5Nat6Hy8Fo9r11sQTp46gM0NeBNhHQGZh2g0HlMQT0ANqIFe3N6EuaWq/wvcut326BaIJyBuQFGUHdo8WgVHgYNbAAAAAElFTkSuQmCC",
+          "name": "Butterfly Net",
+          "rarity": 0,
+          "type2": "WEAPON"
+        },
+        "ARMOR": {
+          "_id": "67141a097a534003b84f5407",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAM9JREFUWIXtkzEOgzAMRV97GJA4DkOk3CRLpizcBKkDx6nUXiZdSBQiUExLNz8JgSNj/28MKIqiKIqiCLBmjP/IBbi1EoJ3EeD5egMwP5ajxgAMfQeAD1Ozthhrxrg6y1fwLq7i8r3IEyNVuSkavNtMxJqRoe/wYTpbl7skyZqR4F2OU/OSvTMJTaXlSCuXrfeYH0uzvmgCieQyLRyQJ1OenUHyrWIqXv4BdUOJ219I218/78WnEC9hclw7/3b0pwTU410FxaP4cgF7IhTlKj6jHFv9GlcA0QAAAABJRU5ErkJggg==",
+          "name": "Titan's Embrace",
+          "rarity": 0,
+          "type2": "ARMOR"
+        }
+      },
+      {
+        "BACKGROUND": {
+          "_id": "67140c847a534003b84f5395",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHNJREFUWIVj/HD27H+GAQRMA2k5AwMDAwuMwXj+A10t/m8owMDAMJhCAAZgLqMVQA/pAQ+BUQeMOmDUAaMOGHXAqANGHTDqgFEHjDpg1AEY/QJcPST+FGeiDf04Zy/5DiDXUlz6CDkG7gBa9YgImTvgaQAAeBIUyWkIozAAAAAASUVORK5CYII=",
+          "name": "Inner Frame (RED)",
+          "rarity": 2,
+          "type2": "BACKGROUND"
+        },
+        "HEAD": {
+          "_id": "6714119c7a534003b84f53b9",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAFxJREFUWIVjYBgFo2AUjIJRMNIBIzmaIsOC/mupq8H5tc0dZJlDlgMiw4L+o4tpqauR7QgWcjQxMDAwLF+1jlytKICJXI2RYUFY2XRzwCgYBaNgFIyCUTAKhg0AAHkTDAxCqzT+AAAAAElFTkSuQmCC",
+          "name": "The Narrow Gaze",
+          "rarity": 0,
+          "type2": "HEAD"
+        },
+        "WEAPON": {
+          "_id": "671412ce7a534003b84f53c3",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAG9JREFUWIXtlUEKgDAMBFcfo+BzcgjkhYIHnyPoZ+pdMVJIqODOpbfusA0pQMjf6aIvNJUyjQO2/cD1nJf1ltdHC9TSXCD8CQCUmrwMgSeJrCwXrw0AH5gBClCAAhRIFTAVmIq7DZs3kA3/AkLIKydduhQhvAqArwAAAABJRU5ErkJggg==",
+          "name": "broom",
+          "rarity": 0,
+          "type2": "WEAPON"
+        },
+        "ARMOR": {
+          "_id": "671418557a534003b84f53f8",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAANBJREFUWIXtkzEKwzAMRX9Kz9JCj6NBoJtkyZSlNwlkyHECyWXUoXZwgu24IaGLHhghJKyvjw0YhmEYhmH8maqkqW1qBYBxmtH1Q7RHmPB6PgAATfsuuhcA7iVN4zTvDUz27XHLFd3m6nO/vTAtA8dphjAlnTmMMKkwaSDCC1EAKkyrGNZ+mZN1AIjb2jY1un5YxZj4UwSkRAnTKl5CaHOwkSbOIbIOdP1QIfJV3SNcav5Rni4gIyybny7AOQHgu2248Ta/RMBWhBusudwwSvkAo5dsqSvbpFIAAAAASUVORK5CYII=",
+          "name": "Mouth of the Beast",
+          "rarity": 0,
+          "type2": "ARMOR"
+        }
+      },
+      {
+        "BACKGROUND": {
+          "_id": "67140c9f7a534003b84f5396",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGtJREFUWIVj/Dhn73+GAQRMA2k5AwMDAwuM8d9QgK4WM57/wMDAMAhCYNQBow4YdcCoA0YdMOqAUQeMOmDUAaMOGHXAqANYCCuBAAFjY6IN/XD2LHUcQIqluPQRcgzcAbC+GrUBIXMHPA0AAJ4QEId6mvJrAAAAAElFTkSuQmCC",
+          "name": "OUTER FRAME (RED)",
+          "rarity": 2,
+          "type2": "BACKGROUND"
+        },
+        "HEAD": {
+          "_id": "67140f777a534003b84f53a7",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAJRJREFUWIXt0rEJwzAUhOHf2cOlE0jnVVQYvIhxo0pNNgmk8CoeIoMojW1CIIVPuAi5D4RQIb3T44GZ/btKufRsye/netbekQJ8Fi8NcVKK1zPV0ASGJmyFvwU7Ul5WEaltfRcywPVyBiCmmzwDUvF1sXQhxVHuxO7k6+/vj6n4Ldg5hEeQA/RdIMURYNvNzMzsJ70ANtomSR2qPS0AAAAASUVORK5CYII=",
+          "name": "Gladiator's Honor (RED)",
+          "rarity": 0,
+          "type2": "HEAD"
+        },
+        "WEAPON": {
+          "_id": "671412b37a534003b84f53c2",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAFNJREFUWIXt1EsKACAIRdFsiQ6E9r+QmjQMcvL6wD3TBB9olgIAAA7o0+qtqhvvauxUADOT9kqFWJGOIIMAUi28t/C3d0Bu9wuu3wH5CK4dIOAbA2EnH//wVriaAAAAAElFTkSuQmCC",
+          "name": "Bone Club",
+          "rarity": 0,
+          "type2": "WEAPON"
+        },
+        "ARMOR": {
+          "_id": "671416817a534003b84f53e6",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAANJJREFUWIXtkjEOwyAMRX+qniWRchwGJG7ShYklN4nEkONUai/jDsWVRdNgsnTxm0C2+J9vA4ZhGIZhGH9maNQpxRsA4P54AgDWvO02Bu8wT+PnHtOieR/XlsGYFgreHQoWsdpkU1xjgB+iXz9nuF7MqsR7Gon7g3dUF+dpREzLIPu0BjQJAHj/TKYgz3JE5Uylp2nkohWXwizOC1rF34UqKo59zVtrBN2oEthjzdvAEfP2n0G9A0L48N6LKgG5TMG7r6U7M/suA7WJIkxHd8PQ8gLkeVMweCJB6gAAAABJRU5ErkJggg==",
+          "name": "Aegis Of Valor",
+          "rarity": 0,
+          "type2": "ARMOR"
+        }
+      },
+      {
+        "BACKGROUND": {
+          "_id": "67140c9f7a534003b84f5396",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGtJREFUWIVj/Dhn73+GAQRMA2k5AwMDAwuM8d9QgK4WM57/wMDAMAhCYNQBow4YdcCoA0YdMOqAUQeMOmDUAaMOGHXAqANYCCuBAAFjY6IN/XD2LHUcQIqluPQRcgzcAbC+GrUBIXMHPA0AAJ4QEId6mvJrAAAAAElFTkSuQmCC",
+          "name": "OUTER FRAME (RED)",
+          "rarity": 2,
+          "type2": "BACKGROUND"
+        },
+        "HEAD": {
+          "_id": "6714119c7a534003b84f53b9",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAFxJREFUWIVjYBgFo2AUjIJRMNIBIzmaIsOC/mupq8H5tc0dZJlDlgMiw4L+o4tpqauR7QgWcjQxMDAwLF+1jlytKICJXI2RYUFY2XRzwCgYBaNgFIyCUTAKhg0AAHkTDAxCqzT+AAAAAElFTkSuQmCC",
+          "name": "The Narrow Gaze",
+          "rarity": 0,
+          "type2": "HEAD"
+        },
+        "WEAPON": {
+          "_id": "671414df7a534003b84f53d3",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAG1JREFUWIVjYBgFo2A4g+baiv+E1DDRwyH4ACOtDEb2fW1zB057BjwEhqcDYMF/7eYtFD7dHEAKoFkijAwLgvt6+ap1NLOHEBj85cCoA0YdMOoAmjogMiwIpUCiuwMGAxgtCUcdMPgdMAoGHAAAa+IXFqbzh94AAAAASUVORK5CYII=",
+          "name": "Pike",
+          "rarity": 0,
+          "type2": "WEAPON"
+        },
+        "ARMOR": {
+          "_id": "671418987a534003b84f53fa",
+          "addr": "",
+          "builder_id": "6705f94a758ab5da90e32e1d",
+          "date": "2024-10-19",
+          "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAANZJREFUWIXtk00KwyAQhV9Kz9JCj+NC8CbZuHKTmwguPE4gXsYuGmViEzSpu84Hwow+/94owDAMwzAM04DRYzR6jL10lFuLaF4C5iVgXXy3KSnivIQzewMAhppASbG5kXUeSgoAwOv5yP3aTLl/1VXXBhodOEKb6ZfpAIB7TbDeJLlAYwCf8qQx6zzVdSXVmsZl24yVpTui6gAAKClgnc9xonwDpbaFVqu+SpAOQjbrbntGSUEtpZbv5ae49AtoGfby7gdo/dNXOL0wfd3W+aHMex2M+R/eao1f/8Fxn2cAAAAASUVORK5CYII=",
+          "name": "Phantom's Ward",
+          "rarity": 0,
+          "type2": "ARMOR"
+        }
+      }
+]

@@ -5,12 +5,51 @@ import type { NextPage } from "next";
 import { useAccount } from "wagmi";
 import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { Address } from "~~/components/scaffold-eth";
+import { useScaffoldReadContract } from "~~/hooks/scaffold-eth";
 
 const Home: NextPage = () => {
   const { address: connectedAddress } = useAccount();
 
+  const { data: farcastleContract } = useScaffoldReadContract({
+    contractName: "Farcastles",
+    functionName: "tokenURI",
+    args: [BigInt(1)],
+  });
+
+  console.log(farcastleContract?.substring(29, farcastleContract.length - 1));
+  let imgSrc = "";
+
+  if (farcastleContract) {
+    const base64String = farcastleContract.substring(22, farcastleContract.length);
+    console.log(base64String);
+
+    const jsonObject = JSON.parse(base64String);
+    console.log(jsonObject);
+    imgSrc = jsonObject["image"];
+  }
+  // if (farcastleContract) {
+  //   let base64String = farcastleContract.substring(29, farcastleContract.length - 1);
+
+  //   console.log(base64String);
+  //   // Step 1: Decode the Base64 string
+  //   const decodedString = Buffer.from(base64String, "base64");
+
+  //   // Step 2: Parse the decoded string into a JSON object
+  //   const jsonObject = JSON.parse(decodedString.toString());
+  //   console.log(jsonObject);
+  //   imgSrc = jsonObject["img_data"];
+  //   // console.log(jsonObject);
+  // }
+
+  console.log(imgSrc);
   return (
     <>
+      <div className="flex items-center justify-center p-4">
+        <div className="bg-base-100 p-1">
+          <img src={imgSrc} width={64} height={64} />
+        </div>
+      </div>
+
       <div className="flex items-center flex-col flex-grow pt-10">
         <div className="px-5">
           <h1 className="text-center">
