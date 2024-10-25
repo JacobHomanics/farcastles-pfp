@@ -1,32 +1,72 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import type { NextPage } from "next";
-import { useAccount } from "wagmi";
+import { useAccount, useBlockNumber, usePublicClient } from "wagmi";
 import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { Address } from "~~/components/scaffold-eth";
-import { useScaffoldReadContract } from "~~/hooks/scaffold-eth";
+import { useScaffoldContract } from "~~/hooks/scaffold-eth";
 
 const Home: NextPage = () => {
+  const [nfts, setNfts] = useState<any[]>([]);
+
   const { address: connectedAddress } = useAccount();
 
-  const { data: farcastleContract } = useScaffoldReadContract({
-    contractName: "Farcastles",
-    functionName: "tokenURI",
-    args: [BigInt(1)],
-  });
+  const { data: Farcastles } = useScaffoldContract({ contractName: "Farcastles" });
 
-  console.log(farcastleContract?.substring(29, farcastleContract.length - 1));
-  let imgSrc = "";
+  const publicClient = usePublicClient();
+  useEffect(() => {
+    async function fetchTokenURIs() {
+      if (!publicClient?.chain.id || !Farcastles?.abi || !Farcastles?.address) {
+        console.log("Required data not available");
+        return;
+      }
 
-  if (farcastleContract) {
-    const base64String = farcastleContract.substring(22, farcastleContract.length);
-    console.log(base64String);
+      const newImgSrcs = [];
+      for (let i = 1; i <= 25; i++) {
+        try {
+          const tokenURI = await publicClient.readContract({
+            address: Farcastles.address,
+            abi: Farcastles.abi,
+            functionName: "tokenURI",
+            args: [BigInt(i)],
+          });
 
-    const jsonObject = JSON.parse(base64String);
-    console.log(jsonObject);
-    imgSrc = jsonObject["image"];
-  }
+          const base64String = tokenURI.substring(22);
+          const jsonObject = JSON.parse(base64String);
+          newImgSrcs.push(jsonObject);
+        } catch (error) {
+          console.error(`Error fetching token URI for token ${i}:`, error);
+        }
+      }
+
+      if (JSON.stringify(newImgSrcs) !== JSON.stringify(nfts)) {
+        setNfts(newImgSrcs);
+      }
+    }
+
+    fetchTokenURIs();
+  }, [publicClient, Farcastles, nfts]);
+
+  console.log(nfts);
+  // const { data: farcastleContract } = useScaffoldReadContract({
+  //   contractName: "Farcastles",
+  //   functionName: "tokenURI",
+  //   args: [BigInt(1)],
+  // });
+
+  // console.log(farcastleContract?.substring(29, farcastleContract.length - 1));
+
+  // if (farcastleContract) {
+  //   const base64String = farcastleContract.substring(22, farcastleContract.length);
+  //   console.log(base64String);
+
+  //   const jsonObject = JSON.parse(base64String);
+  //   console.log(jsonObject);
+  //   imgSrc = jsonObject["image"];
+  // }
   // if (farcastleContract) {
   //   let base64String = farcastleContract.substring(29, farcastleContract.length - 1);
 
@@ -41,14 +81,43 @@ const Home: NextPage = () => {
   //   // console.log(jsonObject);
   // }
 
-  console.log(imgSrc);
+  // console.log(imgSrc);
+
+  // const imgComponents = imgSrcs.map((src, index) => (
+  //   <div key={index} className="flex items-center justify-center p-4">
+  //     <div className="bg-base-100 p-1">
+  //       <Image src={src} width={64} height={64} alt="farcastle" />
+  //     </div>
+  //   </div>
+  // ));
+
+  const { data: blockNumber } = useBlockNumber();
+  console.log(blockNumber);
+
+  const jsonComponents = nfts.map((nft, index) => (
+    <div key={index} className="flex items-center justify-center p-4">
+      <div className="bg-base-100 p-1">
+        <Image src={nft.image} width={64} height={64} alt="farcastle" />
+        <div className="flex flex-col">
+          <p>Name</p>
+          <p>{nft.name}</p>
+        </div>
+
+        <p>Attributes</p>
+
+        {nft.attributes.map((attribute: any, attributeIndex: number) => (
+          <div key={"attributes" + attributeIndex} className="flex flex-col">
+            <p>{attribute["trait_type"]}</p>
+            <p>{attribute["value"]}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  ));
+
   return (
     <>
-      <div className="flex items-center justify-center p-4">
-        <div className="bg-base-100 p-1">
-          <img src={imgSrc} width={64} height={64} />
-        </div>
-      </div>
+      <div className="flex flex-wrap justify-center">{jsonComponents}</div>
 
       <div className="flex items-center flex-col flex-grow pt-10">
         <div className="px-5">

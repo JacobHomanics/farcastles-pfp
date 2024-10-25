@@ -123,7 +123,7 @@ contract DeployFarcastle is ScaffoldETHDeploy {
                 0,
                 0,
                 100,
-                1,
+                100,
                 msg.sender,
                 new address[](0)
             );
