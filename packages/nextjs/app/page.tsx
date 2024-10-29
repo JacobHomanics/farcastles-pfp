@@ -7,7 +7,7 @@ import type { NextPage } from "next";
 import { useAccount, useBlockNumber, usePublicClient } from "wagmi";
 import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { Address } from "~~/components/scaffold-eth";
-import { useScaffoldContract } from "~~/hooks/scaffold-eth";
+import { useScaffoldContract, useScaffoldReadContract, useScaffoldWriteContract } from "~~/hooks/scaffold-eth";
 
 const Home: NextPage = () => {
   const [nfts, setNfts] = useState<any[]>([]);
@@ -16,16 +16,20 @@ const Home: NextPage = () => {
 
   const { data: Farcastles } = useScaffoldContract({ contractName: "Farcastles2" });
 
+  const { data: totalSupply } = useScaffoldReadContract({ contractName: "Farcastles2", functionName: "totalSupply" });
+
+  const { writeContractAsync } = useScaffoldWriteContract("Farcastles2");
+
   const publicClient = usePublicClient();
   useEffect(() => {
     async function fetchTokenURIs() {
-      if (!publicClient?.chain.id || !Farcastles?.abi || !Farcastles?.address) {
+      if (!publicClient?.chain.id || !Farcastles?.abi || !Farcastles?.address || !totalSupply) {
         console.log("Required data not available");
         return;
       }
 
       const newImgSrcs = [];
-      for (let i = 1; i <= 400; i++) {
+      for (let i = 1; i <= totalSupply; i++) {
         try {
           const tokenURI = await publicClient.readContract({
             address: Farcastles.address,
@@ -48,7 +52,7 @@ const Home: NextPage = () => {
     }
 
     fetchTokenURIs();
-  }, [publicClient, Farcastles, nfts]);
+  }, [publicClient, Farcastles, nfts, totalSupply]);
 
   console.log(nfts);
   // const { data: farcastleContract } = useScaffoldReadContract({
@@ -115,8 +119,34 @@ const Home: NextPage = () => {
     </div>
   ));
 
+  const [northHealth, setNorthHealth] = useState(100);
+  const [southHealth, setSouthHealth] = useState(100);
   return (
     <>
+      <div className="flex flex-col justify-center items-center gap-44 mt-4">
+        <div className="flex flex-col items-center">
+          <Image src="/castle-red.png" width={256} height={256} alt="farcastle" />
+          <div className="rounded-full bg-base-100 p-4">{northHealth}/ 100</div>
+          <button
+            className="btn btn-primary"
+            onClick={async () => {
+              setNorthHealth(northHealth - 1);
+              await writeContractAsync({ functionName: "mint", args: [connectedAddress, BigInt(1)] });
+            }}
+          >
+            {"!attack north"}
+          </button>
+        </div>
+
+        <div className="flex flex-col items-center">
+          <button className="btn btn-primary" onClick={() => setSouthHealth(southHealth - 1)}>
+            {"!attack south"}
+          </button>
+          <div className="rounded-full bg-base-100 p-4">{southHealth}/ 100</div>
+          <Image src="/castle-red.png" width={256} height={256} alt="farcastle" />
+        </div>
+      </div>
+
       <div className="flex flex-wrap justify-center">{jsonComponents}</div>
 
       <div className="flex items-center flex-col flex-grow pt-10">

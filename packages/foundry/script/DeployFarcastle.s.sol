@@ -246,7 +246,7 @@ contract DeployFarcastle is ScaffoldETHDeploy {
             }
         }
 
-        farcastle2.mint(0x42bcD9e66817734100b86A2bab62d9eF3B63E92A, 30);
+        // farcastle2.mint(0x42bcD9e66817734100b86A2bab62d9eF3B63E92A, 30);
     }
 
     struct TraitJson {
