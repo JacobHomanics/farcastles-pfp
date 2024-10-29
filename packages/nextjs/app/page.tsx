@@ -95,9 +95,9 @@ const Home: NextPage = () => {
   console.log(blockNumber);
 
   const jsonComponents = nfts.map((nft, index) => (
-    <div key={index} className="flex items-center justify-center p-4">
-      <div className="bg-base-100 p-1 flex flex-col items-center justify-center">
-        <Image src={nft.image} width={64} height={64} alt="farcastle" />
+    <div key={index} className="flex items-center justify-center p-4 w-[400px]">
+      <div className="bg-base-100 p-1 flex flex-col items-center justify-center w-full">
+        <Image src={nft.image} width={128} height={128} alt="farcastle" className="rounded-full" />
         <div className="flex flex-col text-center">
           <p className="m-0">Name</p>
           <p className="m-0">{nft.name}</p>
@@ -106,7 +106,7 @@ const Home: NextPage = () => {
         <p className="text-center m-0 mt-4">Attributes</p>
 
         {nft.attributes.map((attribute: any, attributeIndex: number) => (
-          <div key={"attributes" + attributeIndex} className="flex flex-col text-center">
+          <div key={"attributes" + attributeIndex} className="flex flex-wrap gap-5 text-center">
             <p className="m-0">{attribute["trait_type"]}</p>
             <p className="m-0">{attribute["value"]}</p>
           </div>
