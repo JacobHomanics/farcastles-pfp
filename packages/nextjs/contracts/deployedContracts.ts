@@ -7,7 +7,7 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 const deployedContracts = {
   31337: {
     Farcastles2: {
-      address: "0x5db9a3b5d74035729012aa217fbeaa83e206320e",
+      address: "0xbf1329b8a83099f807001c98f4bab8d6bae40593",
       abi: [
         {
           type: "constructor",
@@ -412,8 +412,14 @@ const deployedContracts = {
         },
         {
           type: "function",
-          name: "s_traitCount",
-          inputs: [],
+          name: "s_traitCounts",
+          inputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
           outputs: [
             {
               name: "",

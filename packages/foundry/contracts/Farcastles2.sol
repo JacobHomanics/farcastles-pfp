@@ -29,7 +29,9 @@ contract Farcastles2 is ERC721A {
     // STATE VARIABLES
     // ********************************
     mapping(uint256 => mapping(uint256 index => Trait)) public s_traits;
-    uint256 public s_traitCount;
+    mapping(uint256 => uint256) public s_traitCounts;
+
+    // uint256 public s_traitCount;
     // uint16[] public s_traitRarities;
     mapping(uint256 => uint256) public _combo;
     mapping(uint256 => uint256) public _registry;
@@ -58,9 +60,9 @@ contract Farcastles2 is ERC721A {
         Payload calldata payload,
         uint16 rarity
     ) public {
-        _setTrait(s_traitCount, layer, payload, rarity);
+        _setTrait(s_traitCounts[layer], layer, payload, rarity);
         unchecked {
-            s_traitCount++;
+            s_traitCounts[layer]++;
         }
     }
 
