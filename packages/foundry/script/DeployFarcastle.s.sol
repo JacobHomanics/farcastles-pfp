@@ -166,6 +166,21 @@ contract DeployFarcastle is ScaffoldETHDeploy {
                     allTraits[i][j].WEAPON.rarity
                 );
 
+                farcastle2.addTrait(
+                    1,
+                    Farcastles2.Payload({
+                        name: allTraits[i][j].ARMOR.name,
+                        image: bytes(
+                            substring(
+                                allTraits[i][j].ARMOR.img_data,
+                                22,
+                                bytes(allTraits[i][j].ARMOR.img_data).length - 1
+                            )
+                        )
+                    }),
+                    allTraits[i][j].ARMOR.rarity
+                );
+
                 // addTrait(
                 //     farcastle,
                 //     0,

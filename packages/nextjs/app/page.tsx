@@ -96,7 +96,7 @@ const Home: NextPage = () => {
 
   const jsonComponents = nfts.map((nft, index) => (
     <div key={index} className="flex items-center justify-center p-4">
-      <div className="bg-base-100 p-1">
+      <div className="bg-base-100 p-1 flex flex-col items-center justify-center">
         <Image src={nft.image} width={64} height={64} alt="farcastle" />
         <div className="flex flex-col text-center">
           <p className="m-0">Name</p>

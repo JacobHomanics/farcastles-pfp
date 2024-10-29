@@ -17,6 +17,7 @@ contract Farcastles2 is ERC721A {
 
     struct Knight {
         uint256 weapon;
+        uint256 armor;
     }
 
     struct Payload {
@@ -29,7 +30,7 @@ contract Farcastles2 is ERC721A {
     // ********************************
     mapping(uint256 => mapping(uint256 index => Trait)) public s_traits;
     uint256 public s_traitCount;
-    uint16[] public s_traitRarities;
+    // uint16[] public s_traitRarities;
     mapping(uint256 => uint256) public _combo;
     mapping(uint256 => uint256) public _registry;
     mapping(uint256 layer => uint256) public s_maxBoundRarity;
@@ -75,7 +76,7 @@ contract Farcastles2 is ERC721A {
         Trait storage trait = s_traits[layer][traitIndex];
         trait.image = payload.image;
         trait.name = payload.name;
-        s_traitRarities.push(rarity);
+        s_traitRarities[layer].push(rarity);
         s_maxBoundRarity[layer] += rarity;
     }
 
@@ -83,13 +84,24 @@ contract Farcastles2 is ERC721A {
         _setTokenTraits(tokenID, amount);
     }
 
+    uint16[][4] public s_traitRarities;
+
     function _setTokenTraits(uint256 tokenID, uint256 amount) private {
         uint256 seed = getRandomSeed(tokenID);
 
         uint256 current = tokenID;
         uint256 combination;
+
+        uint16[] memory weaponRarities = s_traitRarities[0];
+        uint16[] memory armorRarities = s_traitRarities[1];
+
         while (true) {
-            combination = _getRandomTraitIndex(0, s_traitRarities, seed);
+            combination = _getRandomTraitIndex(0, weaponRarities, seed);
+            combination |= (_getRandomTraitIndex(
+                1,
+                armorRarities,
+                seed >> 16
+            ) << 8);
 
             if (_combo[combination] == 0) {
                 _combo[combination] = 1;
@@ -144,6 +156,8 @@ contract Farcastles2 is ERC721A {
         mask = 0xFF;
 
         knight.weapon = value & mask;
+        value >>= 8;
+        knight.armor = value & mask;
     }
 
     // ********************************
@@ -169,7 +183,7 @@ contract Farcastles2 is ERC721A {
     ) public view returns (uint256) {
         uint256 seed = getRandomSeed(tokenId);
 
-        return _getRandomTraitIndex(layer, s_traitRarities, seed);
+        return _getRandomTraitIndex(layer, s_traitRarities[layer], seed);
     }
 
     function getRandomSeed(uint256 id) public view returns (uint256 seed) {
@@ -212,6 +226,12 @@ contract Farcastles2 is ERC721A {
                 _getTraitMetadata(
                     "WEAPON",
                     s_traits[0][knight.weapon].name,
+                    false
+                ),
+                ",",
+                _getTraitMetadata(
+                    "ARMOR",
+                    s_traits[1][knight.armor].name,
                     false
                 )
             );
@@ -275,6 +295,8 @@ contract Farcastles2 is ERC721A {
                     '<svg width="100%" height="100%" viewBox="0 0 20000 20000" xmlns="http://www.w3.org/2000/svg">',
                     "<style>svg{background-color:transparent;background-image:",
                     _getTraitImageData(s_traits[0][knight.weapon].image),
+                    ",",
+                    _getTraitImageData(s_traits[1][knight.armor].image),
                     ";background-repeat:no-repeat;background-size:contain;background-position:center;image-rendering:-webkit-optimize-contrast;-ms-interpolation-mode:nearest-neighbor;image-rendering:-moz-crisp-edges;image-rendering:pixelated;}</style></svg>"
                 )
             );
