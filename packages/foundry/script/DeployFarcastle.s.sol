@@ -153,17 +153,17 @@ contract DeployFarcastle is ScaffoldETHDeploy {
                 farcastle2.addTrait(
                     0,
                     Farcastles2.Payload({
-                        name: allTraits[i][j].WEAPON.name,
+                        name: allTraits[i][j].BACKGROUND.name,
                         image: bytes(
                             substring(
-                                allTraits[i][j].WEAPON.img_data,
+                                allTraits[i][j].BACKGROUND.img_data,
                                 22,
-                                bytes(allTraits[i][j].WEAPON.img_data).length -
-                                    1
+                                bytes(allTraits[i][j].BACKGROUND.img_data)
+                                    .length - 1
                             )
                         )
                     }),
-                    allTraits[i][j].WEAPON.rarity
+                    allTraits[i][j].BACKGROUND.rarity
                 );
 
                 farcastle2.addTrait(
@@ -179,6 +179,22 @@ contract DeployFarcastle is ScaffoldETHDeploy {
                         )
                     }),
                     allTraits[i][j].ARMOR.rarity
+                );
+
+                farcastle2.addTrait(
+                    2,
+                    Farcastles2.Payload({
+                        name: allTraits[i][j].WEAPON.name,
+                        image: bytes(
+                            substring(
+                                allTraits[i][j].WEAPON.img_data,
+                                22,
+                                bytes(allTraits[i][j].WEAPON.img_data).length -
+                                    1
+                            )
+                        )
+                    }),
+                    allTraits[i][j].WEAPON.rarity
                 );
 
                 // addTrait(

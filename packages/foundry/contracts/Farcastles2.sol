@@ -16,8 +16,9 @@ contract Farcastles2 is ERC721A {
     }
 
     struct Knight {
-        uint256 weapon;
+        uint256 background;
         uint256 armor;
+        uint256 weapon;
     }
 
     struct Payload {
@@ -94,16 +95,22 @@ contract Farcastles2 is ERC721A {
         uint256 current = tokenID;
         uint256 combination;
 
-        uint16[] memory weaponRarities = s_traitRarities[0];
+        uint16[] memory backgroundRarities = s_traitRarities[0];
         uint16[] memory armorRarities = s_traitRarities[1];
+        uint16[] memory weaponRarities = s_traitRarities[2];
 
         while (true) {
-            combination = _getRandomTraitIndex(0, weaponRarities, seed);
+            combination = _getRandomTraitIndex(0, backgroundRarities, seed);
             combination |= (_getRandomTraitIndex(
                 1,
                 armorRarities,
                 seed >> 16
             ) << 8);
+            combination |= (_getRandomTraitIndex(
+                2,
+                weaponRarities,
+                seed >> 32
+            ) << 16);
 
             if (_combo[combination] == 0) {
                 _combo[combination] = 1;
@@ -157,9 +164,11 @@ contract Farcastles2 is ERC721A {
         uint256 value = (_registry[bucket] & mask) >> (64 * slot);
         mask = 0xFF;
 
-        knight.weapon = value & mask;
+        knight.background = value & mask;
         value >>= 8;
         knight.armor = value & mask;
+        value >>= 8;
+        knight.weapon = value & mask;
     }
 
     // ********************************
@@ -226,14 +235,20 @@ contract Farcastles2 is ERC721A {
         return
             string.concat(
                 _getTraitMetadata(
-                    "WEAPON",
-                    s_traits[0][knight.weapon].name,
+                    "BACKGROUND",
+                    s_traits[0][knight.background].name,
                     false
                 ),
                 ",",
                 _getTraitMetadata(
                     "ARMOR",
                     s_traits[1][knight.armor].name,
+                    false
+                ),
+                ",",
+                _getTraitMetadata(
+                    "WEAPON",
+                    s_traits[2][knight.weapon].name,
                     false
                 )
             );
@@ -296,9 +311,11 @@ contract Farcastles2 is ERC721A {
                 abi.encodePacked(
                     '<svg width="100%" height="100%" viewBox="0 0 20000 20000" xmlns="http://www.w3.org/2000/svg">',
                     "<style>svg{background-color:transparent;background-image:",
-                    _getTraitImageData(s_traits[0][knight.weapon].image),
+                    _getTraitImageData(s_traits[2][knight.weapon].image),
                     ",",
                     _getTraitImageData(s_traits[1][knight.armor].image),
+                    ",",
+                    _getTraitImageData(s_traits[0][knight.background].image),
                     ";background-repeat:no-repeat;background-size:contain;background-position:center;image-rendering:-webkit-optimize-contrast;-ms-interpolation-mode:nearest-neighbor;image-rendering:-moz-crisp-edges;image-rendering:pixelated;}</style></svg>"
                 )
             );
