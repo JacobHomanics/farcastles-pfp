@@ -151,6 +151,7 @@ contract DeployFarcastle is ScaffoldETHDeploy {
                 console.log(allTraits[i][j].BACKGROUND.name);
 
                 farcastle2.addTrait(
+                    0,
                     Farcastles2.Payload({
                         name: allTraits[i][j].WEAPON.name,
                         image: bytes(

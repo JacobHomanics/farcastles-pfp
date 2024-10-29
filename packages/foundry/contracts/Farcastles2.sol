@@ -27,12 +27,12 @@ contract Farcastles2 is ERC721A {
     // ********************************
     // STATE VARIABLES
     // ********************************
-    mapping(uint256 index => Trait) public s_traits;
+    mapping(uint256 => mapping(uint256 index => Trait)) public s_traits;
     uint256 public s_traitCount;
     uint16[] public s_traitRarities;
     mapping(uint256 => uint256) public _combo;
     mapping(uint256 => uint256) public _registry;
-    uint256 public s_maxBoundRarity;
+    mapping(uint256 layer => uint256) public s_maxBoundRarity;
 
     // ********************************
     // CONSTRUCTOR
@@ -52,8 +52,12 @@ contract Farcastles2 is ERC721A {
         _safeMint(to, amount, "");
     }
 
-    function addTrait(Payload calldata payload, uint16 rarity) public {
-        _setTrait(s_traitCount, payload, rarity);
+    function addTrait(
+        uint256 layer,
+        Payload calldata payload,
+        uint16 rarity
+    ) public {
+        _setTrait(s_traitCount, layer, payload, rarity);
         unchecked {
             s_traitCount++;
         }
@@ -64,14 +68,15 @@ contract Farcastles2 is ERC721A {
     // ********************************
     function _setTrait(
         uint256 traitIndex,
+        uint256 layer,
         Payload calldata payload,
         uint16 rarity
     ) internal {
-        Trait storage trait = s_traits[traitIndex];
+        Trait storage trait = s_traits[layer][traitIndex];
         trait.image = payload.image;
         trait.name = payload.name;
         s_traitRarities.push(rarity);
-        s_maxBoundRarity += rarity;
+        s_maxBoundRarity[layer] += rarity;
     }
 
     function setTokenTraits(uint256 tokenID, uint256 amount) public {
@@ -84,7 +89,7 @@ contract Farcastles2 is ERC721A {
         uint256 current = tokenID;
         uint256 combination;
         while (true) {
-            combination = _getRandomTraitIndex(s_traitRarities, seed);
+            combination = _getRandomTraitIndex(0, s_traitRarities, seed);
 
             if (_combo[combination] == 0) {
                 _combo[combination] = 1;
@@ -144,8 +149,11 @@ contract Farcastles2 is ERC721A {
     // ********************************
     // PUBLIC READ FUNCTIONS
     // ********************************
-    function getTrait(uint256 traitIndex) public view returns (Trait memory) {
-        return s_traits[traitIndex];
+    function getTrait(
+        uint256 layer,
+        uint256 traitIndex
+    ) public view returns (Trait memory) {
+        return s_traits[layer][traitIndex];
     }
 
     function getSeedModulus(
@@ -156,11 +164,12 @@ contract Farcastles2 is ERC721A {
     }
 
     function getRandomTraitIndex(
+        uint8 layer,
         uint256 tokenId
     ) public view returns (uint256) {
         uint256 seed = getRandomSeed(tokenId);
 
-        return _getRandomTraitIndex(s_traitRarities, seed);
+        return _getRandomTraitIndex(layer, s_traitRarities, seed);
     }
 
     function getRandomSeed(uint256 id) public view returns (uint256 seed) {
@@ -170,10 +179,11 @@ contract Farcastles2 is ERC721A {
     }
 
     function _getRandomTraitIndex(
+        uint8 layer,
         uint16[] memory rarities,
         uint256 seed
     ) public view returns (uint256 index) {
-        uint256 rand = seed % s_maxBoundRarity;
+        uint256 rand = seed % s_maxBoundRarity[layer];
         uint256 lowerBound; // starts at 0
         uint256 upperBound;
         uint256 percentage;
@@ -199,7 +209,11 @@ contract Farcastles2 is ERC721A {
     ) internal view returns (string memory trait) {
         return
             string.concat(
-                _getTraitMetadata("WEAPON", s_traits[knight.weapon].name, false)
+                _getTraitMetadata(
+                    "WEAPON",
+                    s_traits[0][knight.weapon].name,
+                    false
+                )
             );
     }
 
@@ -260,7 +274,7 @@ contract Farcastles2 is ERC721A {
                 abi.encodePacked(
                     '<svg width="100%" height="100%" viewBox="0 0 20000 20000" xmlns="http://www.w3.org/2000/svg">',
                     "<style>svg{background-color:transparent;background-image:",
-                    _getTraitImageData(s_traits[knight.weapon].image),
+                    _getTraitImageData(s_traits[0][knight.weapon].image),
                     ";background-repeat:no-repeat;background-size:contain;background-position:center;image-rendering:-webkit-optimize-contrast;-ms-interpolation-mode:nearest-neighbor;image-rendering:-moz-crisp-edges;image-rendering:pixelated;}</style></svg>"
                 )
             );

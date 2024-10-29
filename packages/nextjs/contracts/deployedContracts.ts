@@ -7,7 +7,7 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 const deployedContracts = {
   31337: {
     Farcastles2: {
-      address: "0x362c7d9607b55d30e4444292cf458ca47778cbca",
+      address: "0xee25d927c926bca73912f0b3b88b7274df42ffd8",
       abi: [
         {
           type: "constructor",
@@ -48,6 +48,11 @@ const deployedContracts = {
           type: "function",
           name: "_getRandomTraitIndex",
           inputs: [
+            {
+              name: "layer",
+              type: "uint8",
+              internalType: "uint8",
+            },
             {
               name: "rarities",
               type: "uint16[]",
@@ -91,6 +96,11 @@ const deployedContracts = {
           type: "function",
           name: "addTrait",
           inputs: [
+            {
+              name: "layer",
+              type: "uint256",
+              internalType: "uint256",
+            },
             {
               name: "payload",
               type: "tuple",
@@ -197,6 +207,11 @@ const deployedContracts = {
           name: "getRandomTraitIndex",
           inputs: [
             {
+              name: "layer",
+              type: "uint8",
+              internalType: "uint8",
+            },
+            {
               name: "tokenId",
               type: "uint256",
               internalType: "uint256",
@@ -265,6 +280,11 @@ const deployedContracts = {
           type: "function",
           name: "getTrait",
           inputs: [
+            {
+              name: "layer",
+              type: "uint256",
+              internalType: "uint256",
+            },
             {
               name: "traitIndex",
               type: "uint256",
@@ -369,7 +389,13 @@ const deployedContracts = {
         {
           type: "function",
           name: "s_maxBoundRarity",
-          inputs: [],
+          inputs: [
+            {
+              name: "layer",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
           outputs: [
             {
               name: "",
@@ -415,6 +441,11 @@ const deployedContracts = {
           type: "function",
           name: "s_traits",
           inputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
             {
               name: "index",
               type: "uint256",

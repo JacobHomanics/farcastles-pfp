@@ -24,12 +24,13 @@ contract Farcastles2Test is Test {
         uint16 rarity = 100;
 
         farcastles2.addTrait(
+            0,
             Farcastles2.Payload({name: name, image: bytes(imageBase64)}),
             rarity
         );
 
-        assertEq(farcastles2.getTrait(0).name, name);
-        assertEq(farcastles2.getTrait(0).image, bytes(imageBase64));
+        assertEq(farcastles2.getTrait(0, 0).name, name);
+        assertEq(farcastles2.getTrait(0, 0).image, bytes(imageBase64));
         assertEq(farcastles2.s_traitCount(), 1);
         assertEq(farcastles2.s_traitRarities(0), rarity);
 
@@ -44,6 +45,7 @@ contract Farcastles2Test is Test {
         uint16 rarity = 2000;
 
         farcastles2.addTrait(
+            0,
             Farcastles2.Payload({
                 name: string.concat(name, "1"),
                 image: bytes(imageBase64)
@@ -52,6 +54,7 @@ contract Farcastles2Test is Test {
         );
 
         farcastles2.addTrait(
+            0,
             Farcastles2.Payload({
                 name: string.concat(name, "2"),
                 image: bytes(imageBase64)
@@ -60,6 +63,7 @@ contract Farcastles2Test is Test {
         );
 
         farcastles2.addTrait(
+            0,
             Farcastles2.Payload({
                 name: string.concat(name, "3"),
                 image: bytes(imageBase64)
@@ -68,6 +72,7 @@ contract Farcastles2Test is Test {
         );
 
         farcastles2.addTrait(
+            0,
             Farcastles2.Payload({
                 name: string.concat(name, "4"),
                 image: bytes(imageBase64)
@@ -81,7 +86,7 @@ contract Farcastles2Test is Test {
         console.log(seed);
         console.log(rand);
 
-        uint256 traitIndex = farcastles2.getRandomTraitIndex(13);
+        uint256 traitIndex = farcastles2.getRandomTraitIndex(0, 13);
 
         console.log(traitIndex);
 
