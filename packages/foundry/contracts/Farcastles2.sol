@@ -19,6 +19,7 @@ contract Farcastles2 is ERC721A {
         uint256 background;
         uint256 armor;
         uint256 weapon;
+        uint256 head;
     }
 
     struct Payload {
@@ -98,6 +99,7 @@ contract Farcastles2 is ERC721A {
         uint16[] memory backgroundRarities = s_traitRarities[0];
         uint16[] memory armorRarities = s_traitRarities[1];
         uint16[] memory weaponRarities = s_traitRarities[2];
+        uint16[] memory headRarities = s_traitRarities[3];
 
         while (true) {
             combination = _getRandomTraitIndex(0, backgroundRarities, seed);
@@ -111,6 +113,8 @@ contract Farcastles2 is ERC721A {
                 weaponRarities,
                 seed >> 32
             ) << 16);
+            combination |= (_getRandomTraitIndex(3, headRarities, seed >> 48) <<
+                24);
 
             if (_combo[combination] == 0) {
                 _combo[combination] = 1;
@@ -169,6 +173,8 @@ contract Farcastles2 is ERC721A {
         knight.armor = value & mask;
         value >>= 8;
         knight.weapon = value & mask;
+        value >>= 8;
+        knight.head = value & mask;
     }
 
     // ********************************
@@ -250,7 +256,9 @@ contract Farcastles2 is ERC721A {
                     "WEAPON",
                     s_traits[2][knight.weapon].name,
                     false
-                )
+                ),
+                ",",
+                _getTraitMetadata("HEAD", s_traits[3][knight.head].name, false)
             );
     }
 
@@ -311,6 +319,8 @@ contract Farcastles2 is ERC721A {
                 abi.encodePacked(
                     '<svg width="100%" height="100%" viewBox="0 0 20000 20000" xmlns="http://www.w3.org/2000/svg">',
                     "<style>svg{background-color:transparent;background-image:",
+                    _getTraitImageData(s_traits[3][knight.head].image),
+                    ",",
                     _getTraitImageData(s_traits[2][knight.weapon].image),
                     ",",
                     _getTraitImageData(s_traits[1][knight.armor].image),
