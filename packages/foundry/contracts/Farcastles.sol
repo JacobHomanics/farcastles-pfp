@@ -12,9 +12,23 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 import {SSTORE2} from "../lib/sstore2/contracts/SSTORE2.sol";
 
 contract Farcastles is ScaffoldERC721A {
-    mapping(uint256 => uint256) private _traitCounts;
-    mapping(uint256 => mapping(uint256 => Trait)) private _traits;
-    mapping(uint256 => uint256) private _combo;
+    // ********************************
+    // ERRORS
+    // ********************************
+    error Farcastles__InvalidToken();
+
+    // ********************************
+    // STATE
+    // ********************************
+    mapping(uint256 => uint256) public _traitCounts;
+    mapping(uint256 => mapping(uint256 => Trait)) public _traits;
+    mapping(uint256 => uint256) public _combo;
+    mapping(uint256 => uint256) private _registry;
+    uint16[][4] public _traitRarities;
+
+    // ********************************
+    // STRUCTS
+    // ********************************
     struct Trait {
         // address image;
         bytes image;
@@ -33,12 +47,26 @@ contract Farcastles is ScaffoldERC721A {
         uint256 WEAPON;
     }
 
-    uint16[][6] private _traitRarities;
-
+    // ********************************
+    // CONSTRUCTOR
+    // ********************************
     constructor(
         ScaffoldERC721AParameters memory params
     ) ScaffoldERC721A(params) {}
 
+    // ********************************
+    // EXTERNAL WRITE FUNCTIONS
+    // ********************************
+    function mint2(address to, uint256 amount) external {
+        uint256 minted = _totalMinted();
+        _setTraitsCombination(minted, amount);
+
+        _safeMint(to, amount);
+    }
+
+    // ********************************
+    // PUBLIC WRITE FUNCTIONS
+    // ********************************
     function addTrait(
         uint8 layer,
         Payload calldata payload,
@@ -51,19 +79,6 @@ contract Farcastles is ScaffoldERC721A {
         unchecked {
             ++traitIndex;
         }
-    }
-
-    function _addTrait(
-        uint256 traitIndex,
-        uint8 layer,
-        Payload calldata payload,
-        uint16 rarity
-    ) internal {
-        Trait storage trait = _traits[layer][traitIndex];
-        trait.image = payload.image;
-        // trait.image = SSTORE2.write(payload.image);
-        trait.name = payload.name;
-        _traitRarities[layer].push(rarity);
     }
 
     function addTraits(
@@ -87,36 +102,42 @@ contract Farcastles is ScaffoldERC721A {
         }
     }
 
-    function _base64EncodeJSON(
-        string memory json
-    ) internal pure returns (string memory) {
-        return Base64.encode(bytes(json));
+    // ********************************
+    // PUBLIC VIEW FUNCTIONS
+    // ********************************
+    function tokenURI(
+        uint256 tokenID
+    ) public view virtual override returns (string memory metadata) {
+        if (!_exists(tokenID)) revert Farcastles__InvalidToken(); //InvalidToken();
+
+        Knight memory brian = _getTraits(tokenID);
+        bytes memory json = abi.encodePacked(
+            '{"name": "South #',
+            LibString.toString(tokenID),
+            '", "description":"',
+            "South Castle is the best!",
+            '","image":"data:image/svg+xml;base64,',
+            _getTraitImage(brian),
+            '",',
+            '"attributes": [',
+            _getTraitAttributes(brian),
+            "]}"
+        );
+
+        return string(abi.encodePacked("data:application/json,", json));
     }
 
-    function _getTraitImage(
-        Knight memory knight
-    ) internal view returns (string memory image) {
-        return
-            Base64.encode(
-                abi.encodePacked(
-                    '<svg width="100%" height="100%" viewBox="0 0 20000 20000" xmlns="http://www.w3.org/2000/svg">',
-                    "<style>svg{background-color:transparent;background-image:",
-                    _getTraitImageData(_traits[3][knight.WEAPON].image),
-                    ",",
-                    _getTraitImageData(_traits[2][knight.HEAD].image),
-                    ",",
-                    _getTraitImageData(_traits[1][knight.ARMOR].image),
-                    ",",
-                    _getTraitImageData(_traits[0][knight.BACKGROUND].image),
-                    ";background-repeat:no-repeat;background-size:contain;background-position:center;image-rendering:-webkit-optimize-contrast;-ms-interpolation-mode:nearest-neighbor;image-rendering:-moz-crisp-edges;image-rendering:pixelated;}</style></svg>"
-                )
-            );
-    }
-
-    function getTraitImageData(
-        bytes memory image
-    ) external view returns (string memory) {
-        return _getTraitImageData(image);
+    function _addTrait(
+        uint256 traitIndex,
+        uint8 layer,
+        Payload calldata payload,
+        uint16 rarity
+    ) internal {
+        Trait storage trait = _traits[layer][traitIndex];
+        trait.image = payload.image;
+        // trait.image = SSTORE2.write(payload.image);
+        trait.name = payload.name;
+        _traitRarities[layer].push(rarity);
     }
 
     /**
@@ -126,7 +147,7 @@ contract Farcastles is ScaffoldERC721A {
         bytes memory image
     )
         private
-        view
+        pure
         returns (
             // address image
             string memory
@@ -194,57 +215,9 @@ contract Farcastles is ScaffoldERC721A {
             string.concat('{"trait_type":"', key, '","value": "', value, '"}');
     }
 
-    error Farcastles__InvalidToken();
-
-    function getTrait(
-        uint256 layer,
-        uint256 index
-    ) external view returns (Trait memory trait) {
-        return _traits[layer][index];
-    }
-
-    function getTraits(
-        uint256 tokenID
-    ) external view returns (Knight memory knight) {
-        return _getTraits(tokenID);
-    }
-
-    function getTraitAttributes(
-        uint256 tokenID
-    ) external view returns (string memory trait) {
-        return _getTraitAttributes(_getTraits(tokenID));
-    }
-
-    function getTraitImage(
-        uint256 tokenID
-    ) external view returns (string memory image) {
-        return _getTraitImage(_getTraits(tokenID));
-    }
-
-    function tokenURI(
-        uint256 tokenID
-    ) public view virtual override returns (string memory metadata) {
-        if (!_exists(tokenID)) revert Farcastles__InvalidToken(); //InvalidToken();
-
-        Knight memory brian = _getTraits(tokenID);
-        bytes memory json = abi.encodePacked(
-            '{"name": "1337 Brian #',
-            LibString.toString(tokenID),
-            '", "description":"',
-            "1337 Brians is a collection of 8,453 pixel art bald brians, deployed fully onchain with a public domain license. Community crafted for Onchain Summer, these based brians are the latest from the 1337 hackers that brought you 1337 Skulls and more. Stay based and get 1337 pilled at 1337skulls.xyz.",
-            '","image":"data:image/svg+xml;base64,',
-            _getTraitImage(brian),
-            '",',
-            '"attributes": [',
-            _getTraitAttributes(brian),
-            "]}"
-        );
-
-        return string(abi.encodePacked("data:application/json,", json));
-    }
-
-    mapping(uint256 => uint256) private _registry;
-
+    // ********************************
+    // INTERNAL VIEW FUNCTIONS
+    // ********************************
     function _getTraits(
         uint256 tokenId
     ) internal view returns (Knight memory knight) {
@@ -264,11 +237,36 @@ contract Farcastles is ScaffoldERC721A {
         knight.WEAPON = traitCombination & traitMask;
     }
 
-    function _mint(uint256 amount, address to) internal {
-        uint256 minted = _totalMinted();
-        _setTraitsCombination(minted, amount);
+    function _getTraitImage(
+        Knight memory knight
+    ) internal view returns (string memory image) {
+        return
+            Base64.encode(
+                abi.encodePacked(
+                    '<svg width="100%" height="100%" viewBox="0 0 20000 20000" xmlns="http://www.w3.org/2000/svg">',
+                    "<style>svg{background-color:transparent;background-image:",
+                    _getTraitImageData(_traits[3][knight.WEAPON].image),
+                    ",",
+                    _getTraitImageData(_traits[2][knight.HEAD].image),
+                    ",",
+                    _getTraitImageData(_traits[1][knight.ARMOR].image),
+                    ",",
+                    _getTraitImageData(_traits[0][knight.BACKGROUND].image),
+                    ";background-repeat:no-repeat;background-size:contain;background-position:center;image-rendering:-webkit-optimize-contrast;-ms-interpolation-mode:nearest-neighbor;image-rendering:-moz-crisp-edges;image-rendering:pixelated;}</style></svg>"
+                )
+            );
+    }
 
-        super._mint(to, amount);
+    // ********************************
+    // INTERNAL WRITE FUNCTIONS
+    // ********************************
+    function _storeTraits(uint256 tokenId, uint256 traitCombination) internal {
+        uint256 tokenTraitBucket = tokenId / 4;
+        uint256 tokenTraitSlot = tokenId % 4;
+        uint256 traitMask = not(0xFFFFFFFFFFFFFFFF << (64 * tokenTraitSlot));
+        _registry[tokenTraitBucket] =
+            (_registry[tokenTraitBucket] & traitMask) |
+            (traitCombination << (64 * tokenTraitSlot));
     }
 
     function _setTraitsCombination(uint256 tokenID, uint256 amount) private {
@@ -311,7 +309,7 @@ contract Farcastles is ScaffoldERC721A {
         uint16[] memory rarities,
         uint256 seed
     ) private pure returns (uint256 index) {
-        uint256 rand = seed % 10000;
+        uint256 rand = seed % rarities.length;
         uint256 lowerBound;
         uint256 upperBound;
         uint256 percentage;
@@ -332,89 +330,9 @@ contract Farcastles is ScaffoldERC721A {
         revert();
     }
 
-    function _storeTraits(uint256 tokenId, uint256 traitCombination) internal {
-        uint256 tokenTraitBucket = tokenId / 4;
-        uint256 tokenTraitSlot = tokenId % 4;
-        uint256 traitMask = not(0xFFFFFFFFFFFFFFFF << (64 * tokenTraitSlot));
-        _registry[tokenTraitBucket] =
-            (_registry[tokenTraitBucket] & traitMask) |
-            (traitCombination << (64 * tokenTraitSlot));
-    }
-
     function not(uint256 val) internal pure returns (uint256 notval) {
         assembly ("memory-safe") {
             notval := not(val)
         }
     }
-
-    // function tokenURI(
-    //     uint256 tokenId
-    // ) public view override returns (string memory) {
-    //     require(_exists(tokenId), "Token does not exist");
-
-    //     // Get traits for the tokenId
-    //     Trait memory background = backgroundTraits[tokenId];
-    //     Trait memory head = headTraits[tokenId];
-
-    //     // Combine the base64-encoded images
-    //     string memory combinedBase64Image = _combineBase64Images(
-    //         background.base64_img_data,
-    //         head.base64_img_data
-    //     );
-
-    //     // Construct the JSON metadata
-    //     string memory json = string(
-    //         abi.encodePacked(
-    //             '{"name": "NFT #',
-    //             Strings.toString(tokenId),
-    //             '",',
-    //             '"description": "An NFT with combined base64-encoded traits",',
-    //             '"img_data": "',
-    //             combinedBase64Image,
-    //             '",',
-    //             '"attributes": [',
-    //             '{ "trait_type": "BACKGROUND", "value": "',
-    //             background.name,
-    //             '" },',
-    //             '{ "trait_type": "HEAD", "value": "',
-    //             head.name,
-    //             '" }',
-    //             "]}"
-    //         )
-    //     );
-
-    //     // Encode the JSON metadata as base64
-    //     string memory base64Json = _base64EncodeJSON(json);
-
-    //     // Return the data URI format
-    //     return
-    //         string(
-    //             abi.encodePacked("data:application/json;base64,", base64Json)
-    //         );
-    // }
-
-    // function setTraits(
-    //     uint256 tokenId,
-    //     string memory backgroundId,
-    //     string memory backgroundBase64ImgData,
-    //     string memory backgroundName,
-    //     string memory headId,
-    //     string memory headBase64ImgData,
-    //     string memory headName
-    // ) public {
-    //     backgroundTraits[tokenId] = Trait(
-    //         backgroundId,
-    //         backgroundBase64ImgData,
-    //         backgroundName,
-    //         0,
-    //         "BACKGROUND"
-    //     );
-    //     headTraits[tokenId] = Trait(
-    //         headId,
-    //         headBase64ImgData,
-    //         headName,
-    //         0,
-    //         "HEAD"
-    //     );
-    // }
 }

@@ -14,7 +14,7 @@ const Home: NextPage = () => {
 
   const { address: connectedAddress } = useAccount();
 
-  const { data: Farcastles } = useScaffoldContract({ contractName: "Farcastles" });
+  const { data: Farcastles } = useScaffoldContract({ contractName: "Farcastles2" });
 
   const publicClient = usePublicClient();
   useEffect(() => {
@@ -25,7 +25,7 @@ const Home: NextPage = () => {
       }
 
       const newImgSrcs = [];
-      for (let i = 1; i <= 25; i++) {
+      for (let i = 1; i <= 400; i++) {
         try {
           const tokenURI = await publicClient.readContract({
             address: Farcastles.address,

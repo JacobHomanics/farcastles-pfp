@@ -7,7 +7,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -17,7 +17,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAALdJREFUWIXtkk0KwjAQRr+Kx0iXVnBXLyJUsOhBpJsgko03EVxIb9KdoNvkHuMiNBapTZSa1TwY8svMYxKAYRgmEJ2DdA6KXvSTRDSZbkGqBbUS7TyKQDeoFkREdhxBIgmVEAdhFyuNXbnGYp65c6lOQXn6mPgKA0DaIDFHAwAwS1vrdn+4ULL6uQte8/cW72cFAOB8uX6dq4+p70LavBL/49MNPsGQzHZTuH0lqxGVGIZhGIaJzBOgHFYBaCWuugAAAABJRU5ErkJggg==",
         "name": "Flamewrought Visage",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -27,7 +27,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHNJREFUWIVjYBgFo2AUjIJRMNxBc23Ff3zyLDS0+z8WNiO6IiYaWs6IZCGMjTc0qGk50XyMIKHU8v//Ue1jZGRkwCZGA7txOwqfJK3SANFg1AH0cgDOdEBTB0SGBf2PDAvCq2bAo4AegC6l3ygYBaNg6AIA7sgWh++IClkAAAAASUVORK5CYII=",
         "name": "Crossbow",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -37,7 +37,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAMpJREFUWIXtkjEOwyAMRX+qniWRchwGJG6ShYklN4mUIceJlFyGLgU5CBKTturiNxmw7M+3AUEQBEEQhD/TnD0arTwA9F0b76wbs7nODjFetx3TvJzWZgmgIgBgmpdDM+vGQ2y0Cnms5gDwvEp4F/P0bt32Ui63bzWeiAixd3bwhTc2LKvCGKgbwe6+a8NeNHRcJP+UR43apDiA8lJyudyBEsEBo1UUU7N8HwsgzapmnlI9AqNV/H3u/BMBd6z9qoCciHTj07MgcHkBZL5OmKtUiO4AAAAASUVORK5CYII=",
         "name": "Champion's Shield",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -49,7 +49,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -59,7 +59,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAJRJREFUWIXt0rEJwzAQheE/IWu4dALutIoKgxcxblypySaGFFklQ2iQS2Hk3jqDMbwPhFChuydOICJXlQOWA+atcz8iyCkBxjYyttHTG4Cb464B5LAeml9dLfcIahsXj5pLQx+3uXevpzXp7Qqxu3lZrGOwNE/VH3F38vL65fN114ID/oBXdYChj6R5Ath2ERERuaQ/9y0jFh/gflsAAAAASUVORK5CYII=",
         "name": "Falling Glory",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -69,7 +69,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAFhJREFUWIXt1TsKACEMRdE4S7QQ3Mk0U7nwWPthUj0EuacWvRhQMwAQqiV7tOZRR7Tv/Y2QB0QIIIAAAo4HJOHe8xOsPGuvluzRh3R8BGpu6ygG198AgFAHolMLkb3e8jYAAAAASUVORK5CYII=",
         "name": "Sword",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -79,7 +79,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAMVJREFUWIXtkjsOgzAQRB9RzgISx3FhyTehoaLJTZAoOA4SXMYpIicGGbz5oDT7Oktjz+x4QVEURVEU5c8UElHXNh5gmhf6YUxqnDXUVQlA291E7wJcJebTvOQMCQHDHWmIS06QMv/lHWlVPtL7rm1WJnVVhtpjnYjsF8CjboB+GHHWMM3Ls354TRx0IUg/jNkgogApwr9vjN9GVJWzJp7I78jEtcdkl/CA4lPTrwI4a1aVb8+nBJAs06kBUiHCXuydFUXKHaarR86H9hxLAAAAAElFTkSuQmCC",
         "name": "The Chosen Shield",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -91,7 +91,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -101,7 +101,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAALdJREFUWIXtkk0KwjAQRr+Kx0iXVnBXLyJUsOhBpJsgko03EVxIb9KdoNvkHuMiNBapTZSa1TwY8svMYxKAYRgmEJ2DdA6KXvSTRDSZbkGqBbUS7TyKQDeoFkREdhxBIgmVEAdhFyuNXbnGYp65c6lOQXn6mPgKA0DaIDFHAwAwS1vrdn+4ULL6uQte8/cW72cFAOB8uX6dq4+p70LavBL/49MNPsGQzHZTuH0lqxGVGIZhGIaJzBOgHFYBaCWuugAAAABJRU5ErkJggg==",
         "name": "Flamewrought Visage",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -111,7 +111,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGRJREFUWIXt1kEKwCAMBdGf0hO6ELz/QdJVoQglJY2UwryloBl0o4S/84t5ffTmd/tO+5vBT9YiW9XwLKs6aI4yM5PklTMywptKPUElAggggAACCFgaMHpT9Cv6/AZW4z8AIHQAw4EoDdYtaJwAAAAASUVORK5CYII=",
         "name": "White Flag",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -121,7 +121,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAMNJREFUWIXtkzEKwzAMRZ0epoUex4PBN+niyUtuYsjg4xTay7iTiv2xw9eURQ8CcfKRvn4U5wzDMAzDMC5mY0Q5vZrcp7yvNK7TUHUpAzH4hs/KUYemKe8uBo8aygTrdDCBzZ6POyZDJ3BjhX1hSUB4f76qpmoDODEihkQXg2+zTzfj1DUWKUfdVoVn75g9OE1gVkCmLUf9X72eXT4VEGlz41LiefrnrNAuIYUmBcpAXzAGPywlnrXQCeBUGLMmdsPo+QEU5FOYsu1vDwAAAABJRU5ErkJggg==",
         "name": "Embellished Protector",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -133,7 +133,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -143,7 +143,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGRJREFUWIVjYBgFo2AUjIJRMFRBZFjQ/+baiv+UmsNIruUwtpa6GkNtcwdZ5pDlAGTLqeEIFnI0MTAwMCxftY5crSiAiVyNkWFBcHZzbQXZDiA7BNAdMQpGwSgYBaNgFIyCIQsAbCIR/SCuycEAAAAASUVORK5CYII=",
         "name": "Veil Of Silence",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -153,7 +153,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAFJJREFUWIVjYBgFo2AUDHPwn5ACJnq4YtQBow4YdcCoAwbMAc21FQPrAGLAqANo6oBrN28xRIYF4a0RBzwEaAqaaysItgdoDUYbJKMOGAWDHwAAPyMKnZPW4z8AAAAASUVORK5CYII=",
         "name": "Bō Staff",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -163,7 +163,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAMdJREFUWIXtkzEKwzAMRb9Lr+HRLXTLVTQEsvUUpkumLMEXCWTw1Ht4K7QZc5B0aHGGBiw36VDQA4ORZPH1kQFBEARBEIR/YiwwAcvnnctGcQub+jIBwPnaxpgOwFi87tYQTscD6qZl92QLqEr6mM4NPgqwhmI8V8SOW8jldn9EtzYRsDQ9RwR3J7Ic6Hq/Kr9awC/YVEBVErreZ/2CfarADbOtrgAso2nXe+W22gEdoKwhWEPQgdNyfsepSzoAINr6zY8QhBRPzXM+cLq4678AAAAASUVORK5CYII=",
         "name": "Priests's Mantle (red)",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -175,7 +175,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -185,7 +185,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHJJREFUWIXt0bEJgEAMheFfcRYFx7niwE1srK5xE8HCFWPjgVqZsxDhfW2Sl0BARET+aojBhhjsbU7l7LdjOQB91wIwpbk0zzVwWZ69PaLxLD/CDWBZt3tPrpnniKcHPA10v6D2DmTnV6RpLI0RERGR7+3qdBSG8+MuZgAAAABJRU5ErkJggg==",
         "name": "Descending Bull",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -195,7 +195,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGVJREFUWIVjYBgFo2AUjIJRMApGOmCkhaGPDRn+o4vJnsduF00cgO4IXJYzMDAwsNDKAWWqQQjO+XW0soYgwIgKdMBED1eMOmDAHBAZFsQQGRaENx0MeAjQGgz+XDAKRsEoGHAAAJ9mDXy6ToqmAAAAAElFTkSuQmCC",
         "name": "Plunger",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -205,7 +205,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAMBJREFUWIXtkjEOwyAMRT9VzwISx2FA4iZdMmXpTSIxcEW64MqxGsVErbr4bYk+9ufzAcMwDMMwjD/jNKJ1eXQAWNbnmQ5Dp5qrMlBy6vx7q43+IwZPC1Fyemti8GoTGlGn4Xw5XyZNDN3XDAAApeBkIsRWm+M65VzctEK26FRTcupHRi8ZKDntYucmYvC7p+E6Daqo6DZbbR+fYKZ0kvvsAXZ7WqiK+ojpDsiYr8Q+bWA0/CeoE5AmZBe0rTcMyQvG9EaPU/DSeAAAAABJRU5ErkJggg==",
         "name": "Bulwark of the Brave",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -217,7 +217,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -227,7 +227,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAH1JREFUWIXt0TEKgCAYxfF/0FkUOo6D4GGaWrpJ0NBxhLqMLVnSlhANvd8k9vx8JIiIyN81D7Ip54N3qbOGuG4ATPPS3DNvFSB4d2501gAQ141pXmpmPgsH71JeFxfmb+WfeKdAWeJeoGYWQFtz6CgCXM/QD2PtKBEREfnWDsW+HgkIHdbkAAAAAElFTkSuQmCC",
         "name": "Horned Watcher",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -237,7 +237,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHJJREFUWIXtkjEKgEAMBKOPUfA5KQL5iY2VfxT0M7GyEblcs8Rip17IHHMiBMi+rZFtxmoJqMBxXukGKRCPRE8KpERdAjcVN21u4AmWeWKC5oYJmAANEzBBmmAA3n+/HHnrGzcNN61L8AdqP2EP5QKEkBuVfzhIccY8+wAAAABJRU5ErkJggg==",
         "name": "Bludgeon",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -247,7 +247,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAMxJREFUWIXtkzsOwyAMhk3VEzIgcZMsTCy9CRIDx6mUXoYuMTKBAE7Vzd9kCz9+bAAQBEEQBEG4wLste7flf+c+rw7e+6cUQzvENGtc5f4kIMQE1uimmDW6isGmzr+q2JlY5DE4UyGmaaHebY8ctSJgKQgAcJ+K2L1aNG6J0QQKdOzW6DJ2BH0SlwdC+QIoISb6QAGgXgMVu8LtFZwfI6MWH2t0tkajCGr3fBbsFQC0X2z1y90WEGIq47VGN4+Su3e2gLOIo3Ee+YKwyhcUbGOQ6ijsfQAAAABJRU5ErkJggg==",
         "name": "Guard of the Monarch",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -259,7 +259,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -269,7 +269,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHdJREFUWIVjYBgFo2AUkAkeGzL8f2zI8J9Sc5io4Ri6O4AaPqfIAdQELORqLFMNgjDOr6OWW0gG/6GYIsBIjqbIsCC4xVrqagy1zR1kmUOWA5Atp4YjyE4Dy1dRJ+4HPBeQ7YDIsCCs7FEwCkbBKBgFo2AUDDkAALXmFrcZdBxDAAAAAElFTkSuQmCC",
         "name": "\nChampion's Crest (RED)",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -279,7 +279,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHJJREFUWIXtkjEKgEAMBKOPUfA5KQL5iY2VfxT0M7GyEblcs8Rip17IHHMiBMi+rZFtxmoJqMBxXukGKRCPRE8KpERdAjcVN21u4AmWeWKC5oYJmAANEzBBmmAA3n+/HHnrGzcNN61L8AdqP2EP5QKEkBuVfzhIccY8+wAAAABJRU5ErkJggg==",
         "name": "Bludgeon",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -289,7 +289,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAM5JREFUWIXtkzEOwjAMRX8QZwGJ42SolJt0yZSFm1Tq0OMgwWXCgoOx2tRpYUDym5L2K//bTgDDMAzDMP6BFPucYp+/peMc1gSh8/zA2uHlX0sI12AOABjGaUkrddWziaNGxM1D53E5nwAAMV2RYl/WMsTuAEvVEjNVNwdQtQnv+TpaUydu9weZO6FToRoBVUojUOgzC1Vl9RXMMYxTafeWtnOaLqGEtZ8+udZQzR2QZnvZNAJC+9Z3B+BGofMfF1HufxJAhngZ59reMLQ8AZdNUvkIdQp5AAAAAElFTkSuQmCC",
         "name": "Noble's Regalia",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -301,7 +301,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -311,7 +311,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGlJREFUWIVjYBgFo2AUjIJRMMCAkRxNkWFB/7XU1eD82uYOsswhywGRYUH/0cW01NXIdgRJmrBZTqkjyA6B5avWUWwWAwMDAxM5mqgJKIoCWCg011YwMDBQlhhHwSgYBaNgFIyCUTBgAACNvBcIztCzVQAAAABJRU5ErkJggg==",
         "name": "Fortress Headpiece",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -321,7 +321,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGhJREFUWIVjYBgFo2AUjIJRMApGwXAGzbUV/9H56GJMtHZEZFjQfwYGhv9QGgPQ3AHLV61DoenugMiwIBSargAp2P/D+LiigtYAp6UstLQV5ltc8c/AQIc0MFgAzigYMSEwCkbBKMAJAC9UH29m5YpWAAAAAElFTkSuQmCC",
         "name": "Warhammer",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -331,7 +331,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAANBJREFUWIXtkzEKwzAMRX9Kz9JCj6NBoJtkyZSlNwlkyHECyWXUoXZwgu24IaGLHhghJKyvjw0YhmEYhmH8maqkqW1qBYBxmtH1Q7RHmPB6PgAATfsuuhcA7iVN4zTvDUz27XHLFd3m6nO/vTAtA8dphjAlnTmMMKkwaSDCC1EAKkyrGNZ+mZN1AIjb2jY1un5YxZj4UwSkRAnTKl5CaHOwkSbOIbIOdP1QIfJV3SNcav5Rni4gIyybny7AOQHgu2248Ta/RMBWhBusudwwSvkAo5dsqSvbpFIAAAAASUVORK5CYII=",
         "name": "Mouth of the Beast",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -343,7 +343,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -353,7 +353,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAJJJREFUWIVjYBgFo2CogseGDP8fGzL8p9QcFnIsptRSkh2AbqnseQZGajkGrwOQLYBZSi2LyQbIcR8ZFkRfh2BJePRJhDBLkaMB5vvlq9ZR5ABGwkowAXLQa6mrMdQ2d5BlDlkOwBbvlDiC5HIABigNehhgooopA+GAyLAgOLu5toIqjhkFo2AUjIJRMApGwYAAABH1LzyulWJ4AAAAAElFTkSuQmCC",
         "name": "Standard Bearer (RED)",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -363,7 +363,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAH9JREFUWIVjYBgFo2AUjAIagObaiv/EqmWihQOu3bxFtCNo4gBSHEEzB8AcMSAOWL5qHSOMTSgUaBoCDAyEQ4HmDiAEaOYAYqNh+IbAqAOQQW1zByMuOZwSVADoCY+WdmEHkWFB/yPDgga2IBpI8J8BMxowwLAOgVEwCkYBUQAADKkjGvf4qz4AAAAASUVORK5CYII=",
         "name": "Scimitar",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -373,7 +373,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAM9JREFUWIXtkzEOgzAMRV97GJA4DkOk3CRLpizcBKkDx6nUXiZdSBQiUExLNz8JgSNj/28MKIqiKIqiCLBmjP/IBbi1EoJ3EeD5egMwP5ajxgAMfQeAD1Ozthhrxrg6y1fwLq7i8r3IEyNVuSkavNtMxJqRoe/wYTpbl7skyZqR4F2OU/OSvTMJTaXlSCuXrfeYH0uzvmgCieQyLRyQJ1OenUHyrWIqXv4BdUOJ219I218/78WnEC9hclw7/3b0pwTU410FxaP4cgF7IhTlKj6jHFv9GlcA0QAAAABJRU5ErkJggg==",
         "name": "Titan's Embrace",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -385,7 +385,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -395,7 +395,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGFJREFUWIVjYBgFo2AUjIKRDhjJ1PefCmaQrfk/FjGyHUEtB5BtJguptkeGBWGIaamrMdQ2d5AVCiQ7AAaWr1pHrlYUwEQVUwbCAchR0VxbQRXHjIJRMApGwSgYBaNgQAAAtAkKidtdgtMAAAAASUVORK5CYII=",
         "name": "Obsidian Cap",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -405,7 +405,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGhJREFUWIVjYBgFo2AUjIJRMApGwXAGzbUV/9H56GJMtHZEZFjQfwYGhv9QGgPQ3AHLV61DoenugMiwIBSargAp2P/D+LiigtYAp6UstLQV5ltc8c/AQIc0MFgAzigYMSEwCkbBKMAJAC9UH29m5YpWAAAAAElFTkSuQmCC",
         "name": "Warhammer",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -415,7 +415,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAM1JREFUWIXtlEEKwyAQRX9Lz9JCj+NC8CbZZJXDBLLIcQS9TLpRmU7TOknsonQeCIn8zP+OGkBRFEVRlF9h6LulhYZzlpr7EKs6H+LmEKIA2TwVXx3ZWBKUcqoJnDVlReM05zkAwP12LQHHaS7zSVutDVQ6QM0pOYgPsZhLv91LbjUALKl4GcSM6kRcJCJnzcsqh777pFvSc3UbRAF4CL7fXLcFcYB30M5ID16TAMTs0GET/QcozpqnNvP3rwTY09qmAdZC8Hve+t4r/8MDpqRqidCla0QAAAAASUVORK5CYII=",
         "name": "Heroic Grit",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -427,7 +427,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -437,7 +437,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAJJJREFUWIVjYBgFo2CogseGDP8fGzL8p9QcFnIsptRSkh2AbqnseQZGajkGrwOQLYBZSi2LyQbIcR8ZFkRfh2BJePRJhDBLkaMB5vvlq9ZR5ABGwkowAXLQa6mrMdQ2d5BlDlkOwBbvlDiC5HIABigNehhgooopA+GAyLAgOLu5toIqjhkFo2AUjIJRMApGwYAAABH1LzyulWJ4AAAAAElFTkSuQmCC",
         "name": "Standard Bearer (RED)",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -447,7 +447,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHJJREFUWIXtkjEKgEAMBKOPUfA5KQL5iY2VfxT0M7GyEblcs8Rip17IHHMiBMi+rZFtxmoJqMBxXukGKRCPRE8KpERdAjcVN21u4AmWeWKC5oYJmAANEzBBmmAA3n+/HHnrGzcNN61L8AdqP2EP5QKEkBuVfzhIccY8+wAAAABJRU5ErkJggg==",
         "name": "Bludgeon",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -457,7 +457,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAMxJREFUWIXtlEEKxCAMRX+HOcsMzHFcFLyJG1duepNCFz1Oob2Ms6kSHTtG2u7yQFD85MekKSAIgiAIgsDAWeOdNf4qHaWrCXSvkoDjNB/p4v7zfsG6oRobAJ4cETUORrsJnDUAAOuGeL+sGzcsHi3mlGXdonlN+w9WmQCENnQAPC03kJSc6u5LAEh7vr/6526c5mp8Vgt0r2LQ0utLukvRvfJhGsg+rtbRO5UAMcbBuQlWC7JkkjKfLTt3DNlf9S0JlJLI/5D5WRC4fAHRx1pm7hV+qwAAAABJRU5ErkJggg==",
         "name": "The Ward",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -469,7 +469,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -479,7 +479,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHlJREFUWIVjYBgFo2AUjIKRDhjJ0fTYkOE/Ml/2PHnmkOUAdMspdQQTOZqQLGWQPU+JCQwMLMQoQvZ1mWoQXDxSFUIvUFdjYDjfQTsHIAdvpCrEMctXrSPLQnRAURQMqAMiwxBR0VxbQRXHjIJRMApGwSgYBaNgQAAAvmoUjfTtansAAAAASUVORK5CYII=",
         "name": "Reversed Fortune (RED)",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -489,7 +489,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHBJREFUWIXt1DEKgDAMheHoETMEckLBwSvGScFizPSM4Pu3Lu1HChFh7O9NoHvDTc/Dsm7pO68AniAwgIjIHWKEIAGXu900MgQKkOamMYJaEK2Aoxmt+DwAXfkN7RMggAAowE3Ljdc+AXTcAwQwVrYDRu0fG/jAONQAAAAASUVORK5CYII=",
         "name": "Scythe",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -499,7 +499,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAANZJREFUWIXtk00KwyAQhV9Kz9JCj+NC8CbZuHKTmwguPE4gXsYuGmViEzSpu84Hwow+/94owDAMwzAM04DRYzR6jL10lFuLaF4C5iVgXXy3KSnivIQzewMAhppASbG5kXUeSgoAwOv5yP3aTLl/1VXXBhodOEKb6ZfpAIB7TbDeJLlAYwCf8qQx6zzVdSXVmsZl24yVpTui6gAAKClgnc9xonwDpbaFVqu+SpAOQjbrbntGSUEtpZbv5ae49AtoGfby7gdo/dNXOL0wfd3W+aHMex2M+R/eao1f/8Fxn2cAAAAASUVORK5CYII=",
         "name": "Phantom's Ward",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -511,7 +511,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -521,7 +521,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHdJREFUWIVjYBgFo2AUkAkeGzL8f2zI8J9Sc5io4Ri6O4AaPqfIAdQELORqLFMNgjDOr6OWW0gG/6GYIsBIjqbIsCC4xVrqagy1zR1kmUOWA5Atp4YjyE4Dy1dRJ+4HPBeQ7YDIsCCs7FEwCkbBKBgFo2AUDDkAALXmFrcZdBxDAAAAAElFTkSuQmCC",
         "name": "\nChampion's Crest (RED)",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -531,7 +531,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAFVJREFUWIVjYBgFIx0w0tqCyLCg/8j85avWodjJRE/LsQGaOmDAwZAIgVEHjDpg1AGjDhh1wIA7gNbgPxTjBLRuDzBEhgXhVTMaBcM+BEbBKBgFBAEA+WgOIoArKbgAAAAASUVORK5CYII=",
         "name": "Golf Club",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -541,7 +541,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAANFJREFUWIXtlEEKwyAQRb+lZ2mhx3EheJNsXLnJTQIuPI6gl7EbFZu26Zi2dNF5IBgc/vx8BwGGYRiGYZgfIyhF1kwZAEJMWJx/WKOVxOV8AgAYO5N0SQa0krnuF+dboxBTa1ia7jJxpDrdIsT0cP9JclnQSuaSSltdSq2OCvWuqqjojPRx350BwOL8S/3DiNsqrpXE4jxCTDB2hjXTqEyDlECNuPzRs4jJk98znEAxVBsKAG8lsMvAmm9N/g0bkz48+T3D97Z6mMT6e68R5n+5AiqdU6VKUWF2AAAAAElFTkSuQmCC",
         "name": "Reinforced Valor",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -553,7 +553,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -563,7 +563,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGdJREFUWIXtzjEKgDAQRNGvh1HwOBaB3CRNqjTeRLDwimujKeyy2ojzIIQlZGZBRET+rvN8imG2aRzqnMviynGJYbbrAAZYycm8ec2bn8Ws2/44C6D3lLe+vbbArZCSE0C9RURE5JMO2VYabS4HYyoAAAAASUVORK5CYII=",
         "name": "Neck Guard",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -573,7 +573,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGVJREFUWIVjYBgFo2AUjIJRMApGOmCkhaGPDRn+o4vJnsduF00cgO4IXJYzMDAwsNDKAWWqQQjO+XW0soYgwIgKdMBED1eMOmDAHBAZFsQQGRaENx0MeAjQGgz+XDAKRsEoGHAAAJ9mDXy6ToqmAAAAAElFTkSuQmCC",
         "name": "Plunger",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -583,7 +583,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAANFJREFUWIXtk0EKgzAQRX9Kz9JCj+NC8CZussqmNxFceBxBLzNdtJFkTHQM2RTmrRQ+P38+M4CiKIqiKP+Asz0521MtXchdIpqX1X8SAJORUaATkzPb6NommmgYp5wOTHfqLQqA79S7h17PRySy7l3ijZtAY7q22U04Lyt45YFO9PgVoW/BACAeBtgqD3X1Avg9YI+kvOinD0MdIroCFib697uQ2AERxQ0EU17y4kiWMMkwTuaoYn6+1QLwi0hdiA9YLYDUrARxAzwEr1hauaJwPjoOUyF71sHsAAAAAElFTkSuQmCC",
         "name": "Fortress of the Fallen",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -595,7 +595,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -605,7 +605,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHJJREFUWIXt0bEJgEAMheFfcRYFx7niwE1srK5xE8HCFWPjgVqZsxDhfW2Sl0BARET+aojBhhjsbU7l7LdjOQB91wIwpbk0zzVwWZ69PaLxLD/CDWBZt3tPrpnniKcHPA10v6D2DmTnV6RpLI0RERGR7+3qdBSG8+MuZgAAAABJRU5ErkJggg==",
         "name": "Descending Bull",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -615,7 +615,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAEdJREFUWIXt0TEKACAIhWHpiA6CN2lp6uC2NFajBP4fODm8h4oAAIAK3DTm6HHatewyFPiuQIbYk89Nw02f4WVecFXiAgCeFtTIC4GsOKx0AAAAAElFTkSuQmCC",
         "name": "Razor",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -625,7 +625,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAMhJREFUWIXtkkEKwyAQRb+lZ2mhx3EheBM3rtzkJgEXHqfQXsYumhErxk6abArzIAsng/85CgiCIAiCIPwDwbscvMsAht/SswnFCb8/nmU9x0T1UvNhgjUaAHC7XuDD9HVf4jT6aY3+CK/qqOvBuyLW6x/BNaXRKmt0d8xzTKru4woMJ0DQeJegctq6VvdZo/OaaMuZ5/nevA5uJXqyhwqsBTVS7NETrCvohc8xKQrceupdAm3YnnC2wC+jPVSgJ9G+cu6rF4SWF3jMV4qItbXIAAAAAElFTkSuQmCC",
         "name": "Guard",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -637,7 +637,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -647,7 +647,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGlJREFUWIVjYBgFo2AUjIJRMMCAkRxNkWFB/7XU1eD82uYOsswhywGRYUH/0cW01NXIdgRJmrBZTqkjyA6B5avWUWwWAwMDAxM5mqgJKIoCWCg011YwMDBQlhhHwSgYBaNgFIyCUTBgAACNvBcIztCzVQAAAABJRU5ErkJggg==",
         "name": "Fortress Headpiece",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -657,7 +657,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAIlJREFUWIXt0jEKwzAQRNHvkBOqEOgmalSp8U0MKXIcg32ZdRVQiBG4WIvAvEqF0AzaBRERGWxyfNvanFqyAZQ6f2U+PJJryVZL/pwBbN121m3/ufv0KNAGnYW2XH7gitt2IMVgAMvr7ZnZLXFq+AhU4I4C3T1wLZBiIMXQvTN8BN6MkSMQkb9wADNvIKEB5NN/AAAAAElFTkSuQmCC",
         "name": "War Mace",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -667,7 +667,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAMZJREFUWIXtkkEKgzAQRZ+lZ1HwOFkEcpNuXLnpTQpd9DiF9jLpog5MQ6NjFbqZB0Eko/9lJuA4juM4jvNnGkvROJwywP3x5HK9fa1JMdB3LQDDeDb9d1FABwMf4TpwCiXFALBK5Di3KcFLNVrE+p1gbVWW+hRD1ht918poGl1nFThYiqS18B6DjELCyw6kGHIpukmghrRanikGUgzVi7oFfaJcWT+xegSKhhWz3iRQUgpVBPcTmG747uFmgVJiCs5z745j5QVB4VOvcs+iAAAAAABJRU5ErkJggg==",
         "name": "Breastplate of Resolve",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -679,7 +679,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -689,7 +689,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHRJREFUWIVjYBgFo2AUjIIBBoxk6vtPJXMYmMiwEN1yYuQpdgCxBpNkOQMDaUFHrOEkRQfJcRcZFoThEC11NYba5g6y0gELOZoYGBgYlq9aR65WFEBKGqAJINsBkWFBcHZzbQVVHDMKRsEoGAWjYBSMggEBAAftEIIPs70BAAAAAElFTkSuQmCC",
         "name": "Cowboy's Dream (Red)",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -699,7 +699,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAI9JREFUWIVjYBgFo4CGoLm24j8hNUy0srS5tuL/tZu34PzIsKD/2BxEdQfAQG1zB6OWuhpDbXMHIz51LLSwPDIs6L+WuhoDLASu3bxFXwcsX7WOkYEBEg2wEIgMC8KaHmgWBYMC4PI1MhjwEBh1wKgDRh0w6gBag4EtCSPDgggWx6NRMOAhMOAOGAWjYBQAAJmbLY1EDRxnAAAAAElFTkSuQmCC",
         "name": "Halberd",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -709,7 +709,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAMNJREFUWIXtkzEKwzAMRZ0epoUex4PBN+niyUtuYsjg4xTay7iTiv2xw9eURQ8CcfKRvn4U5wzDMAzDMC5mY0Q5vZrcp7yvNK7TUHUpAzH4hs/KUYemKe8uBo8aygTrdDCBzZ6POyZDJ3BjhX1hSUB4f76qpmoDODEihkQXg2+zTzfj1DUWKUfdVoVn75g9OE1gVkCmLUf9X72eXT4VEGlz41LiefrnrNAuIYUmBcpAXzAGPywlnrXQCeBUGLMmdsPo+QEU5FOYsu1vDwAAAABJRU5ErkJggg==",
         "name": "Embellished Protector",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -721,7 +721,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -731,7 +731,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGFJREFUWIVjYBgFo2AUjIKRDhjJ1PefCmaQrfk/FjGyHUEtB5BtJguptkeGBWGIaamrMdQ2d5AVCiQ7AAaWr1pHrlYUwEQVUwbCAchR0VxbQRXHjIJRMApGwSgYBaNgQAAAtAkKidtdgtMAAAAASUVORK5CYII=",
         "name": "Obsidian Cap",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -741,7 +741,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAEhJREFUWIXt1bENACAIBVF0RAoS9h9EWwuV6huLe7WRi4WYAQC0RnWgv6gggAACCLhp4vvXn3A7S/oCGW4ZfhwuD/hBuYwAYAKo9QUZJPfxjQAAAABJRU5ErkJggg==",
         "name": "Truncheon",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -751,7 +751,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAMBJREFUWIXtkjEOwyAMRT9VzwISx2FA4iZdMmXpTSIxcEW64MqxGsVErbr4bYk+9ufzAcMwDMMwjD/jNKJ1eXQAWNbnmQ5Dp5qrMlBy6vx7q43+IwZPC1Fyemti8GoTGlGn4Xw5XyZNDN3XDAAApeBkIsRWm+M65VzctEK26FRTcupHRi8ZKDntYucmYvC7p+E6Daqo6DZbbR+fYKZ0kvvsAXZ7WqiK+ojpDsiYr8Q+bWA0/CeoE5AmZBe0rTcMyQvG9EaPU/DSeAAAAABJRU5ErkJggg==",
         "name": "Bulwark of the Brave",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -763,7 +763,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -773,7 +773,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAKRJREFUWIVjYBgFo2AUjHTASKqGx4YM/7GJy54n3SySHYDLckocQbQGZMvLVINQ5Lpur6PIEUQ7AC0E/kMxLnmiAAspimG+iwwL+s/AwMCgpa7GwMDA8L+2uYNR9jwDIzkOIDm40CyHg9rmDtoEPTYHQB3xn4GB4X9zbQVKVJAKmCh1UG1zB0X6yXZAZBgiJzTXVlDkiFEwCkbBKBgFo2AUDCgAAGeBMLhPJpKEAAAAAElFTkSuQmCC",
         "name": "Crown of the Might",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -783,7 +783,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHxJREFUWIXt1j0KwzAMhuG3PUwLOY4GgW6SxZOX3iTQIVdUl5Yu/aMgHML3gDeDXrAxBhEp1Nucvc35ac+hani4JcB0PgHQ+uXlrGNVwK8UoAAFKKBUuOXjRRwl7+ut4Uew74BwI9zGBWzB10tY9iGB56cEYLmupbNE5G833QgXCd8NP8oAAAAASUVORK5CYII=",
         "name": "Baseball Bat",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -793,7 +793,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAANZJREFUWIXtk00KwyAQhV9Kz9JCj+NC8CbZuHKTmwguPE4gXsYuGmViEzSpu84Hwow+/94owDAMwzAM04DRYzR6jL10lFuLaF4C5iVgXXy3KSnivIQzewMAhppASbG5kXUeSgoAwOv5yP3aTLl/1VXXBhodOEKb6ZfpAIB7TbDeJLlAYwCf8qQx6zzVdSXVmsZl24yVpTui6gAAKClgnc9xonwDpbaFVqu+SpAOQjbrbntGSUEtpZbv5ae49AtoGfby7gdo/dNXOL0wfd3W+aHMex2M+R/eao1f/8Fxn2cAAAAASUVORK5CYII=",
         "name": "Phantom's Ward",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -805,7 +805,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -815,7 +815,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHRJREFUWIVjYBgFo2AUjIJRMFTAY0OG/7Qwl5EcB5SpBjEwMDAwaKmrMTAwMDDUNncQbQ7ZDoA5AmY5MtBSVyPbESykKJY9z8AYqQoJieWr1pFjHwZgooopA+GAyDBEVDTXVlDFMaNgFIyCUTAKRsEoGBAAAILeEwDuBN6cAAAAAElFTkSuQmCC",
         "name": "Fallen Horn (RED)",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -825,7 +825,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHxJREFUWIXt1j0KwzAMhuG3PUwLOY4GgW6SxZOX3iTQIVdUl5Yu/aMgHML3gDeDXrAxBhEp1Nucvc35ac+hani4JcB0PgHQ+uXlrGNVwK8UoAAFKKBUuOXjRRwl7+ut4Uew74BwI9zGBWzB10tY9iGB56cEYLmupbNE5G833QgXCd8NP8oAAAAASUVORK5CYII=",
         "name": "Baseball Bat",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -835,7 +835,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAALtJREFUWIXtkzEOwyAMRZ2qZ2mlHocBiZtkYWLpTZAYOA4SXIYuAQEtBCJ389ssfvDPtwEgCIIgCIKYQMk9KrlHLF3JNjoUnMXX85Fr5wNoY3taKLVSvYd3J+5nAufDVEPnQ1c74rb8BTJTMQFAmusmOKtmnFI4Is86VAOpqTY2NxGcVRpt7Je5Qz/kdAd69JZxlcsGUgKlkZk/RjNQNFt69y3Lr0BwVs2/rf9i4Eq0qAZ+mWg3vq0JYpYPd/BFDY+F0bsAAAAASUVORK5CYII=",
         "name": "Defender's Emblem",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -847,7 +847,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -857,7 +857,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAG5JREFUWIXt0jEKgCAYxfF/0VkKOo6D4E1anFy6SdDQFW0SKlr8ECJ4v0mQ93iCICIiP5PLIXiXg3f57a5GZxkQvANgnkYAYlqtffWBx6uvI6q7AAZLCGDbD2v0pm/S8sWA8g8AUlyajBEREZFPnBoeEoFbfC3iAAAAAElFTkSuQmCC",
         "name": "Rising Minotaur",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -867,7 +867,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAI9JREFUWIVjYBgFo4CGoLm24j8hNUy0srS5tuL/tZu34PzIsKD/2BxEdQfAQG1zB6OWuhpDbXMHIz51LLSwPDIs6L+WuhoDLASu3bxFXwcsX7WOkYEBEg2wEIgMC8KaHmgWBYMC4PI1MhjwEBh1wKgDRh0w6gBag4EtCSPDgggWx6NRMOAhMOAOGAWjYBQAAJmbLY1EDRxnAAAAAElFTkSuQmCC",
         "name": "Halberd",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -877,7 +877,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAALVJREFUWIXtkzEKwzAMRX9KztJCj+PB4Jtk8eSlNwlkyHEK6WXUJTaqaxIpNENBDwyWLaSPvg0YhmEYhmH8CykOFLwjAM0VvKMUB9LW7SRJa2OM05xjAMD9di05MT3K+TjNoroAcJEm5uac5/LazfkVedR8v2WJGK0FXd4DXxZ83OX8vdq9WGqD2oIjqAXUD5H7rnl8hwU0mqm/Hkf8C85CJICPNnhXxt+KTxFQi1gb01ZsGFLeHVdQBwI5Wl8AAAAASUVORK5CYII=",
         "name": "Vanguard's Spirit",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -889,7 +889,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -899,7 +899,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAIpJREFUWIVjYBgFo2AUjHTASInmx4YM/2Fs2fPkmcVEDcspAWS5Gt1ycn1PlgNglsueJ98Msh0As7xMNYiBgYGBQUtdjYGBgYGhtrmD9iGAbjky0FJXI9sRLMQqhMVzpCrEIctXrSPHPgxAdi6gFiDbAZFhiKhorq2gimNGwSgYBaNgFIyCUTAgAADuCBwF7hRXzgAAAABJRU5ErkJggg==",
         "name": "Gladiator's Crest (RED)",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -909,7 +909,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHBJREFUWIVjYBgFo4DGoLm24j8+eSZ6OWTQOoCRVgZjC/ra5g4M+2gSAjDLYRbCaGyOolkUoPsWm+/pAiLDgkZzwagDRh0w6oDB7QBaF4/IpSBWu2gaApFhQQyRYUE4Lae5AwYLGK2MRh0wCkYBXgAAu74XtMysOmEAAAAASUVORK5CYII=",
         "name": "Spetum",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -919,7 +919,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAALdJREFUWIXtk0EKhCAUhn+HOUtBx3EheJPZuHLTTYIWHSeoy9QmQxsnXzpBi/dB+Oj96u8vAgzDMAzDME/Hms/ixq2Ofl5/n0PhnRKM0wyt5DJOc/BfK4mmrgAAxrZw/Zj2jFdK0PVDtM7VHRFEnYtUaCW/4m3qCsa2wtfdZsDVWsm9uZ3YN0BeP3kFd5OdQMFaAaQEtJJB5N6GWZteNnBm5oe5/xro+qH4pEUGYiaOzzH2PBmGwgq5gUoAPgVGOwAAAABJRU5ErkJggg==",
         "name": "The Minimalist",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -931,7 +931,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -941,7 +941,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGFJREFUWIVjYBgFo2AUjIKRDhjJ1PefCmaQrfk/FjGyHUEtB5BtJguptkeGBWGIaamrMdQ2d5AVCiQ7AAaWr1pHrlYUwEQVUwbCAchR0VxbQRXHjIJRMApGwSgYBaNgQAAAtAkKidtdgtMAAAAASUVORK5CYII=",
         "name": "Obsidian Cap",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -951,7 +951,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAFNJREFUWIXt1EsKACAIRdFsiQ6E9r+QmjQMcvL6wD3TBB9olgIAAA7o0+qtqhvvauxUADOT9kqFWJGOIIMAUi28t/C3d0Bu9wuu3wH5CK4dIOAbA2EnH//wVriaAAAAAElFTkSuQmCC",
         "name": "Bone Club",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -961,7 +961,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAANZJREFUWIXtkz0OgzAMhV+qngWkHocBiZt0YWLhJpEy5DhIcJl0qExdlx8naqf6m2LZwi95D8AwDMMwDENB1zapa5sEIB2M0UwWTrP8VlcAgGle4EPcmwPN9cN4+l2VgK0b+RDflhH9MKJrGwDAra7UIq5apZJpXtazFMN734L7n/DyW2bjLCdlsBDKQCYAaejva08IPCXbAgoh+Q08/Wdid4O6hTatdBtHZxLAlqmTnw23AJ/PW/T/E5cCMYf1TwT4EJ2oZb9YQLZv/Ll9iE7WxUqMv+UBL4VniF2TUXIAAAAASUVORK5CYII=",
         "name": "Eldritch Veil",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -973,7 +973,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -983,7 +983,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHRJREFUWIVjYBgFo2AUjIIBBoxk6vtPJXMYmMiwEN1yYuQpdgCxBpNkOQMDaUFHrOEkRQfJcRcZFoThEC11NYba5g6y0gELOZoYGBgYlq9aR65WFEBKGqAJINsBkWFBcHZzbQVVHDMKRsEoGAWjYBSMggEBAAftEIIPs70BAAAAAElFTkSuQmCC",
         "name": "Cowboy's Dream (Red)",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -993,7 +993,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAIlJREFUWIXt0jEKwzAQRNHvkBOqEOgmalSp8U0MKXIcg32ZdRVQiBG4WIvAvEqF0AzaBRERGWxyfNvanFqyAZQ6f2U+PJJryVZL/pwBbN121m3/ufv0KNAGnYW2XH7gitt2IMVgAMvr7ZnZLXFq+AhU4I4C3T1wLZBiIMXQvTN8BN6MkSMQkb9wADNvIKEB5NN/AAAAAElFTkSuQmCC",
         "name": "War Mace",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -1003,7 +1003,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAALtJREFUWIXtkzEOwyAMRZ2qZ2mlHocBiZtkYWLpTZAYOA4SXIYuAQEtBCJ389ssfvDPtwEgCIIgCIKYQMk9KrlHLF3JNjoUnMXX85Fr5wNoY3taKLVSvYd3J+5nAufDVEPnQ1c74rb8BTJTMQFAmusmOKtmnFI4Is86VAOpqTY2NxGcVRpt7Je5Qz/kdAd69JZxlcsGUgKlkZk/RjNQNFt69y3Lr0BwVs2/rf9i4Eq0qAZ+mWg3vq0JYpYPd/BFDY+F0bsAAAAASUVORK5CYII=",
         "name": "Defender's Emblem",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -1015,7 +1015,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -1025,7 +1025,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAG1JREFUWIXt0jEKgDAMBdCveBYFj5OhkBMWOvQ4gl6mbmIFhyQuwn9rm+QPHyAiopgWXTB6D2qSpknCYQbLZ01yHVmXuXvb9gO5VNM+c4C3EN7jADB5hgAgl+od7Vg78Dl3gHsBH2UkIiKifzkBVM8YDHBG638AAAAASUVORK5CYII=",
         "name": "Crowned Guardian (RED)",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -1035,7 +1035,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHpJREFUWIXt00EKgCAQheHfDqPQcVwI3qSNKzfdujYZLSo3ihHvAxeCMMObEUREfmgrJ6dlu97vHpsOxQGIwQMwO0vK62PNqXEDn3BGHoOvjqBHAgYwMXhmZ8soDO3HXXck8Gr4DqiB3rQDYxuIwVe/4vAEetMSikjVDlkXHf/IpqTzAAAAAElFTkSuQmCC",
         "name": "Sledgehammer",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -1045,7 +1045,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAMxJREFUWIXtk0EKgzAQRV9Kz6LQ47gQvImbrNz0JoILjxNILpMuNBLSUsa0XRTmgYsk35nvnwiKoiiKoij/wmTHOPRdBF4+Q9/FyY7xbF0jEe2NmZc13+PWNgDY6X7s7TpRXYCLVFgYAsD5gPOByY41ZQBhAmwxJ/0Rc/bF5Zk4gbMjMGzzPs5ubYPzgXlZTdIlJKOoGkG6C/Oy4nyoKXFw/ejtZ0Pi6BNVCWTNTP5n1FBt4FuIDOTRDn1HfgnL9U8MlCb2xvHdWlGkPACRwlAR3sQ8iAAAAABJRU5ErkJggg==",
         "name": "Skull Guardian",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -1057,7 +1057,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -1067,7 +1067,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHBJREFUWIXt0jEKgDAQRNGvh1HwOBaCN7HZahtvIlh4RW1Nl40JNvPayPAjARERyXO3Gu6CAR2A25YEme+5O8UB7wjWZU4OpnHAfI/uAdAHvi2+ZdXRdZlvgOO8Pm9B7A80URzwfgduW5UYERER+cUDPqsQg9OwZEoAAAAASUVORK5CYII=",
         "name": "Shattered Horn",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -1077,7 +1077,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGVJREFUWIXtlEEKwCAMBNc+0YPg/x8SLx6K2uLF3UJ3QGJOOyQoYIwx5idEP7Lw1R0AcBFFljAFYqgcgVryFHrvWRNITz1zBWmodIEpXCEg4fUDOjqBWnL0V6AR+Aq6FewgFzDGNDcbDhTm6spfAAAAAElFTkSuQmCC",
         "name": "Flail",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -1087,7 +1087,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAM5JREFUWIXtkj0KwzAMhZ9Lz9JCj+PB4Jtk8eQlNwlkyHEMyWXUJQqOU2wZAl30Tf55SM/yAxRFURRFUf6MkYhiGIjXIY41HUIcRTWZZ0vgnaW0buXZsf68X4extG6IYaAeE4/GPU3zIq0FANjNUkvHSJ1yQVMpbgqdiNYELnhnEcNwOiv33lnyzoqmIDLgnT39OweRG+fBzHUSmiGsmUrrBu8sspyY3sx0G+AG07zwP4sD94vuDADXMfeOvdtA9tpbm4sNlCb2xlTbK4qUL4RCR7uttje2AAAAAElFTkSuQmCC",
         "name": "Guardian's Embrace",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -1099,7 +1099,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -1109,7 +1109,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGFJREFUWIVjYBgFo2AUjIKRDhjJ1PefCmaQrfk/FjGyHUEtB5BtJguptkeGBWGIaamrMdQ2d5AVCiQ7AAaWr1pHrlYUwEQVUwbCAchR0VxbQRXHjIJRMApGwSgYBaNgQAAAtAkKidtdgtMAAAAASUVORK5CYII=",
         "name": "Obsidian Cap",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -1119,7 +1119,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGxJREFUWIVjYBgFo2AUjIJRMNxBc23F/+baiv8DZjk2NjJgop9zsINRBwxvB9Q2dwysA4gBow6gqQMiw4IYIsOC8JaCAx4CLLQ0fPmqdQwMDAyM+NQMeAjQBeCrDQc8BAbcAXQDA9YoGQWEAABHoRVyuqXLjQAAAABJRU5ErkJggg==",
         "name": "Whip",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -1129,7 +1129,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAMZJREFUWIXtk0EOhCAMRT+TOSELEm7ChhWHMXHhcUz0Mp1NNRVxwBnc9SXEUBr/91MBRVEURVGUBlIMlGKgXn2SV0vTvKyYlxXeWQJQXN5Z2vq41s0ADeNUPEgxIMVwqHGvaTVQhSM9fOn29M6SiF2uZt41cY50w7D4XhDn5q44ULmCTLyKMHY7iSsoG7zDIJbO8lo3E/xilGbgH7GWv+ByoodxMnev6SdkAjjH+3gCGMZpT8E7K4fttH/EQG6ChenbXlFa+QBUSIZdPUhA8gAAAABJRU5ErkJggg==",
         "name": "Shieldbearer's Legacy",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -1141,7 +1141,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -1151,7 +1151,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAG5JREFUWIVjYBgFo2AUjIKhDJprK/5TagYTuRojw4IotpwiB1ALkOUAWNBfu3mL4mhgJFUDtqDXUldjqG3uINksBgYGBhZyNDEwMDAsX7WOXK0oYGimAQYGBobIsCCs7FEwCkbBKBgFo2AUDDkAAHOlE//cYf38AAAAAElFTkSuQmCC",
         "name": "Pointed Sentinel",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -1161,7 +1161,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHpJREFUWIXt00EKgCAQheHfDqPQcVwI3qSNKzfdujYZLSo3ihHvAxeCMMObEUREfmgrJ6dlu97vHpsOxQGIwQMwO0vK62PNqXEDn3BGHoOvjqBHAgYwMXhmZ8soDO3HXXck8Gr4DqiB3rQDYxuIwVe/4vAEetMSikjVDlkXHf/IpqTzAAAAAElFTkSuQmCC",
         "name": "Sledgehammer",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -1171,7 +1171,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAMdJREFUWIXtlEEKxCAMReMwJ3QheBM3rtz0JoILj1NoL+NsqqSOYpTCLCYPCtHGaH6iAAzDMAzDMD9GjBycNSnb+3GCD7HnV2zrtmHczHvksB/n15xWEgAAfIhlY+u2Mj/Da3oFwlnTPOAMFKkSskUe42yvsgjkSy4BlYSCp853+6eVTHWQFqQS4Gy1kuCsKbXH9koPUKUq0ubM8m1ADbkkO1mBRnYCHqj18BrW1O9A712gQlJgVV4K04Fxd/sQRT1+6mDM//ABl9lLemnqc/sAAAAASUVORK5CYII=",
         "name": "Vigilant Protector",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -1183,7 +1183,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -1193,7 +1193,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHBJREFUWIXt0jEKgDAQRNGvh1HwOBaCN7HZahtvIlh4RW1Nl40JNvPayPAjARERyXO3Gu6CAR2A25YEme+5O8UB7wjWZU4OpnHAfI/uAdAHvi2+ZdXRdZlvgOO8Pm9B7A80URzwfgduW5UYERER+cUDPqsQg9OwZEoAAAAASUVORK5CYII=",
         "name": "Shattered Horn",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -1203,7 +1203,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAEhJREFUWIXt1bENACAIBVF0RAoS9h9EWwuV6huLe7WRi4WYAQC0RnWgv6gggAACCLhp4vvXn3A7S/oCGW4ZfhwuD/hBuYwAYAKo9QUZJPfxjQAAAABJRU5ErkJggg==",
         "name": "Truncheon",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -1213,7 +1213,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAM5JREFUWIXtkj0KwzAMhZ9Lz9JCj+PB4Jtk8eQlNwlkyHEMyWXUJQqOU2wZAl30Tf55SM/yAxRFURRFUf6MkYhiGIjXIY41HUIcRTWZZ0vgnaW0buXZsf68X4extG6IYaAeE4/GPU3zIq0FANjNUkvHSJ1yQVMpbgqdiNYELnhnEcNwOiv33lnyzoqmIDLgnT39OweRG+fBzHUSmiGsmUrrBu8sspyY3sx0G+AG07zwP4sD94vuDADXMfeOvdtA9tpbm4sNlCb2xlTbK4qUL4RCR7uttje2AAAAAElFTkSuQmCC",
         "name": "Guardian's Embrace",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -1225,7 +1225,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -1235,7 +1235,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAIBJREFUWIVjYBgFo2AUjAIywWNDhv+PDRn+U2oOE7mWU2oxDLCQY7nseQbGyLAgiCPOr6OWW0gG/6GYIsBIjia47xkYGLTU1RhqmzvIMocsByBbTg1HkJwGYGD5KurEPVm5gJqAbAdEhgXB2c21FVRxzCgYBaNgFIyCUTAKBgQAADuZGz18tJlHAAAAAElFTkSuQmCC",
         "name": "\nFalling Crest (RED)",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -1245,7 +1245,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAI9JREFUWIVjYBgFo4CGoLm24j8hNUy0srS5tuL/tZu34PzIsKD/2BxEdQfAQG1zB6OWuhpDbXMHIz51LLSwPDIs6L+WuhoDLASu3bxFXwcsX7WOkYEBEg2wEIgMC8KaHmgWBYMC4PI1MhjwEBh1wKgDRh0w6gBag4EtCSPDgggWx6NRMOAhMOAOGAWjYBQAAJmbLY1EDRxnAAAAAElFTkSuQmCC",
         "name": "Halberd",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -1255,7 +1255,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAANZJREFUWIXtkz0OgzAMhV+qngWkHocBiZt0YWLhJpEy5DhIcJl0qExdlx8naqf6m2LZwi95D8AwDMMwDENB1zapa5sEIB2M0UwWTrP8VlcAgGle4EPcmwPN9cN4+l2VgK0b+RDflhH9MKJrGwDAra7UIq5apZJpXtazFMN734L7n/DyW2bjLCdlsBDKQCYAaejva08IPCXbAgoh+Q08/Wdid4O6hTatdBtHZxLAlqmTnw23AJ/PW/T/E5cCMYf1TwT4EJ2oZb9YQLZv/Ll9iE7WxUqMv+UBL4VniF2TUXIAAAAASUVORK5CYII=",
         "name": "Eldritch Veil",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -1267,7 +1267,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -1277,7 +1277,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAJhJREFUWIXtkzEKwzAMRV96j6wpdOtVPBh8kyyevPQmgQ69Sg+Rg7hDSaDd+hVIXPTAeJL09EHwJ1S18LSlRZMCWyDHDwdIYHcBK6b44QAJyAIphppiMAt0StF8/Yy+f2p9JIHv4VYJqSjFUAEu5wGAXG5yAtLw5fG+glryKF/Dz+bL9tP9Ye4FjZ8hJY8A6+84juM4TpO8AGBvInmYDyBzAAAAAElFTkSuQmCC",
         "name": "The Unseen Plunger (RED)",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -1287,7 +1287,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAFVJREFUWIVjYBgFIx0w0tqCyLCg/8j85avWodjJRE/LsQGaOmDAwZAIgVEHjDpg1AGjDhh1wIA7gNbgPxTjBLRuDzBEhgXhVTMaBcM+BEbBKBgFBAEA+WgOIoArKbgAAAAASUVORK5CYII=",
         "name": "Golf Club",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -1297,7 +1297,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAANNJREFUWIXtlDsOwyAQRIcoZ0mkHIcCiZukceXGN7FEwXGQ7MuQxmutEbGXxFGafRWfMTs7yACKoiiKoih/xuxt9t0z0zhNMwBgDLGq9c7icb+t864fds8+NOCdzeXaGCK8s+ucFySDfE9iYk+wGqCivHvecdcP73RfGaiZMTTmSSwFTaETIRJ6ZzMV4VdDCaRpxhiiAZALY4fnX6ROebwUcZpmKr7RtHBt/mKh9jdIOi4RJ1DBoOGuTzPgnd1EXc5/YuCTaE81UDNRPlS1h0tRJLwAIQtQKpvlQ7EAAAAASUVORK5CYII=",
         "name": "Warden's Grasp",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -1309,7 +1309,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -1319,7 +1319,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHlJREFUWIXt07EJgDAUhOFfcRYDdq5iIbiJTao0biJYuJSDxEZF25eABO6DQJp771IERKRkR09MnVH/uTypQC6mArlenypeJ0llCU3jEAE61wLgw2KaYypwL3/rXGsu0VhCAOu2W6MfZf4CgGkcnnvwc5YyIiIi8osTwSUUwPoVkCQAAAAASUVORK5CYII=",
         "name": "Pinnacle Protector (RED)",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -1329,7 +1329,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAGRJREFUWIXt1kEKwCAMBdGf0hO6ELz/QdJVoQglJY2UwryloBl0o4S/84t5ffTmd/tO+5vBT9YiW9XwLKs6aI4yM5PklTMywptKPUElAggggAACCFgaMHpT9Cv6/AZW4z8AIHQAw4EoDdYtaJwAAAAASUVORK5CYII=",
         "name": "White Flag",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -1339,7 +1339,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAMNJREFUWIXtkzEKwzAMRZ0epoUex4PBN+niyUtuYsjg4xTay7iTiv2xw9eURQ8CcfKRvn4U5wzDMAzDMC5mY0Q5vZrcp7yvNK7TUHUpAzH4hs/KUYemKe8uBo8aygTrdDCBzZ6POyZDJ3BjhX1hSUB4f76qpmoDODEihkQXg2+zTzfj1DUWKUfdVoVn75g9OE1gVkCmLUf9X72eXT4VEGlz41LiefrnrNAuIYUmBcpAXzAGPywlnrXQCeBUGLMmdsPo+QEU5FOYsu1vDwAAAABJRU5ErkJggg==",
         "name": "Embellished Protector",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     },
@@ -1351,7 +1351,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAE9JREFUWIXt0dEJACAIhOErGqBd3H8Ed3GDmiAyCHz5fda7D2zhvlQ4vbIcAAAAAAAAAAAAAAAAAABI0sguTrN0aLj/AbyUnu5umPIXlAM2QpgKQ4GvrO8AAAAASUVORK5CYII=",
         "name": "Plain RED",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "BACKGROUND"
       },
       "HEAD": {
@@ -1361,7 +1361,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHNJREFUWIVjYBgFo2AUjHTASKa+/1Qyh4GJXI3UAgPuABZyND02ROXLniffAaTGHXrcU2oe6Roiw4IwHKGlrsZQ29xBVkIkKwoYGBgYlq9aR65WFDDgiZBsB0SGBcHZzbUVVHHMKBgFo2AUjIJRMAoGBAAAkZcMjAbQKHIAAAAASUVORK5CYII=",
         "name": "Degen Master (Red)",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "HEAD"
       },
       "WEAPON": {
@@ -1371,7 +1371,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAF9JREFUWIVjYBgFo2AUjIJRMApGOmCkgx3/I8OC4BwtdTWG2uYOuL1MdHAAXjDqALo4YPmqdTjTGt1CAJcj6BoF+EKCJiAyLOh/ZFjQf3xqBjwR0gOMhsAoGAWjAC8AALdODxHzTh4MAAAAAElFTkSuQmCC",
         "name": "Butcher's Cleave",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "WEAPON"
       },
       "ARMOR": {
@@ -1381,7 +1381,7 @@
         "date": "2024-10-19",
         "img_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAMdJREFUWIXtkzEKwzAMRb9Lr+HRLXTLVTQEsvUUpkumLMEXCWTw1Ht4K7QZc5B0aHGGBiw36VDQA4ORZPH1kQFBEARBEIR/YiwwAcvnnctGcQub+jIBwPnaxpgOwFi87tYQTscD6qZl92QLqEr6mM4NPgqwhmI8V8SOW8jldn9EtzYRsDQ9RwR3J7Ic6Hq/Kr9awC/YVEBVErreZ/2CfarADbOtrgAso2nXe+W22gEdoKwhWEPQgdNyfsepSzoAINr6zY8QhBRPzXM+cLq4678AAAAASUVORK5CYII=",
         "name": "Priests's Mantle (red)",
-        "rarity": 0,
+        "rarity": 2000,
         "type2": "ARMOR"
       }
     }

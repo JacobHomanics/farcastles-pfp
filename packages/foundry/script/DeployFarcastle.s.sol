@@ -2,6 +2,7 @@
 pragma solidity ^0.8.19;
 
 import "../contracts/Farcastles.sol";
+import "../contracts/Farcastles2.sol";
 import "./DeployHelpers.s.sol";
 
 contract DeployFarcastle is ScaffoldETHDeploy {
@@ -106,7 +107,7 @@ contract DeployFarcastle is ScaffoldETHDeploy {
             bytes(substring(imgData, 22, bytes(imgData).length - 1))
         );
 
-        console.log(substring(imgData, 22, bytes(imgData).length - 1));
+        // console.log(substring(imgData, 22, bytes(imgData).length - 1));
 
         farcastle.addTrait(layer, newPayload, rarity);
     }
@@ -122,13 +123,14 @@ contract DeployFarcastle is ScaffoldETHDeploy {
                 0,
                 0,
                 0,
-                100,
-                100,
+                1000,
+                1000,
                 msg.sender,
                 new address[](0)
             );
 
-        Farcastles farcastle = new Farcastles(params);
+        // Farcastles farcastle = new Farcastles(params);
+        Farcastles2 farcastle2 = new Farcastles2("Test", "TEST");
 
         Traits[][] memory allTraits = new Traits[][](3);
         for (uint256 i = 1; i <= 2; i++) {
@@ -136,60 +138,68 @@ contract DeployFarcastle is ScaffoldETHDeploy {
             allTraits[i] = traits;
         }
 
+        uint256 x = 0;
         for (uint256 i = 0; i < allTraits.length; i++) {
             for (uint8 j = 0; j < allTraits[i].length; j++) {
-                addTrait(
-                    farcastle,
-                    0,
-                    allTraits[i][j].BACKGROUND.name,
-                    allTraits[i][j].BACKGROUND.img_data,
-                    allTraits[i][j].BACKGROUND.rarity
-                );
+                // console.log(allTraits[i][j].BACKGROUND.name);
+                // console.log(allTraits[i][j].ARMOR.name);
+                // console.log(allTraits[i][j].HEAD.name);
+                // console.log(allTraits[i][j].WEAPON.name);
 
-                addTrait(
-                    farcastle,
-                    1,
-                    allTraits[i][j].ARMOR.name,
-                    allTraits[i][j].ARMOR.img_data,
-                    allTraits[i][j].ARMOR.rarity
-                );
+                console.log(x);
+                x++;
+                console.log(allTraits[i][j].BACKGROUND.name);
 
-                addTrait(
-                    farcastle,
-                    2,
-                    allTraits[i][j].HEAD.name,
-                    allTraits[i][j].HEAD.img_data,
-                    allTraits[i][j].HEAD.rarity
-                );
-
-                addTrait(
-                    farcastle,
-                    3,
-                    allTraits[i][j].WEAPON.name,
-                    allTraits[i][j].WEAPON.img_data,
+                farcastle2.addTrait(
+                    Farcastles2.Payload({
+                        name: allTraits[i][j].WEAPON.name,
+                        image: bytes(
+                            substring(
+                                allTraits[i][j].WEAPON.img_data,
+                                22,
+                                bytes(allTraits[i][j].WEAPON.img_data).length -
+                                    1
+                            )
+                        )
+                    }),
                     allTraits[i][j].WEAPON.rarity
                 );
 
-                // Farcastles.Payload memory newPayload = Farcastles.Payload(
-                //     allTraits[i][j].BACKGROUND.name,
-                //     bytes(allTraits[i][j].BACKGROUND.img_data)
-                // );
-
-                // farcastle.addTrait(
+                // addTrait(
+                //     farcastle,
                 //     0,
-                //     newPayload,
+                //     allTraits[i][j].BACKGROUND.name,
+                //     allTraits[i][j].BACKGROUND.img_data,
                 //     allTraits[i][j].BACKGROUND.rarity
                 // );
+
+                // addTrait(
+                //     farcastle,
+                //     1,
+                //     allTraits[i][j].ARMOR.name,
+                //     allTraits[i][j].ARMOR.img_data,
+                //     allTraits[i][j].ARMOR.rarity
+                // );
+
+                // addTrait(
+                //     farcastle,
+                //     2,
+                //     allTraits[i][j].HEAD.name,
+                //     allTraits[i][j].HEAD.img_data,
+                //     allTraits[i][j].HEAD.rarity
+                // );
+
+                // addTrait(
+                //     farcastle,
+                //     3,
+                //     allTraits[i][j].WEAPON.name,
+                //     allTraits[i][j].WEAPON.img_data,
+                //     allTraits[i][j].WEAPON.rarity
+                // );
             }
-            // uint256 batchAmount = 30;
-            // Farcastles.addTraits(i, )
-            // for (uint256 j = 0; j < batchAmount; j += batchAmount) {
-            //     Farcastles.Payload[] memory payloads = prepLayer(
-            //         allTraits[i],
-            //         layerName
-            //     );
-            // }
         }
+
+        farcastle2.mint(0x42bcD9e66817734100b86A2bab62d9eF3B63E92A, 30);
     }
 
     struct TraitJson {

@@ -72,7 +72,7 @@ contract ScaffoldERC721A is ERC721A, Ownable {
         }
     }
 
-    function mint(address recipient, uint256 amount) public payable {
+    function mint(address recipient, uint256 amount) public payable virtual {
         if (!isWithinConstraints()) {
             revert ScaffoldERC721A__IsNotWithinMintWindow();
         }

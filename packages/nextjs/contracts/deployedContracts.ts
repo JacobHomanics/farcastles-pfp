@@ -6,119 +6,95 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 
 const deployedContracts = {
   31337: {
-    Farcastles: {
-      address: "0x700b6a60ce7eaaea56f065753d8dcb9653dbad35",
+    Farcastles2: {
+      address: "0xc4f9c79703e9e247a5cfab4c2ebf863410f74aed",
       abi: [
         {
           type: "constructor",
           inputs: [
             {
-              name: "params",
-              type: "tuple",
-              internalType: "struct ScaffoldERC721A.ScaffoldERC721AParameters",
-              components: [
-                {
-                  name: "owner",
-                  type: "address",
-                  internalType: "address",
-                },
-                {
-                  name: "name",
-                  type: "string",
-                  internalType: "string",
-                },
-                {
-                  name: "symbol",
-                  type: "string",
-                  internalType: "string",
-                },
-                {
-                  name: "baseURI",
-                  type: "string",
-                  internalType: "string",
-                },
-                {
-                  name: "mintStartTimestamp",
-                  type: "uint256",
-                  internalType: "uint256",
-                },
-                {
-                  name: "mintEndTimestamp",
-                  type: "uint256",
-                  internalType: "uint256",
-                },
-                {
-                  name: "mintPrice",
-                  type: "uint256",
-                  internalType: "uint256",
-                },
-                {
-                  name: "maxTokenCount",
-                  type: "uint256",
-                  internalType: "uint256",
-                },
-                {
-                  name: "maxMintCountPerUser",
-                  type: "uint256",
-                  internalType: "uint256",
-                },
-                {
-                  name: "mintRoyaltyRecipient",
-                  type: "address",
-                  internalType: "address",
-                },
-                {
-                  name: "initialMintRecipients",
-                  type: "address[]",
-                  internalType: "address[]",
-                },
-              ],
+              name: "name",
+              type: "string",
+              internalType: "string",
+            },
+            {
+              name: "symbol",
+              type: "string",
+              internalType: "string",
             },
           ],
           stateMutability: "nonpayable",
         },
         {
           type: "function",
-          name: "_isWithinConstraints",
+          name: "_combo",
           inputs: [
             {
-              name: "a",
-              type: "uint256",
-              internalType: "uint256",
-            },
-            {
-              name: "b",
-              type: "uint256",
-              internalType: "uint256",
-            },
-            {
-              name: "c",
+              name: "",
               type: "uint256",
               internalType: "uint256",
             },
           ],
           outputs: [
             {
-              name: "value",
-              type: "bool",
-              internalType: "bool",
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
             },
           ],
-          stateMutability: "pure",
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "_getRandomTraitIndex",
+          inputs: [
+            {
+              name: "rarities",
+              type: "uint16[]",
+              internalType: "uint16[]",
+            },
+            {
+              name: "seed",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [
+            {
+              name: "index",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "_registry",
+          inputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
         },
         {
           type: "function",
           name: "addTrait",
           inputs: [
             {
-              name: "layer",
-              type: "uint8",
-              internalType: "uint8",
-            },
-            {
               name: "payload",
               type: "tuple",
-              internalType: "struct Farcastles.Payload",
+              internalType: "struct Farcastles2.Payload",
               components: [
                 {
                   name: "name",
@@ -136,41 +112,6 @@ const deployedContracts = {
               name: "rarity",
               type: "uint16",
               internalType: "uint16",
-            },
-          ],
-          outputs: [],
-          stateMutability: "nonpayable",
-        },
-        {
-          type: "function",
-          name: "addTraits",
-          inputs: [
-            {
-              name: "layer",
-              type: "uint8",
-              internalType: "uint8",
-            },
-            {
-              name: "payload",
-              type: "tuple[]",
-              internalType: "struct Farcastles.Payload[]",
-              components: [
-                {
-                  name: "name",
-                  type: "string",
-                  internalType: "string",
-                },
-                {
-                  name: "image",
-                  type: "bytes",
-                  internalType: "bytes",
-                },
-              ],
-            },
-            {
-              name: "traitRarities",
-              type: "uint16[]",
-              internalType: "uint16[]",
             },
           ],
           outputs: [],
@@ -234,11 +175,17 @@ const deployedContracts = {
         },
         {
           type: "function",
-          name: "getCurrentTokenCount",
-          inputs: [],
+          name: "getRandomSeed",
+          inputs: [
+            {
+              name: "id",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
           outputs: [
             {
-              name: "mintCount",
+              name: "seed",
               type: "uint256",
               internalType: "uint256",
             },
@@ -247,8 +194,14 @@ const deployedContracts = {
         },
         {
           type: "function",
-          name: "getMaxTokenCount",
-          inputs: [],
+          name: "getRandomTraitIndex",
+          inputs: [
+            {
+              name: "tokenId",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
           outputs: [
             {
               name: "",
@@ -260,8 +213,19 @@ const deployedContracts = {
         },
         {
           type: "function",
-          name: "getMintEndTimestamp",
-          inputs: [],
+          name: "getSeedModulus",
+          inputs: [
+            {
+              name: "seed",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "modulus",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
           outputs: [
             {
               name: "",
@@ -269,43 +233,30 @@ const deployedContracts = {
               internalType: "uint256",
             },
           ],
-          stateMutability: "view",
+          stateMutability: "pure",
         },
         {
           type: "function",
-          name: "getMintPrice",
-          inputs: [],
-          outputs: [
+          name: "getTokenTraits",
+          inputs: [
             {
-              name: "mintPrice",
+              name: "tokenId",
               type: "uint256",
               internalType: "uint256",
             },
           ],
-          stateMutability: "view",
-        },
-        {
-          type: "function",
-          name: "getMintRoyaltyRecipient",
-          inputs: [],
           outputs: [
             {
               name: "",
-              type: "address",
-              internalType: "address",
-            },
-          ],
-          stateMutability: "view",
-        },
-        {
-          type: "function",
-          name: "getMintStartTimestamp",
-          inputs: [],
-          outputs: [
-            {
-              name: "",
-              type: "uint256",
-              internalType: "uint256",
+              type: "tuple",
+              internalType: "struct Farcastles2.Knight",
+              components: [
+                {
+                  name: "background",
+                  type: "uint256",
+                  internalType: "uint256",
+                },
+              ],
             },
           ],
           stateMutability: "view",
@@ -315,21 +266,16 @@ const deployedContracts = {
           name: "getTrait",
           inputs: [
             {
-              name: "layer",
-              type: "uint256",
-              internalType: "uint256",
-            },
-            {
-              name: "index",
+              name: "traitIndex",
               type: "uint256",
               internalType: "uint256",
             },
           ],
           outputs: [
             {
-              name: "trait",
+              name: "",
               type: "tuple",
-              internalType: "struct Farcastles.Trait",
+              internalType: "struct Farcastles2.Trait",
               components: [
                 {
                   name: "image",
@@ -340,104 +286,6 @@ const deployedContracts = {
                   name: "name",
                   type: "string",
                   internalType: "string",
-                },
-              ],
-            },
-          ],
-          stateMutability: "view",
-        },
-        {
-          type: "function",
-          name: "getTraitAttributes",
-          inputs: [
-            {
-              name: "tokenID",
-              type: "uint256",
-              internalType: "uint256",
-            },
-          ],
-          outputs: [
-            {
-              name: "trait",
-              type: "string",
-              internalType: "string",
-            },
-          ],
-          stateMutability: "view",
-        },
-        {
-          type: "function",
-          name: "getTraitImage",
-          inputs: [
-            {
-              name: "tokenID",
-              type: "uint256",
-              internalType: "uint256",
-            },
-          ],
-          outputs: [
-            {
-              name: "image",
-              type: "string",
-              internalType: "string",
-            },
-          ],
-          stateMutability: "view",
-        },
-        {
-          type: "function",
-          name: "getTraitImageData",
-          inputs: [
-            {
-              name: "image",
-              type: "bytes",
-              internalType: "bytes",
-            },
-          ],
-          outputs: [
-            {
-              name: "",
-              type: "string",
-              internalType: "string",
-            },
-          ],
-          stateMutability: "view",
-        },
-        {
-          type: "function",
-          name: "getTraits",
-          inputs: [
-            {
-              name: "tokenID",
-              type: "uint256",
-              internalType: "uint256",
-            },
-          ],
-          outputs: [
-            {
-              name: "knight",
-              type: "tuple",
-              internalType: "struct Farcastles.Knight",
-              components: [
-                {
-                  name: "BACKGROUND",
-                  type: "uint256",
-                  internalType: "uint256",
-                },
-                {
-                  name: "ARMOR",
-                  type: "uint256",
-                  internalType: "uint256",
-                },
-                {
-                  name: "HEAD",
-                  type: "uint256",
-                  internalType: "uint256",
-                },
-                {
-                  name: "WEAPON",
-                  type: "uint256",
-                  internalType: "uint256",
                 },
               ],
             },
@@ -470,23 +318,10 @@ const deployedContracts = {
         },
         {
           type: "function",
-          name: "isWithinConstraints",
-          inputs: [],
-          outputs: [
-            {
-              name: "isWithin",
-              type: "bool",
-              internalType: "bool",
-            },
-          ],
-          stateMutability: "view",
-        },
-        {
-          type: "function",
           name: "mint",
           inputs: [
             {
-              name: "recipient",
+              name: "to",
               type: "address",
               internalType: "address",
             },
@@ -497,7 +332,7 @@ const deployedContracts = {
             },
           ],
           outputs: [],
-          stateMutability: "payable",
+          stateMutability: "nonpayable",
         },
         {
           type: "function",
@@ -508,19 +343,6 @@ const deployedContracts = {
               name: "",
               type: "string",
               internalType: "string",
-            },
-          ],
-          stateMutability: "view",
-        },
-        {
-          type: "function",
-          name: "owner",
-          inputs: [],
-          outputs: [
-            {
-              name: "",
-              type: "address",
-              internalType: "address",
             },
           ],
           stateMutability: "view",
@@ -546,10 +368,72 @@ const deployedContracts = {
         },
         {
           type: "function",
-          name: "renounceOwnership",
+          name: "s_maxBoundRarity",
           inputs: [],
-          outputs: [],
-          stateMutability: "nonpayable",
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "s_traitCount",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "s_traitRarities",
+          inputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "uint16",
+              internalType: "uint16",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "s_traits",
+          inputs: [
+            {
+              name: "index",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [
+            {
+              name: "image",
+              type: "bytes",
+              internalType: "bytes",
+            },
+            {
+              name: "name",
+              type: "string",
+              internalType: "string",
+            },
+          ],
+          stateMutability: "view",
         },
         {
           type: "function",
@@ -622,6 +506,24 @@ const deployedContracts = {
         },
         {
           type: "function",
+          name: "setTokenTraits",
+          inputs: [
+            {
+              name: "tokenID",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "amount",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
           name: "supportsInterface",
           inputs: [
             {
@@ -664,7 +566,7 @@ const deployedContracts = {
           ],
           outputs: [
             {
-              name: "metadata",
+              name: "",
               type: "string",
               internalType: "string",
             },
@@ -706,32 +608,6 @@ const deployedContracts = {
           ],
           outputs: [],
           stateMutability: "payable",
-        },
-        {
-          type: "function",
-          name: "transferOwnership",
-          inputs: [
-            {
-              name: "newOwner",
-              type: "address",
-              internalType: "address",
-            },
-          ],
-          outputs: [],
-          stateMutability: "nonpayable",
-        },
-        {
-          type: "function",
-          name: "withdraw",
-          inputs: [],
-          outputs: [
-            {
-              name: "",
-              type: "bool",
-              internalType: "bool",
-            },
-          ],
-          stateMutability: "nonpayable",
         },
         {
           type: "event",
@@ -816,50 +692,6 @@ const deployedContracts = {
         },
         {
           type: "event",
-          name: "Minted",
-          inputs: [
-            {
-              name: "user",
-              type: "address",
-              indexed: true,
-              internalType: "address",
-            },
-            {
-              name: "startIndex",
-              type: "uint256",
-              indexed: true,
-              internalType: "uint256",
-            },
-            {
-              name: "endIndex",
-              type: "uint256",
-              indexed: true,
-              internalType: "uint256",
-            },
-          ],
-          anonymous: false,
-        },
-        {
-          type: "event",
-          name: "OwnershipTransferred",
-          inputs: [
-            {
-              name: "previousOwner",
-              type: "address",
-              indexed: true,
-              internalType: "address",
-            },
-            {
-              name: "newOwner",
-              type: "address",
-              indexed: true,
-              internalType: "address",
-            },
-          ],
-          anonymous: false,
-        },
-        {
-          type: "event",
           name: "Transfer",
           inputs: [
             {
@@ -900,11 +732,6 @@ const deployedContracts = {
         },
         {
           type: "error",
-          name: "Farcastles__InvalidToken",
-          inputs: [],
-        },
-        {
-          type: "error",
           name: "MintERC2309QuantityExceedsLimit",
           inputs: [],
         },
@@ -925,69 +752,12 @@ const deployedContracts = {
         },
         {
           type: "error",
-          name: "OwnableInvalidOwner",
-          inputs: [
-            {
-              name: "owner",
-              type: "address",
-              internalType: "address",
-            },
-          ],
-        },
-        {
-          type: "error",
-          name: "OwnableUnauthorizedAccount",
-          inputs: [
-            {
-              name: "account",
-              type: "address",
-              internalType: "address",
-            },
-          ],
-        },
-        {
-          type: "error",
           name: "OwnerQueryForNonexistentToken",
           inputs: [],
         },
         {
           type: "error",
           name: "OwnershipNotInitializedForExtraData",
-          inputs: [],
-        },
-        {
-          type: "error",
-          name: "ScaffoldERC721A__AddressNotZero",
-          inputs: [],
-        },
-        {
-          type: "error",
-          name: "ScaffoldERC721A__CannotMintThatMany",
-          inputs: [],
-        },
-        {
-          type: "error",
-          name: "ScaffoldERC721A__DidNotProvideEnoughCapital",
-          inputs: [],
-        },
-        {
-          type: "error",
-          name: "ScaffoldERC721A__IsNotWithinMintWindow",
-          inputs: [],
-        },
-        {
-          type: "error",
-          name: "ScaffoldERC721A__NoTokensLeftToMint",
-          inputs: [],
-        },
-        {
-          type: "error",
-          name: "ScaffoldERC721A__NotEnoughMintableTokensToFulfillRequest",
-          inputs: [],
-        },
-        {
-          type: "error",
-          name: "ScaffoldERC721A__YouGottaHitUpTheWeedman",
           inputs: [],
         },
         {
@@ -1037,32 +807,19 @@ const deployedContracts = {
         },
       ],
       inheritedFunctions: {
-        _isWithinConstraints: "contracts/ScaffoldERC721A.sol",
-        approve: "contracts/ScaffoldERC721A.sol",
-        balanceOf: "contracts/ScaffoldERC721A.sol",
-        getApproved: "contracts/ScaffoldERC721A.sol",
-        getCurrentTokenCount: "contracts/ScaffoldERC721A.sol",
-        getMaxTokenCount: "contracts/ScaffoldERC721A.sol",
-        getMintEndTimestamp: "contracts/ScaffoldERC721A.sol",
-        getMintPrice: "contracts/ScaffoldERC721A.sol",
-        getMintRoyaltyRecipient: "contracts/ScaffoldERC721A.sol",
-        getMintStartTimestamp: "contracts/ScaffoldERC721A.sol",
-        isApprovedForAll: "contracts/ScaffoldERC721A.sol",
-        isWithinConstraints: "contracts/ScaffoldERC721A.sol",
-        mint: "contracts/ScaffoldERC721A.sol",
-        name: "contracts/ScaffoldERC721A.sol",
-        owner: "contracts/ScaffoldERC721A.sol",
-        ownerOf: "contracts/ScaffoldERC721A.sol",
-        renounceOwnership: "contracts/ScaffoldERC721A.sol",
-        safeTransferFrom: "contracts/ScaffoldERC721A.sol",
-        setApprovalForAll: "contracts/ScaffoldERC721A.sol",
-        supportsInterface: "contracts/ScaffoldERC721A.sol",
-        symbol: "contracts/ScaffoldERC721A.sol",
-        tokenURI: "contracts/ScaffoldERC721A.sol",
-        totalSupply: "contracts/ScaffoldERC721A.sol",
-        transferFrom: "contracts/ScaffoldERC721A.sol",
-        transferOwnership: "contracts/ScaffoldERC721A.sol",
-        withdraw: "contracts/ScaffoldERC721A.sol",
+        approve: "lib/ERC721A/contracts/ERC721A.sol",
+        balanceOf: "lib/ERC721A/contracts/ERC721A.sol",
+        getApproved: "lib/ERC721A/contracts/ERC721A.sol",
+        isApprovedForAll: "lib/ERC721A/contracts/ERC721A.sol",
+        name: "lib/ERC721A/contracts/ERC721A.sol",
+        ownerOf: "lib/ERC721A/contracts/ERC721A.sol",
+        safeTransferFrom: "lib/ERC721A/contracts/ERC721A.sol",
+        setApprovalForAll: "lib/ERC721A/contracts/ERC721A.sol",
+        supportsInterface: "lib/ERC721A/contracts/ERC721A.sol",
+        symbol: "lib/ERC721A/contracts/ERC721A.sol",
+        tokenURI: "lib/ERC721A/contracts/ERC721A.sol",
+        totalSupply: "lib/ERC721A/contracts/ERC721A.sol",
+        transferFrom: "lib/ERC721A/contracts/ERC721A.sol",
       },
     },
   },
