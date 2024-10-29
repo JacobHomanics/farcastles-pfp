@@ -89,14 +89,14 @@ contract Farcastles2Test is Test {
 
         Farcastles2.Knight memory knight = farcastles2.getTokenTraits(3);
 
-        console.log(knight.background);
+        console.log(knight.weapon);
 
         console.log(farcastles2.tokenURI(0));
 
-        console.log(farcastles2.getTokenTraits(0).background);
-        console.log(farcastles2.getTokenTraits(1).background);
-        console.log(farcastles2.getTokenTraits(2).background);
-        console.log(farcastles2.getTokenTraits(3).background);
+        console.log(farcastles2.getTokenTraits(0).weapon);
+        console.log(farcastles2.getTokenTraits(1).weapon);
+        console.log(farcastles2.getTokenTraits(2).weapon);
+        console.log(farcastles2.getTokenTraits(3).weapon);
 
         // uint256 seed = farcastles2.getRandomTraitIndex(5);
         // console.log(seed);

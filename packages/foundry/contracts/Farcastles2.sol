@@ -16,7 +16,7 @@ contract Farcastles2 is ERC721A {
     }
 
     struct Knight {
-        uint256 background;
+        uint256 weapon;
     }
 
     struct Payload {
@@ -138,7 +138,7 @@ contract Farcastles2 is ERC721A {
         uint256 value = (_registry[bucket] & mask) >> (64 * slot);
         mask = 0xFF;
 
-        knight.background = value & mask;
+        knight.weapon = value & mask;
     }
 
     // ********************************
@@ -199,11 +199,7 @@ contract Farcastles2 is ERC721A {
     ) internal view returns (string memory trait) {
         return
             string.concat(
-                _getTraitMetadata(
-                    "BACKGROUND",
-                    s_traits[knight.background].name,
-                    false
-                )
+                _getTraitMetadata("WEAPON", s_traits[knight.weapon].name, false)
             );
     }
 
@@ -264,7 +260,7 @@ contract Farcastles2 is ERC721A {
                 abi.encodePacked(
                     '<svg width="100%" height="100%" viewBox="0 0 20000 20000" xmlns="http://www.w3.org/2000/svg">',
                     "<style>svg{background-color:transparent;background-image:",
-                    _getTraitImageData(s_traits[knight.background].image),
+                    _getTraitImageData(s_traits[knight.weapon].image),
                     ";background-repeat:no-repeat;background-size:contain;background-position:center;image-rendering:-webkit-optimize-contrast;-ms-interpolation-mode:nearest-neighbor;image-rendering:-moz-crisp-edges;image-rendering:pixelated;}</style></svg>"
                 )
             );

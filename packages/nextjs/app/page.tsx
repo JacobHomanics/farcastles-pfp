@@ -98,17 +98,17 @@ const Home: NextPage = () => {
     <div key={index} className="flex items-center justify-center p-4">
       <div className="bg-base-100 p-1">
         <Image src={nft.image} width={64} height={64} alt="farcastle" />
-        <div className="flex flex-col">
-          <p>Name</p>
-          <p>{nft.name}</p>
+        <div className="flex flex-col text-center">
+          <p className="m-0">Name</p>
+          <p className="m-0">{nft.name}</p>
         </div>
 
-        <p>Attributes</p>
+        <p className="text-center m-0 mt-4">Attributes</p>
 
         {nft.attributes.map((attribute: any, attributeIndex: number) => (
-          <div key={"attributes" + attributeIndex} className="flex flex-col">
-            <p>{attribute["trait_type"]}</p>
-            <p>{attribute["value"]}</p>
+          <div key={"attributes" + attributeIndex} className="flex flex-col text-center">
+            <p className="m-0">{attribute["trait_type"]}</p>
+            <p className="m-0">{attribute["value"]}</p>
           </div>
         ))}
       </div>

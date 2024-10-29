@@ -7,7 +7,7 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 const deployedContracts = {
   31337: {
     Farcastles2: {
-      address: "0xc4f9c79703e9e247a5cfab4c2ebf863410f74aed",
+      address: "0x362c7d9607b55d30e4444292cf458ca47778cbca",
       abi: [
         {
           type: "constructor",
@@ -252,7 +252,7 @@ const deployedContracts = {
               internalType: "struct Farcastles2.Knight",
               components: [
                 {
-                  name: "background",
+                  name: "weapon",
                   type: "uint256",
                   internalType: "uint256",
                 },
