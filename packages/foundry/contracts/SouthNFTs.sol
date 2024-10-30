@@ -216,7 +216,7 @@ contract SouthNFTs is ERC721A {
         uint16[] memory rarities,
         uint256 seed
     ) public view returns (uint256 index) {
-        uint256 rand = seed % s_maxBoundRarity[layer];
+        uint256 rand = seed % 10000; // s_maxBoundRarity[layer];
         uint256 lowerBound; // starts at 0
         uint256 upperBound;
         uint256 percentage;
