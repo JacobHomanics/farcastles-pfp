@@ -185,6 +185,21 @@ contract DeployFarcastle is ScaffoldETHDeploy {
                 farcastle2.addTrait(
                     2,
                     SouthNFTs.Payload({
+                        name: allTraits[i][j].HEAD.name,
+                        image: bytes(
+                            substring(
+                                allTraits[i][j].HEAD.img_data,
+                                22,
+                                bytes(allTraits[i][j].HEAD.img_data).length - 1
+                            )
+                        )
+                    }),
+                    allTraits[i][j].HEAD.rarity
+                );
+
+                farcastle2.addTrait(
+                    3,
+                    SouthNFTs.Payload({
                         name: allTraits[i][j].WEAPON.name,
                         image: bytes(
                             substring(
@@ -196,21 +211,6 @@ contract DeployFarcastle is ScaffoldETHDeploy {
                         )
                     }),
                     allTraits[i][j].WEAPON.rarity
-                );
-
-                farcastle2.addTrait(
-                    3,
-                    SouthNFTs.Payload({
-                        name: allTraits[i][j].HEAD.name,
-                        image: bytes(
-                            substring(
-                                allTraits[i][j].HEAD.img_data,
-                                22,
-                                bytes(allTraits[i][j].HEAD.img_data).length - 1
-                            )
-                        )
-                    }),
-                    allTraits[i][j].HEAD.rarity
                 );
 
                 // addTrait(

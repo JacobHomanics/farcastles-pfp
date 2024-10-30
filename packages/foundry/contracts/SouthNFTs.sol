@@ -18,8 +18,8 @@ contract SouthNFTs is ERC721A {
     struct Knight {
         uint256 background;
         uint256 armor;
-        uint256 weapon;
         uint256 head;
+        uint256 weapon;
     }
 
     struct Payload {
@@ -98,8 +98,8 @@ contract SouthNFTs is ERC721A {
 
         uint16[] memory backgroundRarities = s_traitRarities[0];
         uint16[] memory armorRarities = s_traitRarities[1];
-        uint16[] memory weaponRarities = s_traitRarities[2];
-        uint16[] memory headRarities = s_traitRarities[3];
+        uint16[] memory headRarities = s_traitRarities[2];
+        uint16[] memory weaponRarities = s_traitRarities[3];
 
         while (true) {
             combination = _getRandomTraitIndex(0, backgroundRarities, seed);
@@ -108,13 +108,13 @@ contract SouthNFTs is ERC721A {
                 armorRarities,
                 seed >> 16
             ) << 8);
+            combination |= (_getRandomTraitIndex(2, headRarities, seed >> 32) <<
+                16);
             combination |= (_getRandomTraitIndex(
-                2,
+                3,
                 weaponRarities,
-                seed >> 32
-            ) << 16);
-            combination |= (_getRandomTraitIndex(3, headRarities, seed >> 48) <<
-                24);
+                seed >> 48
+            ) << 24);
 
             if (_combo[combination] == 0) {
                 _combo[combination] = 1;
@@ -172,9 +172,9 @@ contract SouthNFTs is ERC721A {
         value >>= 8;
         knight.armor = value & mask;
         value >>= 8;
-        knight.weapon = value & mask;
-        value >>= 8;
         knight.head = value & mask;
+        value >>= 8;
+        knight.weapon = value & mask;
     }
 
     // ********************************
@@ -209,6 +209,8 @@ contract SouthNFTs is ERC721A {
         );
     }
 
+    error Farcastle__SEED_SUCKED();
+
     function _getRandomTraitIndex(
         uint8 layer,
         uint16[] memory rarities,
@@ -232,7 +234,7 @@ contract SouthNFTs is ERC721A {
                 ++i;
             }
         }
-        revert();
+        // revert Farcastle__SEED_SUCKED();
     }
 
     function _getTraitAttributes(
@@ -251,12 +253,12 @@ contract SouthNFTs is ERC721A {
                     s_traits[1][knight.armor].name,
                     false
                 ),
+                _getTraitMetadata("HEAD", s_traits[2][knight.head].name, true),
                 _getTraitMetadata(
                     "WEAPON",
-                    s_traits[2][knight.weapon].name,
+                    s_traits[3][knight.weapon].name,
                     true
-                ),
-                _getTraitMetadata("HEAD", s_traits[3][knight.head].name, true)
+                )
             );
     }
 
@@ -317,9 +319,9 @@ contract SouthNFTs is ERC721A {
                 abi.encodePacked(
                     '<svg width="100%" height="100%" viewBox="0 0 20000 20000" xmlns="http://www.w3.org/2000/svg">',
                     "<style>svg{background-color:transparent;background-image:",
-                    _getTraitImageData(s_traits[3][knight.head].image),
+                    _getTraitImageData(s_traits[3][knight.weapon].image),
                     ",",
-                    _getTraitImageData(s_traits[2][knight.weapon].image),
+                    _getTraitImageData(s_traits[2][knight.head].image),
                     ",",
                     _getTraitImageData(s_traits[1][knight.armor].image),
                     ",",

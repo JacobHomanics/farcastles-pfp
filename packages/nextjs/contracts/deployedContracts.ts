@@ -7,7 +7,7 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 const deployedContracts = {
   31337: {
     SouthNFTs: {
-      address: "0x5f8f4f55b0052a3a39318bed7c536f91ea66b9d9",
+      address: "0xb023b08253607b8132b0bc192e72eacf7b5df320",
       abi: [
         {
           type: "constructor",
@@ -277,12 +277,12 @@ const deployedContracts = {
                   internalType: "uint256",
                 },
                 {
-                  name: "weapon",
+                  name: "head",
                   type: "uint256",
                   internalType: "uint256",
                 },
                 {
-                  name: "head",
+                  name: "weapon",
                   type: "uint256",
                   internalType: "uint256",
                 },
@@ -789,6 +789,11 @@ const deployedContracts = {
         },
         {
           type: "error",
+          name: "Farcastle__SEED_SUCKED",
+          inputs: [],
+        },
+        {
+          type: "error",
           name: "MintERC2309QuantityExceedsLimit",
           inputs: [],
         },
@@ -880,7 +885,7 @@ const deployedContracts = {
       },
     },
     FarCASTLE: {
-      address: "0x40c4f349b207f190f814d823600c8e6a8b1e7dc6",
+      address: "0xed7dcec6af77d7e76a671664d128f0f2f7b98af8",
       abi: [
         {
           type: "constructor",

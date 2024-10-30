@@ -143,7 +143,12 @@ const Home: NextPage = () => {
               // });
 
               // setNorthHealth(northHealth - 1);
-              await writeContractAsync({ functionName: "mint", args: [connectedAddress, BigInt(20)] });
+
+              try {
+                await writeContractAsync({ functionName: "mint", args: [connectedAddress, BigInt(20)] });
+              } catch (error) {
+                console.error("Error minting NFT:", error);
+              }
             }}
           >
             {"!attack north"}
