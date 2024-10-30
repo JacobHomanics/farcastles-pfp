@@ -2,8 +2,9 @@
 pragma solidity ^0.8.19;
 
 import "../contracts/Farcastles.sol";
-import "../contracts/Farcastles2.sol";
+import "../contracts/SouthNFTs.sol";
 import "./DeployHelpers.s.sol";
+import "../contracts/FarCASTLE.sol";
 
 contract DeployFarcastle is ScaffoldETHDeploy {
     string backgroundLayerName = "BACKGROUND";
@@ -130,7 +131,7 @@ contract DeployFarcastle is ScaffoldETHDeploy {
             );
 
         // Farcastles farcastle = new Farcastles(params);
-        Farcastles2 farcastle2 = new Farcastles2("Test", "TEST");
+        SouthNFTs farcastle2 = new SouthNFTs("Test", "TEST");
 
         Traits[][] memory allTraits = new Traits[][](3);
         for (uint256 i = 1; i <= 2; i++) {
@@ -152,7 +153,7 @@ contract DeployFarcastle is ScaffoldETHDeploy {
 
                 farcastle2.addTrait(
                     0,
-                    Farcastles2.Payload({
+                    SouthNFTs.Payload({
                         name: allTraits[i][j].BACKGROUND.name,
                         image: bytes(
                             substring(
@@ -168,7 +169,7 @@ contract DeployFarcastle is ScaffoldETHDeploy {
 
                 farcastle2.addTrait(
                     1,
-                    Farcastles2.Payload({
+                    SouthNFTs.Payload({
                         name: allTraits[i][j].ARMOR.name,
                         image: bytes(
                             substring(
@@ -183,7 +184,7 @@ contract DeployFarcastle is ScaffoldETHDeploy {
 
                 farcastle2.addTrait(
                     2,
-                    Farcastles2.Payload({
+                    SouthNFTs.Payload({
                         name: allTraits[i][j].WEAPON.name,
                         image: bytes(
                             substring(
@@ -199,7 +200,7 @@ contract DeployFarcastle is ScaffoldETHDeploy {
 
                 farcastle2.addTrait(
                     3,
-                    Farcastles2.Payload({
+                    SouthNFTs.Payload({
                         name: allTraits[i][j].HEAD.name,
                         image: bytes(
                             substring(
@@ -246,6 +247,7 @@ contract DeployFarcastle is ScaffoldETHDeploy {
             }
         }
 
+        new FarCASTLE(55, .1 ether, address(farcastle2));
         // farcastle2.mint(0x42bcD9e66817734100b86A2bab62d9eF3B63E92A, 30);
     }
 

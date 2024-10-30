@@ -14,11 +14,17 @@ const Home: NextPage = () => {
 
   const { address: connectedAddress } = useAccount();
 
-  const { data: Farcastles } = useScaffoldContract({ contractName: "Farcastles2" });
+  const { data: Farcastles } = useScaffoldContract({ contractName: "SouthNFTs" });
 
-  const { data: totalSupply } = useScaffoldReadContract({ contractName: "Farcastles2", functionName: "totalSupply" });
+  const { data: totalSupply } = useScaffoldReadContract({ contractName: "SouthNFTs", functionName: "totalSupply" });
 
-  const { writeContractAsync } = useScaffoldWriteContract("Farcastles2");
+  const { writeContractAsync } = useScaffoldWriteContract("SouthNFTs");
+
+  const { data: currentHealthNorth } = useScaffoldReadContract({
+    contractName: "FarCASTLE",
+    functionName: "s_currentHealth",
+  });
+  // const { writeContractAsync: writeNorthCastleAsync } = useScaffoldWriteContract("FarCASTLE");
 
   const publicClient = usePublicClient();
   useEffect(() => {
@@ -119,19 +125,25 @@ const Home: NextPage = () => {
     </div>
   ));
 
-  const [northHealth, setNorthHealth] = useState(100);
+  // const [northHealth, setNorthHealth] = useState(100);
   const [southHealth, setSouthHealth] = useState(100);
   return (
     <>
       <div className="flex flex-col justify-center items-center gap-44 mt-4">
         <div className="flex flex-col items-center">
           <Image src="/castle-red.png" width={256} height={256} alt="farcastle" />
-          <div className="rounded-full bg-base-100 p-4">{northHealth}/ 100</div>
+          <div className="rounded-full bg-base-100 p-4">{currentHealthNorth?.toString()}/ 55</div>
           <button
             className="btn btn-primary"
             onClick={async () => {
-              setNorthHealth(northHealth - 1);
-              await writeContractAsync({ functionName: "mint", args: [connectedAddress, BigInt(1)] });
+              // await writeNorthCastleAsync({
+              //   functionName: "receiveAttack",
+              //   args: [BigInt(1)],
+              //   value: parseEther("0.1"),
+              // });
+
+              // setNorthHealth(northHealth - 1);
+              await writeContractAsync({ functionName: "mint", args: [connectedAddress, BigInt(20)] });
             }}
           >
             {"!attack north"}

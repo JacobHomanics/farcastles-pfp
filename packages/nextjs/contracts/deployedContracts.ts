@@ -6,8 +6,8 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 
 const deployedContracts = {
   31337: {
-    Farcastles2: {
-      address: "0x778caeaa8fd07599e21c2152ec7eb73e76880a23",
+    SouthNFTs: {
+      address: "0x5f8f4f55b0052a3a39318bed7c536f91ea66b9d9",
       abi: [
         {
           type: "constructor",
@@ -104,7 +104,7 @@ const deployedContracts = {
             {
               name: "payload",
               type: "tuple",
-              internalType: "struct Farcastles2.Payload",
+              internalType: "struct SouthNFTs.Payload",
               components: [
                 {
                   name: "name",
@@ -264,7 +264,7 @@ const deployedContracts = {
             {
               name: "",
               type: "tuple",
-              internalType: "struct Farcastles2.Knight",
+              internalType: "struct SouthNFTs.Knight",
               components: [
                 {
                   name: "background",
@@ -310,7 +310,7 @@ const deployedContracts = {
             {
               name: "",
               type: "tuple",
-              internalType: "struct Farcastles2.Trait",
+              internalType: "struct SouthNFTs.Trait",
               components: [
                 {
                   name: "image",
@@ -878,6 +878,89 @@ const deployedContracts = {
         totalSupply: "lib/ERC721A/contracts/ERC721A.sol",
         transferFrom: "lib/ERC721A/contracts/ERC721A.sol",
       },
+    },
+    FarCASTLE: {
+      address: "0x40c4f349b207f190f814d823600c8e6a8b1e7dc6",
+      abi: [
+        {
+          type: "constructor",
+          inputs: [
+            {
+              name: "startingHealth",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "costPerAttack",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "troops",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "receiveAttack",
+          inputs: [
+            {
+              name: "amount",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [],
+          stateMutability: "payable",
+        },
+        {
+          type: "function",
+          name: "s_costPerAttack",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "s_currentHealth",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "withdraw",
+          inputs: [],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "error",
+          name: "Meep1",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "Meep2",
+          inputs: [],
+        },
+      ],
+      inheritedFunctions: {},
     },
   },
 } as const;

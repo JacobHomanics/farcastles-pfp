@@ -6,7 +6,7 @@ import "../lib/solady/src/utils/Base64.sol";
 import "./ImageLibrary.sol";
 import "../lib/solady/src/utils/LibString.sol";
 
-contract Farcastles2 is ERC721A {
+contract SouthNFTs is ERC721A {
     // ********************************
     // STRUCTS
     // ********************************
@@ -251,14 +251,12 @@ contract Farcastles2 is ERC721A {
                     s_traits[1][knight.armor].name,
                     false
                 ),
-                ",",
                 _getTraitMetadata(
                     "WEAPON",
                     s_traits[2][knight.weapon].name,
-                    false
+                    true
                 ),
-                ",",
-                _getTraitMetadata("HEAD", s_traits[3][knight.head].name, false)
+                _getTraitMetadata("HEAD", s_traits[3][knight.head].name, true)
             );
     }
 
