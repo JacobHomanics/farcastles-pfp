@@ -66,9 +66,7 @@ contract ScaffoldETHDeploy is Script {
     uint256 len = deployments.length;
 
     for (uint256 i = 0; i < len; i++) {
-      vm.serializeString(
-        jsonWrite, vm.toString(deployments[i].addr), deployments[i].name
-      );
+      vm.serializeString(jsonWrite, vm.toString(deployments[i].addr), deployments[i].name);
     }
 
     string memory chainName;
@@ -90,11 +88,7 @@ contract ScaffoldETHDeploy is Script {
     string memory addressString = vm.toString(addr);
     string memory amountString = vm.toString(amount);
     string memory requestPayload = string.concat(
-      '{"method":"anvil_setBalance","params":["',
-      addressString,
-      '","',
-      amountString,
-      '"],"id":1,"jsonrpc":"2.0"}'
+      '{"method":"anvil_setBalance","params":["', addressString, '","', amountString, '"],"id":1,"jsonrpc":"2.0"}'
     );
 
     string[] memory inputs = new string[](8);

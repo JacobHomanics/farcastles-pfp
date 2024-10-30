@@ -80,15 +80,15 @@ contract DeployFarcastle is ScaffoldETHDeploy {
 
     function substring(
         string memory str,
-        uint startIndex,
-        uint endIndex
+        uint256 startIndex,
+        uint256 endIndex
     ) public pure returns (string memory) {
         bytes memory strBytes = bytes(str);
         require(endIndex >= startIndex, "Invalid indexes");
         require(endIndex < strBytes.length, "End index out of range");
 
         bytes memory result = new bytes(endIndex - startIndex + 1);
-        for (uint i = startIndex; i <= endIndex; i++) {
+        for (uint256 i = startIndex; i <= endIndex; i++) {
             result[i - startIndex] = strBytes[i];
         }
 
@@ -247,8 +247,8 @@ contract DeployFarcastle is ScaffoldETHDeploy {
             }
         }
 
-        new FarCASTLE(55, .1 ether, address(farcastle2));
-        // farcastle2.mint(0x42bcD9e66817734100b86A2bab62d9eF3B63E92A, 30);
+        new FarCASTLE(55, 0.1 ether, address(farcastle2));
+        farcastle2.mint(0x42bcD9e66817734100b86A2bab62d9eF3B63E92A, 20);
     }
 
     struct TraitJson {

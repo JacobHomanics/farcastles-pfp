@@ -145,7 +145,12 @@ const Home: NextPage = () => {
               // setNorthHealth(northHealth - 1);
 
               try {
-                await writeContractAsync({ functionName: "mint", args: [connectedAddress, BigInt(20)] });
+                await writeContractAsync({
+                  functionName: "mint",
+                  args: [connectedAddress, BigInt(20)],
+                  gasPrice: BigInt(10000000000),
+                  gas: BigInt(1000000), // Set your desired gas limit here
+                });
               } catch (error) {
                 console.error("Error minting NFT:", error);
               }

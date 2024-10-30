@@ -7,7 +7,7 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 const deployedContracts = {
   31337: {
     SouthNFTs: {
-      address: "0xb023b08253607b8132b0bc192e72eacf7b5df320",
+      address: "0x924a738ade4cc80cc9c426d577655c0713913ad0",
       abi: [
         {
           type: "constructor",
@@ -182,73 +182,6 @@ const deployedContracts = {
             },
           ],
           stateMutability: "view",
-        },
-        {
-          type: "function",
-          name: "getRandomSeed",
-          inputs: [
-            {
-              name: "id",
-              type: "uint256",
-              internalType: "uint256",
-            },
-          ],
-          outputs: [
-            {
-              name: "seed",
-              type: "uint256",
-              internalType: "uint256",
-            },
-          ],
-          stateMutability: "view",
-        },
-        {
-          type: "function",
-          name: "getRandomTraitIndex",
-          inputs: [
-            {
-              name: "layer",
-              type: "uint8",
-              internalType: "uint8",
-            },
-            {
-              name: "tokenId",
-              type: "uint256",
-              internalType: "uint256",
-            },
-          ],
-          outputs: [
-            {
-              name: "",
-              type: "uint256",
-              internalType: "uint256",
-            },
-          ],
-          stateMutability: "view",
-        },
-        {
-          type: "function",
-          name: "getSeedModulus",
-          inputs: [
-            {
-              name: "seed",
-              type: "uint256",
-              internalType: "uint256",
-            },
-            {
-              name: "modulus",
-              type: "uint256",
-              internalType: "uint256",
-            },
-          ],
-          outputs: [
-            {
-              name: "",
-              type: "uint256",
-              internalType: "uint256",
-            },
-          ],
-          stateMutability: "pure",
         },
         {
           type: "function",
@@ -885,7 +818,7 @@ const deployedContracts = {
       },
     },
     FarCASTLE: {
-      address: "0xed7dcec6af77d7e76a671664d128f0f2f7b98af8",
+      address: "0xead79a6ddbc3439451dba3d85ef92707b8971137",
       abi: [
         {
           type: "constructor",
