@@ -7,7 +7,7 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 const deployedContracts = {
   31337: {
     SouthNFTs: {
-      address: "0x44fcde295b556e37ea5092584357bb14f47bd4a3",
+      address: "0x0896efb3b8d29e922abbc26c3d51cbc7df106082",
       abi: [
         {
           type: "constructor",
@@ -122,6 +122,41 @@ const deployedContracts = {
               name: "rarity",
               type: "uint16",
               internalType: "uint16",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "addTraits",
+          inputs: [
+            {
+              name: "layer",
+              type: "uint8",
+              internalType: "uint8",
+            },
+            {
+              name: "payload",
+              type: "tuple[]",
+              internalType: "struct SouthNFTs.Payload[]",
+              components: [
+                {
+                  name: "name",
+                  type: "string",
+                  internalType: "string",
+                },
+                {
+                  name: "image",
+                  type: "bytes",
+                  internalType: "bytes",
+                },
+              ],
+            },
+            {
+              name: "traitRarities",
+              type: "uint16[]",
+              internalType: "uint16[]",
             },
           ],
           outputs: [],
@@ -816,89 +851,6 @@ const deployedContracts = {
         totalSupply: "lib/ERC721A/contracts/ERC721A.sol",
         transferFrom: "lib/ERC721A/contracts/ERC721A.sol",
       },
-    },
-    FarCASTLE: {
-      address: "0x0fef053a225f0e3bebafe4cf167a598ae9a83bec",
-      abi: [
-        {
-          type: "constructor",
-          inputs: [
-            {
-              name: "startingHealth",
-              type: "uint256",
-              internalType: "uint256",
-            },
-            {
-              name: "costPerAttack",
-              type: "uint256",
-              internalType: "uint256",
-            },
-            {
-              name: "troops",
-              type: "address",
-              internalType: "address",
-            },
-          ],
-          stateMutability: "nonpayable",
-        },
-        {
-          type: "function",
-          name: "receiveAttack",
-          inputs: [
-            {
-              name: "amount",
-              type: "uint256",
-              internalType: "uint256",
-            },
-          ],
-          outputs: [],
-          stateMutability: "payable",
-        },
-        {
-          type: "function",
-          name: "s_costPerAttack",
-          inputs: [],
-          outputs: [
-            {
-              name: "",
-              type: "uint256",
-              internalType: "uint256",
-            },
-          ],
-          stateMutability: "view",
-        },
-        {
-          type: "function",
-          name: "s_currentHealth",
-          inputs: [],
-          outputs: [
-            {
-              name: "",
-              type: "uint256",
-              internalType: "uint256",
-            },
-          ],
-          stateMutability: "view",
-        },
-        {
-          type: "function",
-          name: "withdraw",
-          inputs: [],
-          outputs: [],
-          stateMutability: "nonpayable",
-        },
-        {
-          type: "error",
-          name: "Meep1",
-          inputs: [],
-        },
-        {
-          type: "error",
-          name: "Meep2",
-          inputs: [],
-        },
-      ],
-      inheritedFunctions: {},
     },
   },
 } as const;

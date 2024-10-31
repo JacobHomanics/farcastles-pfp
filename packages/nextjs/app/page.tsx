@@ -20,10 +20,11 @@ const Home: NextPage = () => {
 
   const { writeContractAsync } = useScaffoldWriteContract("SouthNFTs");
 
-  const { data: currentHealthNorth } = useScaffoldReadContract({
-    contractName: "FarCASTLE",
-    functionName: "s_currentHealth",
-  });
+  // const { data: currentHealthNorth } = useScaffoldReadContract({
+  //   contractName: "FarCASTLE",
+  //   functionName: "s_currentHealth",
+  // });
+
   // const { writeContractAsync: writeNorthCastleAsync } = useScaffoldWriteContract("FarCASTLE");
 
   const publicClient = usePublicClient();
@@ -132,7 +133,7 @@ const Home: NextPage = () => {
       <div className="flex flex-col justify-center items-center gap-44 mt-4">
         <div className="flex flex-col items-center">
           <Image src="/castle-red.png" width={256} height={256} alt="farcastle" />
-          <div className="rounded-full bg-base-100 p-4">{currentHealthNorth?.toString()}/ 55</div>
+          {/* <div className="rounded-full bg-base-100 p-4">{currentHealthNorth?.toString()}/ 55</div> */}
           <button
             className="btn btn-primary"
             onClick={async () => {

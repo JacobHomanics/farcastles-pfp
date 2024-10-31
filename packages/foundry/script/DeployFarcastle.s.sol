@@ -63,206 +63,304 @@ contract DeployFarcastle is ScaffoldETHDeploy {
         string type2;
     }
 
-    function getTraits(
-        uint256 index
-    ) internal view returns (Traits[] memory traits) {
+    // struct TraitJson {
+    //     string imgData;
+    //     string name;
+    //     uint256 rarity;
+    // }
+
+    // struct Payload {
+    //     string name;
+    //     string imgData;
+    // }
+
+    // Payload[] s_payloads;
+
+    function getTraits2() internal view returns (Traits[] memory traits) {
         string memory root = vm.projectRoot();
 
-        string memory path = string.concat(
-            root,
-            string.concat("/script/1337-split-", vm.toString(index), ".json")
-        );
+        string memory path = string.concat(root, "/script/1337.json");
         string memory json = vm.readFile(path);
         bytes memory data = vm.parseJson(json);
 
         traits = abi.decode(data, (Traits[]));
     }
 
-    function substring(
-        string memory str,
-        uint256 startIndex,
-        uint256 endIndex
-    ) public pure returns (string memory) {
-        bytes memory strBytes = bytes(str);
-        require(endIndex >= startIndex, "Invalid indexes");
-        require(endIndex < strBytes.length, "End index out of range");
+    // function getTraits(
+    //     uint256 index
+    // ) internal view returns (Traits[] memory traits) {
+    //     string memory root = vm.projectRoot();
 
-        bytes memory result = new bytes(endIndex - startIndex + 1);
-        for (uint256 i = startIndex; i <= endIndex; i++) {
-            result[i - startIndex] = strBytes[i];
-        }
+    //     string memory path = string.concat(
+    //         root,
+    //         string.concat("/script/1337-split-", vm.toString(index), ".json")
+    //     );
+    //     string memory json = vm.readFile(path);
+    //     bytes memory data = vm.parseJson(json);
 
-        return string(result);
-    }
+    //     traits = abi.decode(data, (Traits[]));
+    // }
 
-    function addTrait(
-        Farcastles farcastle,
-        uint8 layer,
-        string memory name,
-        string memory imgData,
-        uint16 rarity
-    ) internal {
-        Farcastles.Payload memory newPayload = Farcastles.Payload(
-            name,
-            // bytes(imgData)
-            bytes(substring(imgData, 22, bytes(imgData).length - 1))
-        );
+    // function addTrait(
+    //     Farcastles farcastle,
+    //     uint8 layer,
+    //     string memory name,
+    //     string memory imgData,
+    //     uint16 rarity
+    // ) internal {
+    //     Farcastles.Payload memory newPayload = Farcastles.Payload(
+    //         name,
+    //         // bytes(imgData)
+    //         bytes(substring(imgData, 22, bytes(imgData).length - 1))
+    //     );
 
-        // console.log(substring(imgData, 22, bytes(imgData).length - 1));
+    //     // console.log(substring(imgData, 22, bytes(imgData).length - 1));
 
-        farcastle.addTrait(layer, newPayload, rarity);
-    }
+    //     farcastle.addTrait(layer, newPayload, rarity);
+    // }
 
     // use `deployer` from `ScaffoldETHDeploy`
-    function run() external ScaffoldEthDeployerRunner {
-        ScaffoldERC721A.ScaffoldERC721AParameters
-            memory params = ScaffoldERC721A.ScaffoldERC721AParameters(
-                msg.sender,
-                "Pizza People",
-                "PP",
-                "ipfs://bafybeigwxkkv7fl6aedo726uzovnoxphwweclvnpgb55hhtwnyulnewnv4/",
-                0,
-                0,
-                0,
-                1000,
-                1000,
-                msg.sender,
-                new address[](0)
+    function run() external //ScaffoldEthDeployerRunner
+    {
+        Traits[] memory allTraits = getTraits2();
+
+        uint16[] memory backgroundRarities = new uint16[](allTraits.length);
+        SouthNFTs.Payload[] memory backgroundPayloads = new SouthNFTs.Payload[](
+            allTraits.length
+        );
+
+        for (uint256 i = 0; i < allTraits.length; i++) {
+            backgroundRarities[i] = allTraits[i].BACKGROUND.rarity;
+            backgroundPayloads[i] = SouthNFTs.Payload(
+                allTraits[i].BACKGROUND.name,
+                bytes(allTraits[i].BACKGROUND.img_data)
             );
+        }
+
+        uint256 batchAmount = 2;
+
+        SouthNFTs.Payload[][]
+            memory __backgroundPayloads = new SouthNFTs.Payload[][](
+                allTraits.length
+            );
+        uint16[][] memory __backgroundRarities = new uint16[][](
+            allTraits.length
+        );
+
+        for (uint256 j = 0; j < backgroundPayloads.length; j += batchAmount) {
+            SouthNFTs.Payload[]
+                memory _backgroundPayloads = new SouthNFTs.Payload[](
+                    batchAmount
+                );
+            uint16[] memory _backgroundRarities = new uint16[](batchAmount);
+
+            for (uint256 i = 0; i < batchAmount; i++) {
+                _backgroundPayloads[i] = backgroundPayloads[i];
+                _backgroundRarities[i] = backgroundRarities[i];
+            }
+
+            __backgroundPayloads[j] = _backgroundPayloads;
+            __backgroundRarities[j] = _backgroundRarities;
+            // }
+        }
+
+        startBroadcast();
+        // ScaffoldERC721A.ScaffoldERC721AParameters
+        //     memory params = ScaffoldERC721A.ScaffoldERC721AParameters(
+        //         msg.sender,
+        //         "Pizza People",
+        //         "PP",
+        //         "ipfs://bafybeigwxkkv7fl6aedo726uzovnoxphwweclvnpgb55hhtwnyulnewnv4/",
+        //         0,
+        //         0,
+        //         0,
+        //         1000,
+        //         1000,
+        //         msg.sender,
+        //         new address[](0)
+        //     );
 
         // Farcastles farcastle = new Farcastles(params);
+
+        // Traits[] memory allTraits = getTraits2();
+
+        // uint16[] memory backgroundRarities = new uint16[](allTraits.length);
+        // SouthNFTs.Payload[] memory backgroundPayloads = new SouthNFTs.Payload[](
+        //     allTraits.length
+        // );
+
+        // for (uint256 i = 0; i < allTraits.length; i++) {
+        //     backgroundRarities[i] = allTraits[i].BACKGROUND.rarity;
+        //     backgroundPayloads[i] = SouthNFTs.Payload(
+        //         allTraits[i].BACKGROUND.name,
+        //         bytes(allTraits[i].BACKGROUND.img_data)
+        //     );
+        // }
+
+        // uint256 batchAmount = 5;
+
         SouthNFTs farcastle2 = new SouthNFTs("Test", "TEST");
+        stopBroadcast();
 
-        Traits[][] memory allTraits = new Traits[][](3);
-        for (uint256 i = 1; i <= 2; i++) {
-            Traits[] memory traits = getTraits(i);
-            allTraits[i] = traits;
+        for (uint256 j = 0; j < __backgroundPayloads.length; j++) {
+            vm.startBroadcast();
+
+            farcastle2.addTraits(
+                0,
+                __backgroundPayloads[j],
+                __backgroundRarities[j]
+            );
+            vm.stopBroadcast();
         }
 
-        uint256 x = 0;
-        for (uint256 i = 0; i < allTraits.length; i++) {
-            for (uint8 j = 0; j < allTraits[i].length; j++) {
-                // console.log(allTraits[i][j].BACKGROUND.name);
-                // console.log(allTraits[i][j].ARMOR.name);
-                // console.log(allTraits[i][j].HEAD.name);
-                // console.log(allTraits[i][j].WEAPON.name);
+        // for (uint256 j = 0; j < backgroundPayloads.length; j += batchAmount) {
+        //     SouthNFTs.Payload[]
+        //         memory _backgroundPayloads = new SouthNFTs.Payload[](
+        //             batchAmount
+        //         );
+        //     uint16[] memory _backgroundRarities = new uint16[](batchAmount);
 
-                console.log(x);
-                x++;
-                console.log(allTraits[i][j].BACKGROUND.name);
+        //     for (uint256 i = 0; i < batchAmount; i++) {
+        //         _backgroundPayloads[i] = backgroundPayloads[j + i];
+        //         _backgroundRarities[i] = backgroundRarities[j + i];
+        //     }
 
-                farcastle2.addTrait(
-                    0,
-                    SouthNFTs.Payload({
-                        name: allTraits[i][j].BACKGROUND.name,
-                        image: bytes(
-                            substring(
-                                allTraits[i][j].BACKGROUND.img_data,
-                                22,
-                                bytes(allTraits[i][j].BACKGROUND.img_data)
-                                    .length - 1
-                            )
-                        )
-                    }),
-                    allTraits[i][j].BACKGROUND.rarity
-                );
+        //     farcastle2.addTraits(0, _backgroundPayloads, _backgroundRarities);
+        // }
 
-                farcastle2.addTrait(
-                    1,
-                    SouthNFTs.Payload({
-                        name: allTraits[i][j].ARMOR.name,
-                        image: bytes(
-                            substring(
-                                allTraits[i][j].ARMOR.img_data,
-                                22,
-                                bytes(allTraits[i][j].ARMOR.img_data).length - 1
-                            )
-                        )
-                    }),
-                    allTraits[i][j].ARMOR.rarity
-                );
+        // for (uint256 i = 0; i < allTraits.length; i++) {
 
-                farcastle2.addTrait(
-                    2,
-                    SouthNFTs.Payload({
-                        name: allTraits[i][j].HEAD.name,
-                        image: bytes(
-                            substring(
-                                allTraits[i][j].HEAD.img_data,
-                                22,
-                                bytes(allTraits[i][j].HEAD.img_data).length - 1
-                            )
-                        )
-                    }),
-                    allTraits[i][j].HEAD.rarity
-                );
+        //     uint256 batchAmount = 30;
+        //     for (uint256 j = 0; j < batchAmount; j++) {
+        //     }
+        // }
 
-                farcastle2.addTrait(
-                    3,
-                    SouthNFTs.Payload({
-                        name: allTraits[i][j].WEAPON.name,
-                        image: bytes(
-                            substring(
-                                allTraits[i][j].WEAPON.img_data,
-                                22,
-                                bytes(allTraits[i][j].WEAPON.img_data).length -
-                                    1
-                            )
-                        )
-                    }),
-                    allTraits[i][j].WEAPON.rarity
-                );
+        console.log(allTraits[0].BACKGROUND.name);
+        // Traits[][] memory allTraits = new Traits[][](3);
+        // for (uint256 i = 1; i <= 2; i++) {
+        //     Traits[] memory traits = getTraits(i);
+        //     allTraits[i] = traits;
+        // }
 
-                // addTrait(
-                //     farcastle,
-                //     0,
-                //     allTraits[i][j].BACKGROUND.name,
-                //     allTraits[i][j].BACKGROUND.img_data,
-                //     allTraits[i][j].BACKGROUND.rarity
-                // );
+        // uint256 x = 0;
+        // for (uint256 i = 0; i < allTraits.length; i++) {
+        //     for (uint8 j = 0; j < allTraits[i].length; j++) {
+        //         // console.log(allTraits[i][j].BACKGROUND.name);
+        //         // console.log(allTraits[i][j].ARMOR.name);
+        //         // console.log(allTraits[i][j].HEAD.name);
+        //         // console.log(allTraits[i][j].WEAPON.name);
 
-                // addTrait(
-                //     farcastle,
-                //     1,
-                //     allTraits[i][j].ARMOR.name,
-                //     allTraits[i][j].ARMOR.img_data,
-                //     allTraits[i][j].ARMOR.rarity
-                // );
+        //         console.log(x);
+        //         x++;
+        //         console.log(allTraits[i][j].BACKGROUND.name);
 
-                // addTrait(
-                //     farcastle,
-                //     2,
-                //     allTraits[i][j].HEAD.name,
-                //     allTraits[i][j].HEAD.img_data,
-                //     allTraits[i][j].HEAD.rarity
-                // );
+        //         farcastle2.addTraits(
+        //             SouthNFTs.MultiPayload({
+        //                 layers: [uint8(0)],
+        //                 name: [allTraits[i][j].BACKGROUND.name],
+        //                 imgData: [allTraits[i][j].BACKGROUND.img_data],
+        //                 rarity: [allTraits[i][j].BACKGROUND.rarity]
+        //         }));
 
-                // addTrait(
-                //     farcastle,
-                //     3,
-                //     allTraits[i][j].WEAPON.name,
-                //     allTraits[i][j].WEAPON.img_data,
-                //     allTraits[i][j].WEAPON.rarity
-                // );
-            }
-        }
+        //         farcastle2.addTrait(
+        //             0,
+        //             SouthNFTs.Payload({
+        //                 name: allTraits[i][j].BACKGROUND.name,
+        //                 image: bytes(
+        //                     substring(
+        //                         allTraits[i][j].BACKGROUND.img_data,
+        //                         22,
+        //                         bytes(allTraits[i][j].BACKGROUND.img_data)
+        //                             .length - 1
+        //                     )
+        //                 )
+        //             }),
+        //             allTraits[i][j].BACKGROUND.rarity
+        //         );
 
-        new FarCASTLE(55, 0.1 ether, address(farcastle2));
-        farcastle2.mint(0x42bcD9e66817734100b86A2bab62d9eF3B63E92A, 20);
+        //         farcastle2.addTrait(
+        //             1,
+        //             SouthNFTs.Payload({
+        //                 name: allTraits[i][j].ARMOR.name,
+        //                 image: bytes(
+        //                     substring(
+        //                         allTraits[i][j].ARMOR.img_data,
+        //                         22,
+        //                         bytes(allTraits[i][j].ARMOR.img_data).length - 1
+        //                     )
+        //                 )
+        //             }),
+        //             allTraits[i][j].ARMOR.rarity
+        //         );
+
+        //         farcastle2.addTrait(
+        //             2,
+        //             SouthNFTs.Payload({
+        //                 name: allTraits[i][j].HEAD.name,
+        //                 image: bytes(
+        //                     substring(
+        //                         allTraits[i][j].HEAD.img_data,
+        //                         22,
+        //                         bytes(allTraits[i][j].HEAD.img_data).length - 1
+        //                     )
+        //                 )
+        //             }),
+        //             allTraits[i][j].HEAD.rarity
+        //         );
+
+        //         farcastle2.addTrait(
+        //             3,
+        //             SouthNFTs.Payload({
+        //                 name: allTraits[i][j].WEAPON.name,
+        //                 image: bytes(
+        //                     substring(
+        //                         allTraits[i][j].WEAPON.img_data,
+        //                         22,
+        //                         bytes(allTraits[i][j].WEAPON.img_data).length -
+        //                             1
+        //                     )
+        //                 )
+        //             }),
+        //             allTraits[i][j].WEAPON.rarity
+        //         );
+
+        //         // addTrait(
+        //         //     farcastle,
+        //         //     0,
+        //         //     allTraits[i][j].BACKGROUND.name,
+        //         //     allTraits[i][j].BACKGROUND.img_data,
+        //         //     allTraits[i][j].BACKGROUND.rarity
+        //         // );
+
+        //         // addTrait(
+        //         //     farcastle,
+        //         //     1,
+        //         //     allTraits[i][j].ARMOR.name,
+        //         //     allTraits[i][j].ARMOR.img_data,
+        //         //     allTraits[i][j].ARMOR.rarity
+        //         // );
+
+        //         // addTrait(
+        //         //     farcastle,
+        //         //     2,
+        //         //     allTraits[i][j].HEAD.name,
+        //         //     allTraits[i][j].HEAD.img_data,
+        //         //     allTraits[i][j].HEAD.rarity
+        //         // );
+
+        //         // addTrait(
+        //         //     farcastle,
+        //         //     3,
+        //         //     allTraits[i][j].WEAPON.name,
+        //         //     allTraits[i][j].WEAPON.img_data,
+        //         //     allTraits[i][j].WEAPON.rarity
+        //         // );
+        //     }
+        // }
+
+        // new FarCASTLE(55, 0.1 ether, address(farcastle2));
+        // farcastle2.mint(0x42bcD9e66817734100b86A2bab62d9eF3B63E92A, 20);
     }
-
-    struct TraitJson {
-        string imgData;
-        string name;
-        uint256 rarity;
-    }
-
-    struct Payload {
-        string name;
-        string imgData;
-    }
-
-    Payload[] s_payloads;
 
     // function prepLayer(
     //     Traits[] memory traits,
@@ -295,4 +393,21 @@ contract DeployFarcastle is ScaffoldETHDeploy {
     //         payloads[i] = Farcastles.Payload(names[i], imgDatas[i]);
     //     }
     // }
+
+    function substring(
+        string memory str,
+        uint256 startIndex,
+        uint256 endIndex
+    ) public pure returns (string memory) {
+        bytes memory strBytes = bytes(str);
+        require(endIndex >= startIndex, "Invalid indexes");
+        require(endIndex < strBytes.length, "End index out of range");
+
+        bytes memory result = new bytes(endIndex - startIndex + 1);
+        for (uint256 i = startIndex; i <= endIndex; i++) {
+            result[i - startIndex] = strBytes[i];
+        }
+
+        return string(result);
+    }
 }
