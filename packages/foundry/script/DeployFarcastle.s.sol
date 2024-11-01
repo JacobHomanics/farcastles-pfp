@@ -137,9 +137,15 @@ contract DeployFarcastle is ScaffoldETHDeploy {
             //     )
             // );
 
-            farcastle2.addTraits{
-                gas: 3_000_000_000_000_000_000_000_000_000_000_000_000_000_000
-            }(0, __backgroundPayloads[j], __backgroundRarities[j]);
+            // {
+            //                 gas: 3_000_000_000_000_000_000_000_000_000_000_000_000_000_000
+            //             }
+
+            farcastle2.addTraits(
+                0,
+                __backgroundPayloads[j],
+                __backgroundRarities[j]
+            );
             vm.stopBroadcast();
         }
     }

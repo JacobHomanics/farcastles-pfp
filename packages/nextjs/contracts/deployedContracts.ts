@@ -7,7 +7,7 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 const deployedContracts = {
   31337: {
     SouthNFTs: {
-      address: "0xcc745c7e5c43018bc03903df75c45babdaec1218",
+      address: "0x166617872d39faf09e4ec93e3047b58a583e3470",
       abi: [
         {
           type: "constructor",
