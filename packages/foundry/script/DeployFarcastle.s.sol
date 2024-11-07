@@ -338,7 +338,7 @@ contract DeployFarcastle is ScaffoldETHDeploy {
 
     function yes1(
         Traits[] memory allTraits
-    ) public returns (uint16[][] memory, SouthNFTs.Payload[][] memory) {
+    ) public pure returns (uint16[][] memory, SouthNFTs.Payload[][] memory) {
         uint16[][] memory rarities = new uint16[][](4);
         SouthNFTs.Payload[][] memory payloads = new SouthNFTs.Payload[][](4);
 
