@@ -436,7 +436,7 @@ contract DeployFarcastle is ScaffoldETHDeploy {
         //         );
         //     }
         // }
-        uint256 batchAmount = 100;
+        uint256 batchAmount = 1;
 
         // #1 [] - Layer
         // #2 [] - Batch
@@ -489,9 +489,36 @@ contract DeployFarcastle is ScaffoldETHDeploy {
                 batchCount++;
             }
 
-            // batchedPayloadsByLayer[i] = batchedPayloadsForLayer;
-            // batchedRaritiesByLayer[i] = batchedRaritiesForLayer;
+            batchedPayloadsByLayer[i] = batchedPayloadsForLayer;
+            batchedRaritiesByLayer[i] = batchedRaritiesForLayer;
         }
+
+        startBroadcast();
+        SouthNFTs farcastle2 = new SouthNFTs("Test", "TEST");
+        stopBroadcast();
+
+        for (uint i = 0; i < batchedPayloadsByLayer.length; i++) {
+            for (uint j = 0; j < batchedPayloadsByLayer[i].length; j++) {
+                vm.startBroadcast();
+                farcastle2.addTraits(
+                    uint8(i),
+                    batchedPayloadsByLayer[i][j],
+                    batchedRaritiesByLayer[i][j]
+                );
+
+                vm.stopBroadcast();
+            }
+        }
+
+        // for (uint256 j = 0; j < __backgroundPayloads.length; j++) {
+        //     vm.startBroadcast();
+        //     farcastle2.addTraits(
+        //         0,
+        //         __backgroundPayloads[j],
+        //         __backgroundRarities[j]
+        //     );
+        //     vm.stopBroadcast();
+        // }
 
         // SouthNFTs.Payload[][]
         //     memory __backgroundPayloads = new SouthNFTs.Payload[][](

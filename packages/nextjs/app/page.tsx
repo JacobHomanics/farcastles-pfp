@@ -105,26 +105,30 @@ const Home: NextPage = () => {
   const { data: blockNumber } = useBlockNumber();
   console.log(blockNumber);
 
-  const jsonComponents = nfts.map((nft, index) => (
-    <div key={index} className="flex items-center justify-center p-4 w-[400px]">
-      <div className="bg-base-100 p-1 flex flex-col items-center justify-center w-full">
-        <Image src={nft.image} width={128} height={128} alt="farcastle" className="rounded-full" />
-        <div className="flex flex-col text-center">
-          <p className="m-0">Name</p>
-          <p className="m-0">{nft.name}</p>
-        </div>
+  const jsonComponents = nfts.map((nft, index) => {
+    console.log(nft.image);
 
-        <p className="text-center m-0 mt-4">Attributes</p>
-
-        {nft.attributes.map((attribute: any, attributeIndex: number) => (
-          <div key={"attributes" + attributeIndex} className="flex flex-wrap gap-5 text-center">
-            <p className="m-0">{attribute["trait_type"]}</p>
-            <p className="m-0">{attribute["value"]}</p>
+    return (
+      <div key={index} className="flex items-center justify-center p-4 w-[400px]">
+        <div className="bg-base-100 p-1 flex flex-col items-center justify-center w-full">
+          <Image src={nft.image} width={128} height={128} alt="farcastle" className="rounded-full" />
+          <div className="flex flex-col text-center">
+            <p className="m-0">Name</p>
+            <p className="m-0">{nft.name}</p>
           </div>
-        ))}
+
+          <p className="text-center m-0 mt-4">Attributes</p>
+
+          {nft.attributes.map((attribute: any, attributeIndex: number) => (
+            <div key={"attributes" + attributeIndex} className="flex flex-wrap gap-5 text-center">
+              <p className="m-0">{attribute["trait_type"]}</p>
+              <p className="m-0">{attribute["value"]}</p>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
-  ));
+    );
+  });
 
   // const [northHealth, setNorthHealth] = useState(100);
   const [southHealth, setSouthHealth] = useState(100);
