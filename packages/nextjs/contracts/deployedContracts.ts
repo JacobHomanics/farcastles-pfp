@@ -7,7 +7,7 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 const deployedContracts = {
   31337: {
     FarCASTLEController: {
-      address: "0xd5ec2cad5be5631fa675bdd3d78d06c0b91290b0",
+      address: "0xc5b01066227bc98056a65a7befc90b27a52f46af",
       abi: [
         {
           type: "constructor",
@@ -50,6 +50,19 @@ const deployedContracts = {
           ],
           outputs: [],
           stateMutability: "payable",
+        },
+        {
+          type: "function",
+          name: "getCostPerAttack",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
         },
         {
           type: "function",
@@ -326,7 +339,7 @@ const deployedContracts = {
       },
     },
     FarCASTLE: {
-      address: "0x58994bbb620a5d37ee4aab21f0bcc33cdedb9dde",
+      address: "0xa958c4778d1cd88535a0afa229a8873ca881592d",
       abi: [
         {
           type: "constructor",
@@ -619,7 +632,7 @@ const deployedContracts = {
       },
     },
     SouthNFTs: {
-      address: "0x1d5e43a543062cfbc7054f08b7772c91e3128d8a",
+      address: "0x80ddea0b81c187e99c23c419a5ae9d539c242353",
       abi: [
         {
           type: "constructor",

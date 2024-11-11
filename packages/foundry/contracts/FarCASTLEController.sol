@@ -37,4 +37,8 @@ contract FarCASTLEController is AccessControl {
     }
 
     function withdraw() external {}
+
+    function getCostPerAttack() external view returns (uint256) {
+        return s_costPerAttack;
+    }
 }

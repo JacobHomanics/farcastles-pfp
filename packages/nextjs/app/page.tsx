@@ -2,18 +2,14 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import type { NextPage } from "next";
-import { parseEther } from "viem";
-import { useAccount, useBlockNumber, usePublicClient } from "wagmi";
-import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-import { Address } from "~~/components/scaffold-eth";
+import { formatEther } from "viem";
+import { useBlockNumber, usePublicClient } from "wagmi";
+import { AttackSlider } from "~~/components/AttackSlider";
 import { useScaffoldContract, useScaffoldReadContract, useScaffoldWriteContract } from "~~/hooks/scaffold-eth";
 
 const Home: NextPage = () => {
   const [nfts, setNfts] = useState<any[]>([]);
-
-  const { address: connectedAddress } = useAccount();
 
   const { data: Farcastles } = useScaffoldContract({ contractName: "SouthNFTs" });
 
@@ -27,6 +23,11 @@ const Home: NextPage = () => {
   const { data: currentHealthNorth } = useScaffoldReadContract({
     contractName: "FarCASTLE",
     functionName: "s_currentHealth",
+  });
+
+  const { data: costPerAttackNorth } = useScaffoldReadContract({
+    contractName: "FarCASTLEController",
+    functionName: "getCostPerAttack",
   });
 
   const { writeContractAsync: writeNorthCastleControllerAsync } = useScaffoldWriteContract("FarCASTLEController");
@@ -134,21 +135,32 @@ const Home: NextPage = () => {
     );
   });
 
-  const [northHealth, setNorthHealth] = useState(100);
-  const [southHealth, setSouthHealth] = useState(100);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [isPopupSliderOpen, setIsPopupSliderOpen] = useState(false);
+  const [selectedPopupAttack, setSelectedPopupAttack] = useState("");
+
+  const initialValue = 3;
+  const [attackPower, setAttackPower] = useState(initialValue);
+
+  const handleSliderChange = (value: any) => {
+    setAttackPower(value);
+  };
+
   return (
     <>
-      <div className="flex flex-col justify-center items-center gap-44 mt-4">
+      <div className="flex flex-col justify-center items-center gap-20 mt-4">
         <div className="flex flex-col items-center">
           <Image src="/castle-red.png" width={256} height={256} alt="farcastle" />
-          <div className="rounded-full bg-base-100 p-4">{currentHealthNorth?.toString()}/ 55</div>
-          <button
+          <div className="rounded-full bg-secondary p-4">{currentHealthNorth?.toString()}</div>
+          {/* <button
             className="btn btn-primary"
             onClick={async () => {
               await writeNorthCastleControllerAsync({
                 functionName: "attack",
                 args: [BigInt(1)],
                 value: parseEther("0.1"),
+                gas: BigInt(10000000),
+                // gasPrice: BigInt(100000000),
               });
 
               setNorthHealth(northHealth - 1);
@@ -164,74 +176,113 @@ const Home: NextPage = () => {
             }}
           >
             {"!attack north"}
-          </button>
+          </button> */}
         </div>
 
+        <button className="btn btn-primary btn-lg" onClick={() => setIsPopupOpen(true)}>
+          Attack
+        </button>
         <div className="flex flex-col items-center">
-          <button className="btn btn-primary" onClick={() => setSouthHealth(southHealth - 1)}>
+          {/* <button className="btn btn-primary" onClick={() => setSouthHealth(southHealth - 1)}>
             {"!attack south"}
-          </button>
-          <div className="rounded-full bg-base-100 p-4">{southHealth}/ 100</div>
+          </button> */}
+          <div className="rounded-full bg-secondary p-4">{currentHealthNorth?.toString()}</div>
           <Image src="/castle-red.png" width={256} height={256} alt="farcastle" />
         </div>
       </div>
 
       <div className="flex flex-wrap justify-center">{jsonComponents}</div>
 
-      <div className="flex items-center flex-col flex-grow pt-10">
-        <div className="px-5">
-          <h1 className="text-center">
-            <span className="block text-2xl mb-2">Welcome to</span>
-            <span className="block text-4xl font-bold">Scaffold-ETH 2</span>
-          </h1>
-          <div className="flex justify-center items-center space-x-2 flex-col sm:flex-row">
-            <p className="my-2 font-medium">Connected Address:</p>
-            <Address address={connectedAddress} />
-          </div>
+      {isPopupOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+          <div className="bg-base-100 p-6 rounded-lg max-w-md w-full text-center shadow-lg">
+            {isPopupSliderOpen ? (
+              <div>
+                <h2 className="text-2xl font-semibold mb-4">
+                  {`What might will you strike into the ${selectedPopupAttack}?`}{" "}
+                </h2>
 
-          <p className="text-center text-lg">
-            Get started by editing{" "}
-            <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
-              packages/nextjs/app/page.tsx
-            </code>
-          </p>
-          <p className="text-center text-lg">
-            Edit your smart contract{" "}
-            <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
-              YourContract.sol
-            </code>{" "}
-            in{" "}
-            <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
-              packages/hardhat/contracts
-            </code>
-          </p>
-        </div>
+                <div className="bg">
+                  <AttackSlider min={1} max={20} step={1} initialValue={3} onValueChange={handleSliderChange}>
+                    <div className="flex flex-col">
+                      <div className="text-center m-0">Attack Power</div>
+                      <div className="text-center m-0 text-md">
+                        {"(" + formatEther(BigInt(attackPower) * (costPerAttackNorth || BigInt(0))) + ") ether"}
+                      </div>
 
-        <div className="flex-grow bg-base-300 w-full mt-16 px-8 py-12">
-          <div className="flex justify-center items-center gap-12 flex-col sm:flex-row">
-            <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
-              <BugAntIcon className="h-8 w-8 fill-secondary" />
-              <p>
-                Tinker with your smart contract using the{" "}
-                <Link href="/debug" passHref className="link">
-                  Debug Contracts
-                </Link>{" "}
-                tab.
-              </p>
-            </div>
-            <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
-              <MagnifyingGlassIcon className="h-8 w-8 fill-secondary" />
-              <p>
-                Explore your local transactions with the{" "}
-                <Link href="/blockexplorer" passHref className="link">
-                  Block Explorer
-                </Link>{" "}
-                tab.
-              </p>
+                      <div className="text-center m-0 text-xl">{attackPower}</div>
+                    </div>
+                  </AttackSlider>
+                </div>
+
+                <button
+                  className="btn btn-primary"
+                  onClick={async () => {
+                    await writeNorthCastleControllerAsync({
+                      functionName: "attack",
+                      args: [BigInt(attackPower)],
+                      value: BigInt(attackPower) * (costPerAttackNorth || BigInt(0)),
+                      gas: BigInt(10000000),
+                      // gasPrice: BigInt(100000000),
+                    });
+                  }}
+                >
+                  {"Attack!"}
+                </button>
+              </div>
+            ) : (
+              <div>
+                <h2 className="text-2xl font-semibold mb-4">Which do you pledge allegiance to?</h2>
+
+                <div className="flex flex-col gap-1">
+                  <button
+                    className="btn btn-primary"
+                    onClick={async () => {
+                      setIsPopupSliderOpen(true);
+                      setSelectedPopupAttack("South");
+                    }}
+                  >
+                    North
+                  </button>
+
+                  <button
+                    className="btn btn-primary"
+                    onClick={async () => {
+                      setIsPopupSliderOpen(true);
+                      setSelectedPopupAttack("North");
+                    }}
+                  >
+                    South
+                  </button>
+                </div>
+              </div>
+            )}
+
+            <div className="flex flex-wrap items-center justify-center mt-10">
+              {isPopupSliderOpen && (
+                <button
+                  onClick={() => {
+                    setIsPopupSliderOpen(false);
+                  }}
+                  className="btn btn-primary rounded-md"
+                >
+                  Back
+                </button>
+              )}
+
+              <button
+                onClick={() => {
+                  setIsPopupOpen(false);
+                  setIsPopupSliderOpen(false);
+                }}
+                className="btn rounded-md bg-red-500 hover:bg-red-600"
+              >
+                Close
+              </button>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </>
   );
 };
