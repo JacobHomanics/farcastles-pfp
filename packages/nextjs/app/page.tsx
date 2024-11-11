@@ -153,8 +153,6 @@ const Home: NextPage = () => {
                 await writeContractAsync({
                   functionName: "mint",
                   args: [connectedAddress, BigInt(20)],
-                  gasPrice: BigInt(10000000000),
-                  gas: BigInt(10000000), // Set your desired gas limit here
                 });
               } catch (error) {
                 console.error("Error minting NFT:", error);
