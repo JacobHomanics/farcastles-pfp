@@ -20,7 +20,19 @@ const Home: NextPage = () => {
     functionName: "getCostPerAttack",
   });
 
+  const { data: currentHealthSouth } = useScaffoldReadContract({
+    contractName: "SouthCastle",
+    functionName: "s_currentHealth",
+  });
+
+  const { data: costPerAttackSouth } = useScaffoldReadContract({
+    contractName: "SouthCastleController",
+    functionName: "getCostPerAttack",
+  });
+
   const { writeContractAsync: writeNorthCastleControllerAsync } = useScaffoldWriteContract("NorthCastleController");
+
+  const { writeContractAsync: writeSouthCastleControllerAsync } = useScaffoldWriteContract("SouthCastleController");
 
   const { data: blockNumber } = useBlockNumber();
   console.log(blockNumber);
@@ -48,12 +60,13 @@ const Home: NextPage = () => {
           Attack
         </button>
         <div className="flex flex-col items-center">
-          <div className="rounded-full bg-secondary p-4">{currentHealthNorth?.toString()}</div>
+          <div className="rounded-full bg-secondary p-4">{currentHealthSouth?.toString()}</div>
           <Image src="/castle-red.png" width={256} height={256} alt="farcastle" />
         </div>
       </div>
 
-      <NFTViewer />
+      <NFTViewer contractName="SouthNFTs" />
+      <NFTViewer contractName="NorthNFTs" />
 
       {isPopupOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
@@ -80,13 +93,23 @@ const Home: NextPage = () => {
                 <button
                   className="btn btn-primary"
                   onClick={async () => {
-                    await writeNorthCastleControllerAsync({
-                      functionName: "attack",
-                      args: [BigInt(attackPower)],
-                      value: BigInt(attackPower) * (costPerAttackNorth || BigInt(0)),
-                      gas: BigInt(10000000),
-                      // gasPrice: BigInt(100000000),
-                    });
+                    if (selectedPopupAttack === "North") {
+                      await writeNorthCastleControllerAsync({
+                        functionName: "attack",
+                        args: [BigInt(attackPower)],
+                        value: BigInt(attackPower) * (costPerAttackNorth || BigInt(0)),
+                        gas: BigInt(10000000),
+                        // gasPrice: BigInt(100000000),
+                      });
+                    } else if (selectedPopupAttack === "South") {
+                      await writeSouthCastleControllerAsync({
+                        functionName: "attack",
+                        args: [BigInt(attackPower)],
+                        value: BigInt(attackPower) * (costPerAttackSouth || BigInt(0)),
+                        gas: BigInt(10000000),
+                        // gasPrice: BigInt(100000000),
+                      });
+                    }
                   }}
                 >
                   {"Attack!"}

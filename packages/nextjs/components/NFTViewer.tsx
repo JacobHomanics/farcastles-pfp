@@ -3,13 +3,13 @@ import Image from "next/image";
 import { usePublicClient } from "wagmi";
 import { useScaffoldContract, useScaffoldReadContract } from "~~/hooks/scaffold-eth";
 
-export const NFTViewer = () => {
+export const NFTViewer = ({ contractName }: any) => {
   const [nfts, setNfts] = useState<any[]>([]);
 
-  const { data: SouthNFTS } = useScaffoldContract({ contractName: "SouthNFTs" });
+  const { data: SouthNFTS } = useScaffoldContract({ contractName: contractName as "SouthNFTs" | "NorthNFTs" });
 
   const { data: totalSupply } = useScaffoldReadContract({
-    contractName: "SouthNFTs",
+    contractName: contractName as "SouthNFTs" | "NorthNFTs",
     functionName: "totalSupply",
   });
 
