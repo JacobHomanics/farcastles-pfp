@@ -94,41 +94,6 @@ const deployedContracts = {
         },
         {
           type: "function",
-          name: "addTrait",
-          inputs: [
-            {
-              name: "layer",
-              type: "uint256",
-              internalType: "uint256",
-            },
-            {
-              name: "payload",
-              type: "tuple",
-              internalType: "struct SouthNFTs.Payload",
-              components: [
-                {
-                  name: "name",
-                  type: "string",
-                  internalType: "string",
-                },
-                {
-                  name: "image",
-                  type: "bytes",
-                  internalType: "bytes",
-                },
-              ],
-            },
-            {
-              name: "rarity",
-              type: "uint16",
-              internalType: "uint16",
-            },
-          ],
-          outputs: [],
-          stateMutability: "nonpayable",
-        },
-        {
-          type: "function",
           name: "addTraits",
           inputs: [
             {

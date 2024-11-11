@@ -362,29 +362,109 @@ contract DeployFarcastle is ScaffoldETHDeploy {
             allTraits.length
         );
 
+        // for (uint256 i = 0; i < allTraits.length; i++) {
+        //     rarities[0][i] = allTraits[i].BACKGROUND.rarity;
+        //     payloads[0][i] = SouthNFTs.Payload(
+        //         allTraits[i].BACKGROUND.name,
+        //         bytes(
+        //             substring(
+        //                 allTraits[i].BACKGROUND.img_data,
+        //                 22,
+        //                 bytes(allTraits[i].BACKGROUND.img_data).length - 1
+        //             )
+        //         )
+        //     );
+        // }
+
+        // for (uint256 i = 0; i < allTraits.length; i++) {
+        //     rarities[1][i] = allTraits[i].ARMOR.rarity;
+        //     payloads[1][i] = SouthNFTs.Payload(
+        //         allTraits[i].ARMOR.name,
+        //         bytes(
+        //             // substring(
+        //             allTraits[i].ARMOR.img_data //,
+        //             // 22,
+        //             // bytes(allTraits[i].ARMOR.img_data).length - 1
+        //             // )
+        //         )
+        //     );
+        // }
+
+        // for (uint256 i = 0; i < allTraits.length; i++) {
+        //     rarities[2][i] = allTraits[i].HEAD.rarity;
+        //     payloads[2][i] = SouthNFTs.Payload(
+        //         allTraits[i].HEAD.name,
+        //         bytes(
+        //             // substring(
+        //             allTraits[i].HEAD.img_data //,
+        //             //     22,
+        //             //     bytes(allTraits[i].HEAD.img_data).length - 1
+        //             // )
+        //         )
+        //     );
+        // }
+
+        // for (uint256 i = 0; i < allTraits.length; i++) {
+        //     rarities[3][i] = allTraits[i].WEAPON.rarity;
+        //     payloads[3][i] = SouthNFTs.Payload(
+        //         allTraits[i].WEAPON.name,
+        //         bytes(
+        //             // substring(
+        //             allTraits[i].WEAPON.img_data //,
+        //             // 22,
+        //             // bytes(allTraits[i].WEAPON.img_data).length - 1
+        //             // )
+        //         )
+        //     );
+        // }
+
         for (uint256 i = 0; i < allTraits.length; i++) {
             backgroundRarities[i] = allTraits[i].BACKGROUND.rarity;
             backgroundPayloads[i] = SouthNFTs.Payload(
                 allTraits[i].BACKGROUND.name,
-                bytes(allTraits[i].BACKGROUND.img_data)
+                bytes(
+                    substring(
+                        allTraits[i].BACKGROUND.img_data,
+                        22,
+                        bytes(allTraits[i].BACKGROUND.img_data).length - 1
+                    )
+                )
             );
 
             armorRarities[i] = allTraits[i].ARMOR.rarity;
             armorPayloads[i] = SouthNFTs.Payload(
                 allTraits[i].ARMOR.name,
-                bytes(allTraits[i].ARMOR.img_data)
+                bytes(
+                    substring(
+                        allTraits[i].ARMOR.img_data,
+                        22,
+                        bytes(allTraits[i].ARMOR.img_data).length - 1
+                    )
+                )
             );
 
             headRarities[i] = allTraits[i].HEAD.rarity;
             headPayloads[i] = SouthNFTs.Payload(
                 allTraits[i].HEAD.name,
-                bytes(allTraits[i].HEAD.img_data)
+                bytes(
+                    substring(
+                        allTraits[i].HEAD.img_data,
+                        22,
+                        bytes(allTraits[i].HEAD.img_data).length - 1
+                    )
+                )
             );
 
             weaponRarities[i] = allTraits[i].WEAPON.rarity;
             weaponPayloads[i] = SouthNFTs.Payload(
                 allTraits[i].WEAPON.name,
-                bytes(allTraits[i].WEAPON.img_data)
+                bytes(
+                    substring(
+                        allTraits[i].WEAPON.img_data,
+                        22,
+                        bytes(allTraits[i].WEAPON.img_data).length - 1
+                    )
+                )
             );
         }
 

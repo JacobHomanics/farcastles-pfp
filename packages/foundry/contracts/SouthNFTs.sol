@@ -59,13 +59,6 @@ contract SouthNFTs is ERC721A {
         _safeMint(to, amount, "");
     }
 
-    struct MultiPayload {
-        uint8[] layers;
-        string[] name;
-        string[] imgData;
-        uint16[] rarity;
-    }
-
     function addTraits(
         uint8 layer,
         Payload[] calldata payload,
@@ -85,16 +78,16 @@ contract SouthNFTs is ERC721A {
         }
     }
 
-    function addTrait(
-        uint256 layer,
-        Payload memory payload,
-        uint16 rarity
-    ) public {
-        _setTrait(s_traitCounts[layer], layer, payload, rarity);
-        unchecked {
-            s_traitCounts[layer]++;
-        }
-    }
+    // function addTrait(
+    //     uint256 layer,
+    //     Payload memory payload,
+    //     uint16 rarity
+    // ) public {
+    //     _setTrait(s_traitCounts[layer], layer, payload, rarity);
+    //     unchecked {
+    //         s_traitCounts[layer]++;
+    //     }
+    // }
 
     // ********************************
     // INTERNAL WRITE FUNCTIONS
@@ -102,7 +95,7 @@ contract SouthNFTs is ERC721A {
     function _setTrait(
         uint256 traitIndex,
         uint256 layer,
-        Payload memory payload,
+        Payload calldata payload,
         uint16 rarity
     ) internal {
         Trait storage trait = s_traits[layer][traitIndex];
