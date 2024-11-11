@@ -10,15 +10,6 @@ import { NFTViewer } from "~~/components/NFTViewer";
 import { useScaffoldReadContract, useScaffoldWriteContract } from "~~/hooks/scaffold-eth";
 
 const Home: NextPage = () => {
-  // const [nfts, setNfts] = useState<any[]>([]);
-
-  // const { data: SouthNFTS } = useScaffoldContract({ contractName: "SouthNFTs" });
-
-  // const { data: totalSupply } = useScaffoldReadContract({
-  //   contractName: "SouthNFTs",
-  //   functionName: "totalSupply",
-  // });
-
   const { data: currentHealthNorth } = useScaffoldReadContract({
     contractName: "NorthCastle",
     functionName: "s_currentHealth",
@@ -31,108 +22,8 @@ const Home: NextPage = () => {
 
   const { writeContractAsync: writeNorthCastleControllerAsync } = useScaffoldWriteContract("NorthCastleController");
 
-  // const publicClient = usePublicClient();
-  // useEffect(() => {
-  //   async function fetchTokenURIs() {
-  //     if (!publicClient?.chain.id || !SouthNFTS?.abi || !SouthNFTS?.address || !totalSupply) {
-  //       console.log("Required data not available");
-  //       return;
-  //     }
-
-  //     const newImgSrcs = [];
-  //     for (let i = 1; i <= totalSupply; i++) {
-  //       try {
-  //         const tokenURI = await publicClient.readContract({
-  //           address: SouthNFTS.address,
-  //           abi: SouthNFTS.abi,
-  //           functionName: "tokenURI",
-  //           args: [BigInt(i)],
-  //         });
-
-  //         const base64String = tokenURI.substring(22);
-  //         const jsonObject = JSON.parse(base64String);
-  //         newImgSrcs.push(jsonObject);
-  //       } catch (error) {
-  //         console.error(`Error fetching token URI for token ${i}:`, error);
-  //       }
-  //     }
-
-  //     if (JSON.stringify(newImgSrcs) !== JSON.stringify(nfts)) {
-  //       setNfts(newImgSrcs);
-  //     }
-  //   }
-
-  //   fetchTokenURIs();
-  // }, [publicClient, SouthNFTS, nfts, totalSupply]);
-
-  // console.log(nfts);
-  // const { data: farcastleContract } = useScaffoldReadContract({
-  //   contractName: "Farcastles",
-  //   functionName: "tokenURI",
-  //   args: [BigInt(1)],
-  // });
-
-  // console.log(farcastleContract?.substring(29, farcastleContract.length - 1));
-
-  // if (farcastleContract) {
-  //   const base64String = farcastleContract.substring(22, farcastleContract.length);
-  //   console.log(base64String);
-
-  //   const jsonObject = JSON.parse(base64String);
-  //   console.log(jsonObject);
-  //   imgSrc = jsonObject["image"];
-  // }
-  // if (farcastleContract) {
-  //   let base64String = farcastleContract.substring(29, farcastleContract.length - 1);
-
-  //   console.log(base64String);
-  //   // Step 1: Decode the Base64 string
-  //   const decodedString = Buffer.from(base64String, "base64");
-
-  //   // Step 2: Parse the decoded string into a JSON object
-  //   const jsonObject = JSON.parse(decodedString.toString());
-  //   console.log(jsonObject);
-  //   imgSrc = jsonObject["img_data"];
-  //   // console.log(jsonObject);
-  // }
-
-  // console.log(imgSrc);
-
-  // const imgComponents = imgSrcs.map((src, index) => (
-  //   <div key={index} className="flex items-center justify-center p-4">
-  //     <div className="bg-base-100 p-1">
-  //       <Image src={src} width={64} height={64} alt="farcastle" />
-  //     </div>
-  //   </div>
-  // ));
-
   const { data: blockNumber } = useBlockNumber();
   console.log(blockNumber);
-
-  // const jsonComponents = nfts.map((nft, index) => {
-  //   console.log(nft.image);
-
-  //   return (
-  //     <div key={index} className="flex items-center justify-center p-4 w-[400px]">
-  //       <div className="bg-base-100 p-1 flex flex-col items-center justify-center w-full">
-  //         <Image src={nft.image} width={128} height={128} alt="farcastle" className="rounded-full" />
-  //         <div className="flex flex-col text-center">
-  //           <p className="m-0">Name</p>
-  //           <p className="m-0">{nft.name}</p>
-  //         </div>
-
-  //         <p className="text-center m-0 mt-4">Attributes</p>
-
-  //         {nft.attributes.map((attribute: any, attributeIndex: number) => (
-  //           <div key={"attributes" + attributeIndex} className="flex flex-wrap gap-5 text-center">
-  //             <p className="m-0">{attribute["trait_type"]}</p>
-  //             <p className="m-0">{attribute["value"]}</p>
-  //           </div>
-  //         ))}
-  //       </div>
-  //     </div>
-  //   );
-  // });
 
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isPopupSliderOpen, setIsPopupSliderOpen] = useState(false);
@@ -151,47 +42,18 @@ const Home: NextPage = () => {
         <div className="flex flex-col items-center">
           <Image src="/castle-red.png" width={256} height={256} alt="farcastle" />
           <div className="rounded-full bg-secondary p-4">{currentHealthNorth?.toString()}</div>
-          {/* <button
-            className="btn btn-primary"
-            onClick={async () => {
-              await writeNorthCastleControllerAsync({
-                functionName: "attack",
-                args: [BigInt(1)],
-                value: parseEther("0.1"),
-                gas: BigInt(10000000),
-                // gasPrice: BigInt(100000000),
-              });
-
-              setNorthHealth(northHealth - 1);
-
-              // try {
-              //   await writeContractAsync({
-              //     functionName: "mint",
-              //     args: [connectedAddress, BigInt(20)],
-              //   });
-              // } catch (error) {
-              //   console.error("Error minting NFT:", error);
-              // }
-            }}
-          >
-            {"!attack north"}
-          </button> */}
         </div>
 
         <button className="btn btn-primary btn-lg" onClick={() => setIsPopupOpen(true)}>
           Attack
         </button>
         <div className="flex flex-col items-center">
-          {/* <button className="btn btn-primary" onClick={() => setSouthHealth(southHealth - 1)}>
-            {"!attack south"}
-          </button> */}
           <div className="rounded-full bg-secondary p-4">{currentHealthNorth?.toString()}</div>
           <Image src="/castle-red.png" width={256} height={256} alt="farcastle" />
         </div>
       </div>
 
       <NFTViewer />
-      {/* <div className="flex flex-wrap justify-center">{jsonComponents}</div> */}
 
       {isPopupOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
@@ -232,14 +94,14 @@ const Home: NextPage = () => {
               </div>
             ) : (
               <div>
-                <h2 className="text-2xl font-semibold mb-4">Which do you pledge allegiance to?</h2>
+                <h2 className="text-2xl font-semibold mb-4">Who will you attack?</h2>
 
                 <div className="flex flex-col gap-1">
                   <button
                     className="btn btn-primary"
                     onClick={async () => {
                       setIsPopupSliderOpen(true);
-                      setSelectedPopupAttack("South");
+                      setSelectedPopupAttack("North");
                     }}
                   >
                     North
@@ -249,7 +111,7 @@ const Home: NextPage = () => {
                     className="btn btn-primary"
                     onClick={async () => {
                       setIsPopupSliderOpen(true);
-                      setSelectedPopupAttack("North");
+                      setSelectedPopupAttack("South");
                     }}
                   >
                     South

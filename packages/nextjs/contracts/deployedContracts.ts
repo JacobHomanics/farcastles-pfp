@@ -7,7 +7,7 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 const deployedContracts = {
   31337: {
     NorthCastleController: {
-      address: "0x969f4c4ac4c3a20d7ec8323404785fa1e99676c2",
+      address: "0xdabbca990f615ccbb9348b3651d51ae57d28360f",
       abi: [
         {
           type: "constructor",
@@ -345,7 +345,7 @@ const deployedContracts = {
       },
     },
     NorthCastle: {
-      address: "0xaa966767202f17d4c2039ada9dd9210c2017c6fa",
+      address: "0x23eaa7507e3e754c9343010910334dafaeab6f08",
       abi: [
         {
           type: "constructor",
@@ -641,7 +641,7 @@ const deployedContracts = {
       },
     },
     SouthNFTs: {
-      address: "0xcc2de3e0bbe8c61faa05ed6cebe17459c6e2c64c",
+      address: "0xb138529efcab7de6b0966d38cc76c4fac6e32166",
       abi: [
         {
           type: "constructor",
@@ -1685,7 +1685,7 @@ const deployedContracts = {
       },
     },
     SouthCastleController: {
-      address: "0x63286030ec76abec8852a8f652b38b64dc113dab",
+      address: "0xcedfeec695f3dd402335ec50327760a3b1ef8251",
       abi: [
         {
           type: "constructor",
@@ -2023,7 +2023,7 @@ const deployedContracts = {
       },
     },
     SouthCastle: {
-      address: "0x8b652bdd6a64b1f65c96f74e33022da4a8c0905a",
+      address: "0x878acc717801fe0b4d9d2623ac3dfe81b951015a",
       abi: [
         {
           type: "constructor",
@@ -2319,7 +2319,7 @@ const deployedContracts = {
       },
     },
     NorthNFTs: {
-      address: "0xd21896ce83899b4aa00f8c8051c97c95c249e6f0",
+      address: "0x1c44f9fa6c89ae8f48c725cfea64139935a2b752",
       abi: [
         {
           type: "constructor",

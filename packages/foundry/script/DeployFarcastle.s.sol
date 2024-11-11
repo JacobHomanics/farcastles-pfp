@@ -239,9 +239,9 @@ contract DeployFarcastle is ScaffoldETHDeploy {
             address(northCastleController)
         );
 
-        address[] memory minters = new address[](1);
-        minters[0] = address(northCastleController);
-        SouthNFTs southNFTs = new SouthNFTs(minters);
+        address[] memory southMinters = new address[](1);
+        southMinters[0] = address(northCastleController);
+        SouthNFTs southNFTs = new SouthNFTs(southMinters);
         northCastleController.setCastle(address(northCastle));
         northCastleController.setTroops(address(southNFTs));
 
@@ -273,7 +273,7 @@ contract DeployFarcastle is ScaffoldETHDeploy {
 
         for (uint i = 0; i < completeTraits2.payloads.length; i++) {
             for (uint j = 0; j < completeTraits2.payloads[i].length; j++) {
-                southNFTs.addTraits(
+                northNFTs.addTraits(
                     uint8(i),
                     completeTraits2.payloads[i][j],
                     completeTraits2.rarities[i][j]
