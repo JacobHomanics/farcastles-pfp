@@ -3,8 +3,10 @@ pragma solidity ^0.8.19;
 
 import "../contracts/Farcastles.sol";
 import "../contracts/FarcastleSideNFTs.sol";
+import "../contracts/SouthNFTs.sol";
 import "./DeployHelpers.s.sol";
 import "../contracts/FarCASTLE.sol";
+import "../contracts/FarCASTLEController.sol";
 
 contract DeployFarcastle is ScaffoldETHDeploy {
     string backgroundLayerName = "BACKGROUND";
@@ -455,7 +457,7 @@ contract DeployFarcastle is ScaffoldETHDeploy {
         //         );
         //     }
         // }
-        uint256 batchAmount = 1;
+        uint256 batchAmount = 15;
 
         // #1 [] - Layer
         // #2 [] - Batch
@@ -515,7 +517,33 @@ contract DeployFarcastle is ScaffoldETHDeploy {
         }
 
         startBroadcast();
-        FarcastleSideNFTs farcastle2 = new FarcastleSideNFTs("Test", "TEST");
+
+        (, address _deployer, ) = vm.readCallers();
+
+        FarCASTLEController northCastleController = new FarCASTLEController(
+            .1 ether,
+            _deployer
+        );
+        stopBroadcast();
+
+        startBroadcast();
+
+        FarCASTLE northCastle = new FarCASTLE(
+            150,
+            address(northCastleController)
+        );
+
+        stopBroadcast();
+
+        startBroadcast();
+        address[] memory minters = new address[](1);
+        minters[0] = address(northCastleController);
+        SouthNFTs farcastle2 = new SouthNFTs(minters);
+        stopBroadcast();
+
+        startBroadcast();
+        northCastleController.setCastle(address(northCastle));
+        northCastleController.setTroops(address(farcastle2));
         stopBroadcast();
 
         for (uint i = 0; i < batchedPayloadsByLayer.length; i++) {

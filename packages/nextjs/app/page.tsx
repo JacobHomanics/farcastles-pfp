@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import type { NextPage } from "next";
+import { parseEther } from "viem";
 import { useAccount, useBlockNumber, usePublicClient } from "wagmi";
 import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { Address } from "~~/components/scaffold-eth";
@@ -14,21 +15,21 @@ const Home: NextPage = () => {
 
   const { address: connectedAddress } = useAccount();
 
-  const { data: Farcastles } = useScaffoldContract({ contractName: "FarcastleSideNFTs" });
+  const { data: Farcastles } = useScaffoldContract({ contractName: "SouthNFTs" });
 
   const { data: totalSupply } = useScaffoldReadContract({
-    contractName: "FarcastleSideNFTs",
+    contractName: "SouthNFTs",
     functionName: "totalSupply",
   });
 
-  const { writeContractAsync } = useScaffoldWriteContract("FarcastleSideNFTs");
+  // const { writeContractAsync } = useScaffoldWriteContract("SouthNFTs");
 
-  // const { data: currentHealthNorth } = useScaffoldReadContract({
-  //   contractName: "FarCASTLE",
-  //   functionName: "s_currentHealth",
-  // });
+  const { data: currentHealthNorth } = useScaffoldReadContract({
+    contractName: "FarCASTLE",
+    functionName: "s_currentHealth",
+  });
 
-  // const { writeContractAsync: writeNorthCastleAsync } = useScaffoldWriteContract("FarCASTLE");
+  const { writeContractAsync: writeNorthCastleControllerAsync } = useScaffoldWriteContract("FarCASTLEController");
 
   const publicClient = usePublicClient();
   useEffect(() => {
@@ -133,33 +134,33 @@ const Home: NextPage = () => {
     );
   });
 
-  // const [northHealth, setNorthHealth] = useState(100);
+  const [northHealth, setNorthHealth] = useState(100);
   const [southHealth, setSouthHealth] = useState(100);
   return (
     <>
       <div className="flex flex-col justify-center items-center gap-44 mt-4">
         <div className="flex flex-col items-center">
           <Image src="/castle-red.png" width={256} height={256} alt="farcastle" />
-          {/* <div className="rounded-full bg-base-100 p-4">{currentHealthNorth?.toString()}/ 55</div> */}
+          <div className="rounded-full bg-base-100 p-4">{currentHealthNorth?.toString()}/ 55</div>
           <button
             className="btn btn-primary"
             onClick={async () => {
-              // await writeNorthCastleAsync({
-              //   functionName: "receiveAttack",
-              //   args: [BigInt(1)],
-              //   value: parseEther("0.1"),
-              // });
+              await writeNorthCastleControllerAsync({
+                functionName: "attack",
+                args: [BigInt(1)],
+                value: parseEther("0.1"),
+              });
 
-              // setNorthHealth(northHealth - 1);
+              setNorthHealth(northHealth - 1);
 
-              try {
-                await writeContractAsync({
-                  functionName: "mint",
-                  args: [connectedAddress, BigInt(20)],
-                });
-              } catch (error) {
-                console.error("Error minting NFT:", error);
-              }
+              // try {
+              //   await writeContractAsync({
+              //     functionName: "mint",
+              //     args: [connectedAddress, BigInt(20)],
+              //   });
+              // } catch (error) {
+              //   console.error("Error minting NFT:", error);
+              // }
             }}
           >
             {"!attack north"}

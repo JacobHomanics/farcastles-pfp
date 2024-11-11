@@ -7,7 +7,9 @@ import "./ImageLibrary.sol";
 import "../lib/solady/src/utils/LibString.sol";
 import "@openzeppelin/contracts/access/AccessControl.sol";
 
-contract FarcastleSideNFTs is ERC721A {
+contract FarcastleSideNFTs is ERC721A, AccessControl {
+    bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
+
     // ********************************
     // STRUCTS
     // ********************************
@@ -46,15 +48,20 @@ contract FarcastleSideNFTs is ERC721A {
     // CONSTRUCTOR
     // ********************************
     constructor(
+        address[] memory minters,
         string memory name,
         string memory symbol
-    ) ERC721A(name, symbol) {}
+    ) ERC721A(name, symbol) {
+        for (uint256 i = 0; i < minters.length; i++) {
+            _grantRole(MINTER_ROLE, minters[i]);
+        }
+    }
 
     // ********************************
     // PUBLIC WRITE FUNCTIONS
     // ********************************
 
-    function mint(address to, uint256 amount) public {
+    function mint(address to, uint256 amount) public onlyRole(MINTER_ROLE) {
         uint256 minted = _totalMinted();
         _setTokenTraits(minted, amount);
         _safeMint(to, amount, "");
@@ -369,5 +376,11 @@ contract FarcastleSideNFTs is ERC721A {
         assembly ("memory-safe") {
             notval := not(val)
         }
+    }
+
+    function supportsInterface(
+        bytes4 interfaceId
+    ) public view override(ERC721A, AccessControl) returns (bool) {
+        return super.supportsInterface(interfaceId);
     }
 }

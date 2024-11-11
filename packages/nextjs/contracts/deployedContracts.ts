@@ -6,24 +6,657 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 
 const deployedContracts = {
   31337: {
-    FarcastleSideNFTs: {
-      address: "0x5f819f132c5414e3fc6bffcc4b734857178a42f2",
+    FarCASTLEController: {
+      address: "0xd5ec2cad5be5631fa675bdd3d78d06c0b91290b0",
       abi: [
         {
           type: "constructor",
           inputs: [
             {
-              name: "name",
-              type: "string",
-              internalType: "string",
+              name: "costPerAttack",
+              type: "uint256",
+              internalType: "uint256",
             },
             {
-              name: "symbol",
-              type: "string",
-              internalType: "string",
+              name: "admin",
+              type: "address",
+              internalType: "address",
             },
           ],
           stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "DEFAULT_ADMIN_ROLE",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "bytes32",
+              internalType: "bytes32",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "attack",
+          inputs: [
+            {
+              name: "amount",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [],
+          stateMutability: "payable",
+        },
+        {
+          type: "function",
+          name: "getRoleAdmin",
+          inputs: [
+            {
+              name: "role",
+              type: "bytes32",
+              internalType: "bytes32",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "bytes32",
+              internalType: "bytes32",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "grantRole",
+          inputs: [
+            {
+              name: "role",
+              type: "bytes32",
+              internalType: "bytes32",
+            },
+            {
+              name: "account",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "hasRole",
+          inputs: [
+            {
+              name: "role",
+              type: "bytes32",
+              internalType: "bytes32",
+            },
+            {
+              name: "account",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "bool",
+              internalType: "bool",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "renounceRole",
+          inputs: [
+            {
+              name: "role",
+              type: "bytes32",
+              internalType: "bytes32",
+            },
+            {
+              name: "callerConfirmation",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "revokeRole",
+          inputs: [
+            {
+              name: "role",
+              type: "bytes32",
+              internalType: "bytes32",
+            },
+            {
+              name: "account",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "s_costPerAttack",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "setCastle",
+          inputs: [
+            {
+              name: "castle",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "setTroops",
+          inputs: [
+            {
+              name: "troops",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "supportsInterface",
+          inputs: [
+            {
+              name: "interfaceId",
+              type: "bytes4",
+              internalType: "bytes4",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "bool",
+              internalType: "bool",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "withdraw",
+          inputs: [],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "event",
+          name: "RoleAdminChanged",
+          inputs: [
+            {
+              name: "role",
+              type: "bytes32",
+              indexed: true,
+              internalType: "bytes32",
+            },
+            {
+              name: "previousAdminRole",
+              type: "bytes32",
+              indexed: true,
+              internalType: "bytes32",
+            },
+            {
+              name: "newAdminRole",
+              type: "bytes32",
+              indexed: true,
+              internalType: "bytes32",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "RoleGranted",
+          inputs: [
+            {
+              name: "role",
+              type: "bytes32",
+              indexed: true,
+              internalType: "bytes32",
+            },
+            {
+              name: "account",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "sender",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "RoleRevoked",
+          inputs: [
+            {
+              name: "role",
+              type: "bytes32",
+              indexed: true,
+              internalType: "bytes32",
+            },
+            {
+              name: "account",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "sender",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "error",
+          name: "AccessControlBadConfirmation",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "AccessControlUnauthorizedAccount",
+          inputs: [
+            {
+              name: "account",
+              type: "address",
+              internalType: "address",
+            },
+            {
+              name: "neededRole",
+              type: "bytes32",
+              internalType: "bytes32",
+            },
+          ],
+        },
+        {
+          type: "error",
+          name: "Meep1",
+          inputs: [],
+        },
+      ],
+      inheritedFunctions: {
+        DEFAULT_ADMIN_ROLE: "lib/openzeppelin-contracts/contracts/access/AccessControl.sol",
+        getRoleAdmin: "lib/openzeppelin-contracts/contracts/access/AccessControl.sol",
+        grantRole: "lib/openzeppelin-contracts/contracts/access/AccessControl.sol",
+        hasRole: "lib/openzeppelin-contracts/contracts/access/AccessControl.sol",
+        renounceRole: "lib/openzeppelin-contracts/contracts/access/AccessControl.sol",
+        revokeRole: "lib/openzeppelin-contracts/contracts/access/AccessControl.sol",
+        supportsInterface: "lib/openzeppelin-contracts/contracts/access/AccessControl.sol",
+      },
+    },
+    FarCASTLE: {
+      address: "0x58994bbb620a5d37ee4aab21f0bcc33cdedb9dde",
+      abi: [
+        {
+          type: "constructor",
+          inputs: [
+            {
+              name: "startingHealth",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
+              name: "admin",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "DEFAULT_ADMIN_ROLE",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "bytes32",
+              internalType: "bytes32",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "getRoleAdmin",
+          inputs: [
+            {
+              name: "role",
+              type: "bytes32",
+              internalType: "bytes32",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "bytes32",
+              internalType: "bytes32",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "grantRole",
+          inputs: [
+            {
+              name: "role",
+              type: "bytes32",
+              internalType: "bytes32",
+            },
+            {
+              name: "account",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "hasRole",
+          inputs: [
+            {
+              name: "role",
+              type: "bytes32",
+              internalType: "bytes32",
+            },
+            {
+              name: "account",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "bool",
+              internalType: "bool",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "receiveAttack",
+          inputs: [
+            {
+              name: "amount",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "renounceRole",
+          inputs: [
+            {
+              name: "role",
+              type: "bytes32",
+              internalType: "bytes32",
+            },
+            {
+              name: "callerConfirmation",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "revokeRole",
+          inputs: [
+            {
+              name: "role",
+              type: "bytes32",
+              internalType: "bytes32",
+            },
+            {
+              name: "account",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "s_currentHealth",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "supportsInterface",
+          inputs: [
+            {
+              name: "interfaceId",
+              type: "bytes4",
+              internalType: "bytes4",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "bool",
+              internalType: "bool",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "withdraw",
+          inputs: [],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "event",
+          name: "RoleAdminChanged",
+          inputs: [
+            {
+              name: "role",
+              type: "bytes32",
+              indexed: true,
+              internalType: "bytes32",
+            },
+            {
+              name: "previousAdminRole",
+              type: "bytes32",
+              indexed: true,
+              internalType: "bytes32",
+            },
+            {
+              name: "newAdminRole",
+              type: "bytes32",
+              indexed: true,
+              internalType: "bytes32",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "RoleGranted",
+          inputs: [
+            {
+              name: "role",
+              type: "bytes32",
+              indexed: true,
+              internalType: "bytes32",
+            },
+            {
+              name: "account",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "sender",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "RoleRevoked",
+          inputs: [
+            {
+              name: "role",
+              type: "bytes32",
+              indexed: true,
+              internalType: "bytes32",
+            },
+            {
+              name: "account",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "sender",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "error",
+          name: "AccessControlBadConfirmation",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "AccessControlUnauthorizedAccount",
+          inputs: [
+            {
+              name: "account",
+              type: "address",
+              internalType: "address",
+            },
+            {
+              name: "neededRole",
+              type: "bytes32",
+              internalType: "bytes32",
+            },
+          ],
+        },
+        {
+          type: "error",
+          name: "Meep2",
+          inputs: [],
+        },
+      ],
+      inheritedFunctions: {
+        DEFAULT_ADMIN_ROLE: "lib/openzeppelin-contracts/contracts/access/AccessControl.sol",
+        getRoleAdmin: "lib/openzeppelin-contracts/contracts/access/AccessControl.sol",
+        grantRole: "lib/openzeppelin-contracts/contracts/access/AccessControl.sol",
+        hasRole: "lib/openzeppelin-contracts/contracts/access/AccessControl.sol",
+        renounceRole: "lib/openzeppelin-contracts/contracts/access/AccessControl.sol",
+        revokeRole: "lib/openzeppelin-contracts/contracts/access/AccessControl.sol",
+        supportsInterface: "lib/openzeppelin-contracts/contracts/access/AccessControl.sol",
+      },
+    },
+    SouthNFTs: {
+      address: "0x1d5e43a543062cfbc7054f08b7772c91e3128d8a",
+      abi: [
+        {
+          type: "constructor",
+          inputs: [
+            {
+              name: "minters",
+              type: "address[]",
+              internalType: "address[]",
+            },
+          ],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "DEFAULT_ADMIN_ROLE",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "bytes32",
+              internalType: "bytes32",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "MINTER_ROLE",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "bytes32",
+              internalType: "bytes32",
+            },
+          ],
+          stateMutability: "view",
         },
         {
           type: "function",
@@ -185,6 +818,25 @@ const deployedContracts = {
         },
         {
           type: "function",
+          name: "getRoleAdmin",
+          inputs: [
+            {
+              name: "role",
+              type: "bytes32",
+              internalType: "bytes32",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "bytes32",
+              internalType: "bytes32",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
           name: "getTokenTraits",
           inputs: [
             {
@@ -262,6 +914,48 @@ const deployedContracts = {
         },
         {
           type: "function",
+          name: "grantRole",
+          inputs: [
+            {
+              name: "role",
+              type: "bytes32",
+              internalType: "bytes32",
+            },
+            {
+              name: "account",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "hasRole",
+          inputs: [
+            {
+              name: "role",
+              type: "bytes32",
+              internalType: "bytes32",
+            },
+            {
+              name: "account",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [
+            {
+              name: "",
+              type: "bool",
+              internalType: "bool",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
           name: "isApprovedForAll",
           inputs: [
             {
@@ -333,6 +1027,42 @@ const deployedContracts = {
             },
           ],
           stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "renounceRole",
+          inputs: [
+            {
+              name: "role",
+              type: "bytes32",
+              internalType: "bytes32",
+            },
+            {
+              name: "callerConfirmation",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "revokeRole",
+          inputs: [
+            {
+              name: "role",
+              type: "bytes32",
+              internalType: "bytes32",
+            },
+            {
+              name: "account",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
         },
         {
           type: "function",
@@ -682,6 +1412,81 @@ const deployedContracts = {
         },
         {
           type: "event",
+          name: "RoleAdminChanged",
+          inputs: [
+            {
+              name: "role",
+              type: "bytes32",
+              indexed: true,
+              internalType: "bytes32",
+            },
+            {
+              name: "previousAdminRole",
+              type: "bytes32",
+              indexed: true,
+              internalType: "bytes32",
+            },
+            {
+              name: "newAdminRole",
+              type: "bytes32",
+              indexed: true,
+              internalType: "bytes32",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "RoleGranted",
+          inputs: [
+            {
+              name: "role",
+              type: "bytes32",
+              indexed: true,
+              internalType: "bytes32",
+            },
+            {
+              name: "account",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "sender",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "RoleRevoked",
+          inputs: [
+            {
+              name: "role",
+              type: "bytes32",
+              indexed: true,
+              internalType: "bytes32",
+            },
+            {
+              name: "account",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "sender",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
           name: "Transfer",
           inputs: [
             {
@@ -704,6 +1509,27 @@ const deployedContracts = {
             },
           ],
           anonymous: false,
+        },
+        {
+          type: "error",
+          name: "AccessControlBadConfirmation",
+          inputs: [],
+        },
+        {
+          type: "error",
+          name: "AccessControlUnauthorizedAccount",
+          inputs: [
+            {
+              name: "account",
+              type: "address",
+              internalType: "address",
+            },
+            {
+              name: "neededRole",
+              type: "bytes32",
+              internalType: "bytes32",
+            },
+          ],
         },
         {
           type: "error",
@@ -802,19 +1628,38 @@ const deployedContracts = {
         },
       ],
       inheritedFunctions: {
-        approve: "lib/ERC721A/contracts/ERC721A.sol",
-        balanceOf: "lib/ERC721A/contracts/ERC721A.sol",
-        getApproved: "lib/ERC721A/contracts/ERC721A.sol",
-        isApprovedForAll: "lib/ERC721A/contracts/ERC721A.sol",
-        name: "lib/ERC721A/contracts/ERC721A.sol",
-        ownerOf: "lib/ERC721A/contracts/ERC721A.sol",
-        safeTransferFrom: "lib/ERC721A/contracts/ERC721A.sol",
-        setApprovalForAll: "lib/ERC721A/contracts/ERC721A.sol",
-        supportsInterface: "lib/ERC721A/contracts/ERC721A.sol",
-        symbol: "lib/ERC721A/contracts/ERC721A.sol",
-        tokenURI: "lib/ERC721A/contracts/ERC721A.sol",
-        totalSupply: "lib/ERC721A/contracts/ERC721A.sol",
-        transferFrom: "lib/ERC721A/contracts/ERC721A.sol",
+        DEFAULT_ADMIN_ROLE: "contracts/FarcastleSideNFTs.sol",
+        MINTER_ROLE: "contracts/FarcastleSideNFTs.sol",
+        _combo: "contracts/FarcastleSideNFTs.sol",
+        _getRandomTraitIndex: "contracts/FarcastleSideNFTs.sol",
+        _registry: "contracts/FarcastleSideNFTs.sol",
+        addTraits: "contracts/FarcastleSideNFTs.sol",
+        approve: "contracts/FarcastleSideNFTs.sol",
+        balanceOf: "contracts/FarcastleSideNFTs.sol",
+        getApproved: "contracts/FarcastleSideNFTs.sol",
+        getRoleAdmin: "contracts/FarcastleSideNFTs.sol",
+        getTokenTraits: "contracts/FarcastleSideNFTs.sol",
+        getTrait: "contracts/FarcastleSideNFTs.sol",
+        grantRole: "contracts/FarcastleSideNFTs.sol",
+        hasRole: "contracts/FarcastleSideNFTs.sol",
+        isApprovedForAll: "contracts/FarcastleSideNFTs.sol",
+        mint: "contracts/FarcastleSideNFTs.sol",
+        name: "contracts/FarcastleSideNFTs.sol",
+        ownerOf: "contracts/FarcastleSideNFTs.sol",
+        renounceRole: "contracts/FarcastleSideNFTs.sol",
+        revokeRole: "contracts/FarcastleSideNFTs.sol",
+        s_maxBoundRarity: "contracts/FarcastleSideNFTs.sol",
+        s_traitCounts: "contracts/FarcastleSideNFTs.sol",
+        s_traitRarities: "contracts/FarcastleSideNFTs.sol",
+        s_traits: "contracts/FarcastleSideNFTs.sol",
+        safeTransferFrom: "contracts/FarcastleSideNFTs.sol",
+        setApprovalForAll: "contracts/FarcastleSideNFTs.sol",
+        setTokenTraits: "contracts/FarcastleSideNFTs.sol",
+        supportsInterface: "contracts/FarcastleSideNFTs.sol",
+        symbol: "contracts/FarcastleSideNFTs.sol",
+        tokenURI: "contracts/FarcastleSideNFTs.sol",
+        totalSupply: "contracts/FarcastleSideNFTs.sol",
+        transferFrom: "contracts/FarcastleSideNFTs.sol",
       },
     },
   },
