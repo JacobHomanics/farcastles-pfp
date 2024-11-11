@@ -347,37 +347,11 @@ contract DeployFarcastle is ScaffoldETHDeploy {
             payloads[i] = new SouthNFTs.Payload[](allTraits.length);
         }
 
-        // uint16[] memory backgroundRarities = new uint16[](allTraits.length);
-        // SouthNFTs.Payload[] memory backgroundPayloads = new SouthNFTs.Payload[](
-        //     allTraits.length
-        // );
-
-        // uint16[] memory armorRarities = new uint16[](allTraits.length);
-        // SouthNFTs.Payload[] memory armorPayloads = new SouthNFTs.Payload[](
-        //     allTraits.length
-        // );
-
-        // uint16[] memory headRarities = new uint16[](allTraits.length);
-        // SouthNFTs.Payload[] memory headPayloads = new SouthNFTs.Payload[](
-        //     allTraits.length
-        // );
-
-        // uint16[] memory weaponRarities = new uint16[](allTraits.length);
-        // SouthNFTs.Payload[] memory weaponPayloads = new SouthNFTs.Payload[](
-        //     allTraits.length
-        // );
-
         for (uint256 i = 0; i < allTraits.length; i++) {
             rarities[0][i] = allTraits[i].BACKGROUND.rarity;
             payloads[0][i] = SouthNFTs.Payload(
                 allTraits[i].BACKGROUND.name,
-                bytes(
-                    substring(
-                        allTraits[i].BACKGROUND.img_data,
-                        22,
-                        bytes(allTraits[i].BACKGROUND.img_data).length - 1
-                    )
-                )
+                bytes(allTraits[i].BACKGROUND.img_data)
             );
         }
 
@@ -385,13 +359,7 @@ contract DeployFarcastle is ScaffoldETHDeploy {
             rarities[1][i] = allTraits[i].ARMOR.rarity;
             payloads[1][i] = SouthNFTs.Payload(
                 allTraits[i].ARMOR.name,
-                bytes(
-                    substring(
-                        allTraits[i].ARMOR.img_data,
-                        22,
-                        bytes(allTraits[i].ARMOR.img_data).length - 1
-                    )
-                )
+                bytes(allTraits[i].ARMOR.img_data)
             );
         }
 
@@ -399,13 +367,7 @@ contract DeployFarcastle is ScaffoldETHDeploy {
             rarities[2][i] = allTraits[i].HEAD.rarity;
             payloads[2][i] = SouthNFTs.Payload(
                 allTraits[i].HEAD.name,
-                bytes(
-                    substring(
-                        allTraits[i].HEAD.img_data,
-                        22,
-                        bytes(allTraits[i].HEAD.img_data).length - 1
-                    )
-                )
+                bytes(allTraits[i].HEAD.img_data)
             );
         }
 
@@ -413,83 +375,50 @@ contract DeployFarcastle is ScaffoldETHDeploy {
             rarities[3][i] = allTraits[i].WEAPON.rarity;
             payloads[3][i] = SouthNFTs.Payload(
                 allTraits[i].WEAPON.name,
-                bytes(
-                    substring(
-                        allTraits[i].WEAPON.img_data,
-                        22,
-                        bytes(allTraits[i].WEAPON.img_data).length - 1
-                    )
-                )
+                bytes(allTraits[i].WEAPON.img_data)
             );
         }
 
-        // for (uint256 i = 0; i < allTraits.length; i++) {
-        //     backgroundRarities[i] = allTraits[i].BACKGROUND.rarity;
-        //     backgroundPayloads[i] = SouthNFTs.Payload(
-        //         allTraits[i].BACKGROUND.name,
-        //         bytes(
-        //             substring(
-        //                 allTraits[i].BACKGROUND.img_data,
-        //                 22,
-        //                 bytes(allTraits[i].BACKGROUND.img_data).length - 1
-        //             )
-        //         )
-        //     );
-
-        //     armorRarities[i] = allTraits[i].ARMOR.rarity;
-        //     armorPayloads[i] = SouthNFTs.Payload(
-        //         allTraits[i].ARMOR.name,
-        //         bytes(
-        //             substring(
-        //                 allTraits[i].ARMOR.img_data,
-        //                 22,
-        //                 bytes(allTraits[i].ARMOR.img_data).length - 1
-        //             )
-        //         )
-        //     );
-
-        //     headRarities[i] = allTraits[i].HEAD.rarity;
-        //     headPayloads[i] = SouthNFTs.Payload(
-        //         allTraits[i].HEAD.name,
-        //         bytes(
-        //             substring(
-        //                 allTraits[i].HEAD.img_data,
-        //                 22,
-        //                 bytes(allTraits[i].HEAD.img_data).length - 1
-        //             )
-        //         )
-        //     );
-
-        //     weaponRarities[i] = allTraits[i].WEAPON.rarity;
-        //     weaponPayloads[i] = SouthNFTs.Payload(
-        //         allTraits[i].WEAPON.name,
-        //         bytes(
-        //             substring(
-        //                 allTraits[i].WEAPON.img_data,
-        //                 22,
-        //                 bytes(allTraits[i].WEAPON.img_data).length - 1
-        //             )
-        //         )
-        //     );
-        // }
-
-        // rarities[0] = backgroundRarities;
-        // rarities[1] = armorRarities;
-        // rarities[2] = headRarities;
-        // rarities[3] = weaponRarities;
-
-        // payloads[0] = backgroundPayloads;
-        // payloads[1] = armorPayloads;
-        // payloads[2] = headPayloads;
-        // payloads[3] = weaponPayloads;
-
         return (rarities, payloads);
+    }
+
+    function trimAllTraitsImage(
+        Traits[] memory allTraits
+    ) public pure returns (Traits[] memory) {
+        for (uint256 i = 0; i < allTraits.length; i++) {
+            allTraits[i].BACKGROUND.img_data = substring(
+                allTraits[i].BACKGROUND.img_data,
+                22,
+                bytes(allTraits[i].BACKGROUND.img_data).length - 1
+            );
+
+            allTraits[i].ARMOR.img_data = substring(
+                allTraits[i].ARMOR.img_data,
+                22,
+                bytes(allTraits[i].ARMOR.img_data).length - 1
+            );
+
+            allTraits[i].HEAD.img_data = substring(
+                allTraits[i].HEAD.img_data,
+                22,
+                bytes(allTraits[i].HEAD.img_data).length - 1
+            );
+
+            allTraits[i].WEAPON.img_data = substring(
+                allTraits[i].WEAPON.img_data,
+                22,
+                bytes(allTraits[i].WEAPON.img_data).length - 1
+            );
+        }
+
+        return allTraits;
     }
 
     // use `deployer` from `ScaffoldETHDeploy`
     function run() external //ScaffoldEthDeployerRunner
     {
         Traits[] memory allTraits = getTraits2();
+        Traits[] memory allTraitsTrimmed = trimAllTraitsImage(allTraits);
 
         // uint16[] memory backgroundRarities = new uint16[](allTraits.length);
         // SouthNFTs.Payload[] memory backgroundPayloads = new SouthNFTs.Payload[](
@@ -509,7 +438,7 @@ contract DeployFarcastle is ScaffoldETHDeploy {
         (
             uint16[][] memory raritiesByLayer,
             SouthNFTs.Payload[][] memory payloadsByLayer
-        ) = yes1(allTraits);
+        ) = yes1(allTraitsTrimmed);
 
         // for (uint256 i = 0; i < payloadsByLayer.length; i++) {
         //     for (uint256 j = 0; j < payloadsByLayer[i].length; j++) {
