@@ -2,14 +2,14 @@
 pragma solidity >=0.8.19;
 
 import "./FarCASTLE.sol";
-import "./SouthNFTs.sol";
+import "./FarcastleSideNFTs.sol";
 import "@openzeppelin/contracts/access/AccessControl.sol";
 
 contract FarCASTLEController is AccessControl {
     error Meep1();
 
     FarCASTLE s_castle;
-    SouthNFTs s_opposingTroops;
+    FarcastleSideNFTs s_opposingTroops;
 
     uint256 public s_costPerAttack;
 
@@ -19,7 +19,7 @@ contract FarCASTLEController is AccessControl {
     }
 
     function setTroops(address troops) external onlyRole(DEFAULT_ADMIN_ROLE) {
-        s_opposingTroops = SouthNFTs(troops);
+        s_opposingTroops = FarcastleSideNFTs(troops);
     }
 
     function setCastle(address castle) external onlyRole(DEFAULT_ADMIN_ROLE) {

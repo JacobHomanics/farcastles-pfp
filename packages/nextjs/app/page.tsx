@@ -1,72 +1,71 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import type { NextPage } from "next";
 import { formatEther } from "viem";
-import { useBlockNumber, usePublicClient } from "wagmi";
+import { useBlockNumber } from "wagmi";
 import { AttackSlider } from "~~/components/AttackSlider";
-import { useScaffoldContract, useScaffoldReadContract, useScaffoldWriteContract } from "~~/hooks/scaffold-eth";
+import { NFTViewer } from "~~/components/NFTViewer";
+import { useScaffoldReadContract, useScaffoldWriteContract } from "~~/hooks/scaffold-eth";
 
 const Home: NextPage = () => {
-  const [nfts, setNfts] = useState<any[]>([]);
+  // const [nfts, setNfts] = useState<any[]>([]);
 
-  const { data: Farcastles } = useScaffoldContract({ contractName: "SouthNFTs" });
+  // const { data: SouthNFTS } = useScaffoldContract({ contractName: "SouthNFTs" });
 
-  const { data: totalSupply } = useScaffoldReadContract({
-    contractName: "SouthNFTs",
-    functionName: "totalSupply",
-  });
-
-  // const { writeContractAsync } = useScaffoldWriteContract("SouthNFTs");
+  // const { data: totalSupply } = useScaffoldReadContract({
+  //   contractName: "SouthNFTs",
+  //   functionName: "totalSupply",
+  // });
 
   const { data: currentHealthNorth } = useScaffoldReadContract({
-    contractName: "FarCASTLE",
+    contractName: "NorthCastle",
     functionName: "s_currentHealth",
   });
 
   const { data: costPerAttackNorth } = useScaffoldReadContract({
-    contractName: "FarCASTLEController",
+    contractName: "NorthCastleController",
     functionName: "getCostPerAttack",
   });
 
-  const { writeContractAsync: writeNorthCastleControllerAsync } = useScaffoldWriteContract("FarCASTLEController");
+  const { writeContractAsync: writeNorthCastleControllerAsync } = useScaffoldWriteContract("NorthCastleController");
 
-  const publicClient = usePublicClient();
-  useEffect(() => {
-    async function fetchTokenURIs() {
-      if (!publicClient?.chain.id || !Farcastles?.abi || !Farcastles?.address || !totalSupply) {
-        console.log("Required data not available");
-        return;
-      }
+  // const publicClient = usePublicClient();
+  // useEffect(() => {
+  //   async function fetchTokenURIs() {
+  //     if (!publicClient?.chain.id || !SouthNFTS?.abi || !SouthNFTS?.address || !totalSupply) {
+  //       console.log("Required data not available");
+  //       return;
+  //     }
 
-      const newImgSrcs = [];
-      for (let i = 1; i <= totalSupply; i++) {
-        try {
-          const tokenURI = await publicClient.readContract({
-            address: Farcastles.address,
-            abi: Farcastles.abi,
-            functionName: "tokenURI",
-            args: [BigInt(i)],
-          });
+  //     const newImgSrcs = [];
+  //     for (let i = 1; i <= totalSupply; i++) {
+  //       try {
+  //         const tokenURI = await publicClient.readContract({
+  //           address: SouthNFTS.address,
+  //           abi: SouthNFTS.abi,
+  //           functionName: "tokenURI",
+  //           args: [BigInt(i)],
+  //         });
 
-          const base64String = tokenURI.substring(22);
-          const jsonObject = JSON.parse(base64String);
-          newImgSrcs.push(jsonObject);
-        } catch (error) {
-          console.error(`Error fetching token URI for token ${i}:`, error);
-        }
-      }
+  //         const base64String = tokenURI.substring(22);
+  //         const jsonObject = JSON.parse(base64String);
+  //         newImgSrcs.push(jsonObject);
+  //       } catch (error) {
+  //         console.error(`Error fetching token URI for token ${i}:`, error);
+  //       }
+  //     }
 
-      if (JSON.stringify(newImgSrcs) !== JSON.stringify(nfts)) {
-        setNfts(newImgSrcs);
-      }
-    }
+  //     if (JSON.stringify(newImgSrcs) !== JSON.stringify(nfts)) {
+  //       setNfts(newImgSrcs);
+  //     }
+  //   }
 
-    fetchTokenURIs();
-  }, [publicClient, Farcastles, nfts, totalSupply]);
+  //   fetchTokenURIs();
+  // }, [publicClient, SouthNFTS, nfts, totalSupply]);
 
-  console.log(nfts);
+  // console.log(nfts);
   // const { data: farcastleContract } = useScaffoldReadContract({
   //   contractName: "Farcastles",
   //   functionName: "tokenURI",
@@ -110,30 +109,30 @@ const Home: NextPage = () => {
   const { data: blockNumber } = useBlockNumber();
   console.log(blockNumber);
 
-  const jsonComponents = nfts.map((nft, index) => {
-    console.log(nft.image);
+  // const jsonComponents = nfts.map((nft, index) => {
+  //   console.log(nft.image);
 
-    return (
-      <div key={index} className="flex items-center justify-center p-4 w-[400px]">
-        <div className="bg-base-100 p-1 flex flex-col items-center justify-center w-full">
-          <Image src={nft.image} width={128} height={128} alt="farcastle" className="rounded-full" />
-          <div className="flex flex-col text-center">
-            <p className="m-0">Name</p>
-            <p className="m-0">{nft.name}</p>
-          </div>
+  //   return (
+  //     <div key={index} className="flex items-center justify-center p-4 w-[400px]">
+  //       <div className="bg-base-100 p-1 flex flex-col items-center justify-center w-full">
+  //         <Image src={nft.image} width={128} height={128} alt="farcastle" className="rounded-full" />
+  //         <div className="flex flex-col text-center">
+  //           <p className="m-0">Name</p>
+  //           <p className="m-0">{nft.name}</p>
+  //         </div>
 
-          <p className="text-center m-0 mt-4">Attributes</p>
+  //         <p className="text-center m-0 mt-4">Attributes</p>
 
-          {nft.attributes.map((attribute: any, attributeIndex: number) => (
-            <div key={"attributes" + attributeIndex} className="flex flex-wrap gap-5 text-center">
-              <p className="m-0">{attribute["trait_type"]}</p>
-              <p className="m-0">{attribute["value"]}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  });
+  //         {nft.attributes.map((attribute: any, attributeIndex: number) => (
+  //           <div key={"attributes" + attributeIndex} className="flex flex-wrap gap-5 text-center">
+  //             <p className="m-0">{attribute["trait_type"]}</p>
+  //             <p className="m-0">{attribute["value"]}</p>
+  //           </div>
+  //         ))}
+  //       </div>
+  //     </div>
+  //   );
+  // });
 
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isPopupSliderOpen, setIsPopupSliderOpen] = useState(false);
@@ -191,7 +190,8 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-center">{jsonComponents}</div>
+      <NFTViewer />
+      {/* <div className="flex flex-wrap justify-center">{jsonComponents}</div> */}
 
       {isPopupOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">

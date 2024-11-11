@@ -3,10 +3,17 @@ pragma solidity ^0.8.19;
 
 import "../contracts/Farcastles.sol";
 import "../contracts/FarcastleSideNFTs.sol";
-import "../contracts/SouthNFTs.sol";
 import "./DeployHelpers.s.sol";
 import "../contracts/FarCASTLE.sol";
 import "../contracts/FarCASTLEController.sol";
+
+import "../contracts/SouthNFTs.sol";
+import "../contracts/SouthCastle.sol";
+import "../contracts/SouthCastleController.sol";
+
+import "../contracts/NorthNFTs.sol";
+import "../contracts/NorthCastle.sol";
+import "../contracts/NorthCastleController.sol";
 
 contract DeployFarcastle is ScaffoldETHDeploy {
     string backgroundLayerName = "BACKGROUND";
@@ -32,23 +39,28 @@ contract DeployFarcastle is ScaffoldETHDeploy {
         string type2;
     }
 
-    function getTraits2() internal view returns (Traits[] memory traits) {
+    function getTraits2() internal view returns (Traits[] memory) {
         string memory root = vm.projectRoot();
 
         string memory path = string.concat(root, "/script/1337.json");
         string memory json = vm.readFile(path);
         bytes memory data = vm.parseJson(json);
 
-        traits = abi.decode(data, (Traits[]));
+        Traits[] memory traits = abi.decode(data, (Traits[]));
+
+        Traits[] memory allTraitsTrimmed = trimAllTraitsImage(traits);
+
+        return allTraitsTrimmed;
+    }
+
+    struct CompleteTraits {
+        uint16[][] rarities;
+        FarcastleSideNFTs.Payload[][] payloads;
     }
 
     function yes1(
         Traits[] memory allTraits
-    )
-        public
-        pure
-        returns (uint16[][] memory, FarcastleSideNFTs.Payload[][] memory)
-    {
+    ) public pure returns (CompleteTraits memory) {
         uint16[][] memory rarities = new uint16[][](4);
         FarcastleSideNFTs.Payload[][]
             memory payloads = new FarcastleSideNFTs.Payload[][](4);
@@ -90,7 +102,7 @@ contract DeployFarcastle is ScaffoldETHDeploy {
             );
         }
 
-        return (rarities, payloads);
+        return CompleteTraits(rarities, payloads);
     }
 
     function trimAllTraitsImage(
@@ -125,60 +137,28 @@ contract DeployFarcastle is ScaffoldETHDeploy {
         return allTraits;
     }
 
-    // use `deployer` from `ScaffoldETHDeploy`
-    function run() external //ScaffoldEthDeployerRunner
-    {
-        Traits[] memory allTraits = getTraits2();
-        Traits[] memory allTraitsTrimmed = trimAllTraitsImage(allTraits);
+    uint256 batchAmount = 10;
 
-        // uint16[] memory backgroundRarities = new uint16[](allTraits.length);
-        // FarcastleSideNFTs.Payload[] memory backgroundPayloads = new FarcastleSideNFTs.Payload[](
-        //     allTraits.length
-        // );
+    struct CompleteTraits2 {
+        uint16[][][] rarities;
+        FarcastleSideNFTs.Payload[][][] payloads;
+    }
 
-        // for (uint256 i = 0; i < allTraits.length; i++) {
-        //     backgroundRarities[i] = allTraits[i].BACKGROUND.rarity;
-        //     backgroundPayloads[i] = FarcastleSideNFTs.Payload(
-        //         allTraits[i].BACKGROUND.name,
-        //         bytes(allTraits[i].BACKGROUND.img_data)
-        //     );
-        // }
-
-        // #1 [] - Layer
-        // #2 [] - Value
-        (
-            uint16[][] memory raritiesByLayer,
-            FarcastleSideNFTs.Payload[][] memory payloadsByLayer
-        ) = yes1(allTraitsTrimmed);
-
-        // for (uint256 i = 0; i < payloadsByLayer.length; i++) {
-        //     for (uint256 j = 0; j < payloadsByLayer[i].length; j++) {
-        //         console.log(
-        //             "Layer ",
-        //             i,
-        //             ", Value ",
-        //             payloadsByLayer[i][j].name
-        //         );
-        //     }
-        // }
-        uint256 batchAmount = 15;
-
-        // #1 [] - Layer
-        // #2 [] - Batch
-        // #3 [] - Value
+    function yes1234(
+        CompleteTraits memory completeTraits
+    ) public view returns (CompleteTraits2 memory) {
         uint16[][][] memory batchedRaritiesByLayer = new uint16[][][](
-            payloadsByLayer.length
+            completeTraits.payloads.length
         );
         FarcastleSideNFTs.Payload[][][]
             memory batchedPayloadsByLayer = new FarcastleSideNFTs.Payload[][][](
-                payloadsByLayer.length
+                completeTraits.payloads.length
             );
 
-        for (uint256 i = 0; i < payloadsByLayer.length; i++) {
-            FarcastleSideNFTs.Payload[] memory layerPayloads = payloadsByLayer[
-                i
-            ];
-            uint16[] memory layerRarities = raritiesByLayer[i];
+        for (uint256 i = 0; i < completeTraits.payloads.length; i++) {
+            FarcastleSideNFTs.Payload[] memory layerPayloads = completeTraits
+                .payloads[i];
+            uint16[] memory layerRarities = completeTraits.rarities[i];
 
             uint16[][] memory batchedRaritiesForLayer = new uint16[][](
                 (layerPayloads.length / batchAmount) + 1
@@ -220,38 +200,157 @@ contract DeployFarcastle is ScaffoldETHDeploy {
             batchedRaritiesByLayer[i] = batchedRaritiesForLayer;
         }
 
+        return CompleteTraits2(batchedRaritiesByLayer, batchedPayloadsByLayer);
+    }
+
+    // use `deployer` from `ScaffoldETHDeploy`
+    function run() external //ScaffoldEthDeployerRunner
+    {
+        Traits[] memory allTraits = getTraits2();
+
+        // #1 [] - Layer
+        // #2 [] - Value
+        // (
+        //     uint16[][] memory raritiesByLayer,
+        //     FarcastleSideNFTs.Payload[][] memory payloadsByLayer
+        // )
+        CompleteTraits memory completeTraits = yes1(allTraits);
+
+        // (
+        //     uint16[][][] memory batchedRaritiesByLayer,
+        //     FarcastleSideNFTs.Payload[][][] memory batchedPayloadsByLayer
+        // )
+        CompleteTraits2 memory completeTraits2 = yes1234(completeTraits);
+        // #1 [] - Layer
+        // #2 [] - Batch
+        // #3 [] - Value
+
         startBroadcast();
 
         (, address _deployer, ) = vm.readCallers();
 
-        FarCASTLEController northCastleController = new FarCASTLEController(
+        NorthCastleController northCastleController = new NorthCastleController(
             .1 ether,
             _deployer
         );
 
-        FarCASTLE northCastle = new FarCASTLE(
+        NorthCastle northCastle = new NorthCastle(
             150,
             address(northCastleController)
         );
 
         address[] memory minters = new address[](1);
         minters[0] = address(northCastleController);
-        SouthNFTs farcastle2 = new SouthNFTs(minters);
+        SouthNFTs southNFTs = new SouthNFTs(minters);
         northCastleController.setCastle(address(northCastle));
-        northCastleController.setTroops(address(farcastle2));
+        northCastleController.setTroops(address(southNFTs));
 
-        for (uint i = 0; i < batchedPayloadsByLayer.length; i++) {
-            for (uint j = 0; j < batchedPayloadsByLayer[i].length; j++) {
-                farcastle2.addTraits(
+        for (uint i = 0; i < completeTraits2.payloads.length; i++) {
+            for (uint j = 0; j < completeTraits2.payloads[i].length; j++) {
+                southNFTs.addTraits(
                     uint8(i),
-                    batchedPayloadsByLayer[i][j],
-                    batchedRaritiesByLayer[i][j]
+                    completeTraits2.payloads[i][j],
+                    completeTraits2.rarities[i][j]
                 );
             }
         }
 
+        SouthCastleController southCastleController = new SouthCastleController(
+            .1 ether,
+            _deployer
+        );
+
+        SouthCastle southCastle = new SouthCastle(
+            150,
+            address(southCastleController)
+        );
+
+        address[] memory northMinters = new address[](1);
+        northMinters[0] = address(southCastleController);
+        NorthNFTs northNFTs = new NorthNFTs(northMinters);
+        southCastleController.setCastle(address(southCastle));
+        southCastleController.setTroops(address(northNFTs));
+
+        for (uint i = 0; i < completeTraits2.payloads.length; i++) {
+            for (uint j = 0; j < completeTraits2.payloads[i].length; j++) {
+                southNFTs.addTraits(
+                    uint8(i),
+                    completeTraits2.payloads[i][j],
+                    completeTraits2.rarities[i][j]
+                );
+            }
+        }
+        // deployNorth(batchedPayloadsByLayer, batchedRaritiesByLayer);
+        // deploySouth(batchedPayloadsByLayer, batchedRaritiesByLayer);
+
         vm.stopBroadcast();
     }
+
+    // function deployNorth(
+    //     FarcastleSideNFTs.Payload[][][] memory batchedPayloadsByLayer,
+    //     uint16[][][] memory batchedRaritiesByLayer
+    // ) public {
+    //     (, address _deployer, ) = vm.readCallers();
+
+    //     NorthCastleController northCastleController = new NorthCastleController(
+    //         .1 ether,
+    //         _deployer
+    //     );
+
+    //     NorthCastle northCastle = new NorthCastle(
+    //         150,
+    //         address(northCastleController)
+    //     );
+
+    //     address[] memory minters = new address[](1);
+    //     minters[0] = address(northCastleController);
+    //     SouthNFTs southNFTs = new SouthNFTs(minters);
+    //     northCastleController.setCastle(address(northCastle));
+    //     northCastleController.setTroops(address(southNFTs));
+
+    //     for (uint i = 0; i < batchedPayloadsByLayer.length; i++) {
+    //         for (uint j = 0; j < batchedPayloadsByLayer[i].length; j++) {
+    //             southNFTs.addTraits(
+    //                 uint8(i),
+    //                 batchedPayloadsByLayer[i][j],
+    //                 batchedRaritiesByLayer[i][j]
+    //             );
+    //         }
+    //     }
+    // }
+
+    // function deploySouth(
+    //     FarcastleSideNFTs.Payload[][][] memory batchedPayloadsByLayer,
+    //     uint16[][][] memory batchedRaritiesByLayer
+    // ) public {
+    //     (, address _deployer, ) = vm.readCallers();
+
+    //     SouthCastleController southCastleController = new SouthCastleController(
+    //         .1 ether,
+    //         _deployer
+    //     );
+
+    //     SouthCastle southCastle = new SouthCastle(
+    //         150,
+    //         address(southCastleController)
+    //     );
+
+    //     address[] memory northMinters = new address[](1);
+    //     northMinters[0] = address(southCastleController);
+    //     NorthNFTs northNFTs = new NorthNFTs(northMinters);
+    //     southCastleController.setCastle(address(southCastle));
+    //     southCastleController.setTroops(address(northNFTs));
+
+    //     for (uint i = 0; i < batchedPayloadsByLayer.length; i++) {
+    //         for (uint j = 0; j < batchedPayloadsByLayer[i].length; j++) {
+    //             northNFTs.addTraits(
+    //                 uint8(i),
+    //                 batchedPayloadsByLayer[i][j],
+    //                 batchedRaritiesByLayer[i][j]
+    //             );
+    //         }
+    //     }
+    // }
 
     function substring(
         string memory str,
