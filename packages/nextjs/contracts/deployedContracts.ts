@@ -6,8 +6,8 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 
 const deployedContracts = {
   31337: {
-    SouthNFTs: {
-      address: "0x700b6a60ce7eaaea56f065753d8dcb9653dbad35",
+    FarcastleSideNFTs: {
+      address: "0x5f819f132c5414e3fc6bffcc4b734857178a42f2",
       abi: [
         {
           type: "constructor",
@@ -104,7 +104,7 @@ const deployedContracts = {
             {
               name: "payload",
               type: "tuple[]",
-              internalType: "struct SouthNFTs.Payload[]",
+              internalType: "struct FarcastleSideNFTs.Payload[]",
               components: [
                 {
                   name: "name",
@@ -197,7 +197,7 @@ const deployedContracts = {
             {
               name: "",
               type: "tuple",
-              internalType: "struct SouthNFTs.Knight",
+              internalType: "struct FarcastleSideNFTs.Knight",
               components: [
                 {
                   name: "background",
@@ -243,7 +243,7 @@ const deployedContracts = {
             {
               name: "",
               type: "tuple",
-              internalType: "struct SouthNFTs.Trait",
+              internalType: "struct FarcastleSideNFTs.Trait",
               components: [
                 {
                   name: "image",

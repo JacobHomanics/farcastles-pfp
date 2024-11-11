@@ -14,11 +14,14 @@ const Home: NextPage = () => {
 
   const { address: connectedAddress } = useAccount();
 
-  const { data: Farcastles } = useScaffoldContract({ contractName: "SouthNFTs" });
+  const { data: Farcastles } = useScaffoldContract({ contractName: "FarcastleSideNFTs" });
 
-  const { data: totalSupply } = useScaffoldReadContract({ contractName: "SouthNFTs", functionName: "totalSupply" });
+  const { data: totalSupply } = useScaffoldReadContract({
+    contractName: "FarcastleSideNFTs",
+    functionName: "totalSupply",
+  });
 
-  const { writeContractAsync } = useScaffoldWriteContract("SouthNFTs");
+  const { writeContractAsync } = useScaffoldWriteContract("FarcastleSideNFTs");
 
   // const { data: currentHealthNorth } = useScaffoldReadContract({
   //   contractName: "FarCASTLE",
