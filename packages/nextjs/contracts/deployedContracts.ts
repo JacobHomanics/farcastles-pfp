@@ -7,7 +7,7 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 const deployedContracts = {
   31337: {
     FarCASTLEController: {
-      address: "0xc5b01066227bc98056a65a7befc90b27a52f46af",
+      address: "0x9d9a7f7cf902c065274555357ce66ba7083e9a1b",
       abi: [
         {
           type: "constructor",
@@ -339,7 +339,7 @@ const deployedContracts = {
       },
     },
     FarCASTLE: {
-      address: "0xa958c4778d1cd88535a0afa229a8873ca881592d",
+      address: "0x4458e0e1b4c1a5cd3b65474a712c4b8c38628a60",
       abi: [
         {
           type: "constructor",
@@ -632,7 +632,7 @@ const deployedContracts = {
       },
     },
     SouthNFTs: {
-      address: "0x80ddea0b81c187e99c23c419a5ae9d539c242353",
+      address: "0x0f9cb720080b1a840fd23c6a38a2220bf33efaec",
       abi: [
         {
           type: "constructor",
