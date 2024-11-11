@@ -125,7 +125,7 @@ contract SouthNFTs is ERC721A {
         uint16[] memory headRarities = s_traitRarities[2];
         uint16[] memory weaponRarities = s_traitRarities[3];
 
-        uint256 attemptCount = 0;
+        // uint256 attemptCount = 0;
 
         while (true) {
             combination = _getRandomTraitIndex(0, backgroundRarities, seed);
