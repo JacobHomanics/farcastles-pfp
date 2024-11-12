@@ -50,17 +50,39 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center gap-20 mt-4">
+      <div className="flex flex-col justify-center items-center gap-10 mt-4">
         <div className="flex flex-col items-center">
           <Image src="/castle-red.png" width={256} height={256} alt="farcastle" />
-          <div className="rounded-full bg-secondary p-4">{currentHealthNorth?.toString()}</div>
+          <div className="rounded-full bg-secondary p-1 w-full text-center text-4xl">
+            {currentHealthNorth?.toString()}
+          </div>
         </div>
 
-        <button className="btn btn-primary btn-lg" onClick={() => setIsPopupOpen(true)}>
-          Attack
-        </button>
+        <div className="flex flex-col items-center justify-center">
+          <div className="text-center m-0">Attack Power</div>
+          <div className="text-center m-0 text-3xl">{attackPower}</div>
+          <AttackSlider min={1} max={20} step={1} initialValue={3} onValueChange={handleSliderChange}>
+            <div className="flex flex-col">
+              <div className="text-center m-0 text-md">
+                {"(" + formatEther(BigInt(attackPower) * (costPerAttackNorth || BigInt(0))) + ") ether"}
+              </div>
+            </div>
+          </AttackSlider>
+          <p className="text-3xl">Attack</p>
+          <div className="flex flex-wrap">
+            <button className="btn btn-primary m-0" onClick={() => setIsPopupOpen(true)}>
+              North
+            </button>
+            <button className="btn btn-primary m-0" onClick={() => setIsPopupOpen(true)}>
+              South
+            </button>
+          </div>
+        </div>
+
         <div className="flex flex-col items-center">
-          <div className="rounded-full bg-secondary p-4">{currentHealthSouth?.toString()}</div>
+          <div className="rounded-full bg-secondary p-1 w-full text-center text-4xl">
+            {currentHealthSouth?.toString()}
+          </div>
           <Image src="/castle-red.png" width={256} height={256} alt="farcastle" />
         </div>
       </div>
@@ -85,7 +107,7 @@ const Home: NextPage = () => {
                         {"(" + formatEther(BigInt(attackPower) * (costPerAttackNorth || BigInt(0))) + ") ether"}
                       </div>
 
-                      <div className="text-center m-0 text-xl">{attackPower}</div>
+                      <div className="text-center m-0 text-3xl">{attackPower}</div>
                     </div>
                   </AttackSlider>
                 </div>
