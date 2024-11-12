@@ -330,10 +330,13 @@ contract FarcastleSideNFTs is ERC721A, AccessControl {
     ) public view override returns (string memory) {
         Knight memory traits = _getTraits(tokenID);
         bytes memory json = abi.encodePacked(
-            '{"name": "South #',
+            '{"name": "',
+            name(),
+            " #",
             LibString.toString(tokenID),
             '", "description":"',
-            "South Castle is the best!",
+            name(),
+            " Castle is the best!",
             '","image":"data:image/svg+xml;base64,',
             _getTraitImage(traits),
             '",',

@@ -39,10 +39,12 @@ contract DeployFarcastle is ScaffoldETHDeploy {
         string type2;
     }
 
-    function getTraits2() internal view returns (Traits[] memory) {
+    function getTraits(
+        string memory fileName
+    ) internal view returns (Traits[] memory) {
         string memory root = vm.projectRoot();
 
-        string memory path = string.concat(root, "/script/1337.json");
+        string memory path = string.concat(root, "/script/", fileName);
         string memory json = vm.readFile(path);
         bytes memory data = vm.parseJson(json);
 
@@ -60,7 +62,7 @@ contract DeployFarcastle is ScaffoldETHDeploy {
 
     function yes1(
         Traits[] memory allTraits
-    ) public pure returns (CompleteTraits memory) {
+    ) public view returns (CompleteTraits2 memory) {
         uint16[][] memory rarities = new uint16[][](4);
         FarcastleSideNFTs.Payload[][]
             memory payloads = new FarcastleSideNFTs.Payload[][](4);
@@ -102,7 +104,9 @@ contract DeployFarcastle is ScaffoldETHDeploy {
             );
         }
 
-        return CompleteTraits(rarities, payloads);
+        return yes1234(CompleteTraits(rarities, payloads));
+
+        // return CompleteTraits(rarities, payloads);
     }
 
     function trimAllTraitsImage(
@@ -203,10 +207,15 @@ contract DeployFarcastle is ScaffoldETHDeploy {
         return CompleteTraits2(batchedRaritiesByLayer, batchedPayloadsByLayer);
     }
 
+    address[] northMinters = new address[](1);
+    address[] southMinters = new address[](1);
+
     // use `deployer` from `ScaffoldETHDeploy`
     function run() external //ScaffoldEthDeployerRunner
     {
-        Traits[] memory allTraits = getTraits2();
+        Traits[] memory allTraits = getTraits("1337.json");
+        Traits[] memory allNorthTraits = getTraits("1337-blue.json");
+        CompleteTraits2 memory completeTraitsNorth2 = yes1(allNorthTraits);
 
         // #1 [] - Layer
         // #2 [] - Value
@@ -214,13 +223,13 @@ contract DeployFarcastle is ScaffoldETHDeploy {
         //     uint16[][] memory raritiesByLayer,
         //     FarcastleSideNFTs.Payload[][] memory payloadsByLayer
         // )
-        CompleteTraits memory completeTraits = yes1(allTraits);
+        CompleteTraits2 memory completeTraits2 = yes1(allTraits);
 
         // (
         //     uint16[][][] memory batchedRaritiesByLayer,
         //     FarcastleSideNFTs.Payload[][][] memory batchedPayloadsByLayer
         // )
-        CompleteTraits2 memory completeTraits2 = yes1234(completeTraits);
+        // CompleteTraits2 memory completeTraits2 = yes1234(completeTraits);
         // #1 [] - Layer
         // #2 [] - Batch
         // #3 [] - Value
@@ -239,7 +248,6 @@ contract DeployFarcastle is ScaffoldETHDeploy {
             address(northCastleController)
         );
 
-        address[] memory southMinters = new address[](1);
         southMinters[0] = address(northCastleController);
         SouthNFTs southNFTs = new SouthNFTs(southMinters);
         northCastleController.setCastle(address(northCastle));
@@ -265,18 +273,17 @@ contract DeployFarcastle is ScaffoldETHDeploy {
             address(southCastleController)
         );
 
-        address[] memory northMinters = new address[](1);
         northMinters[0] = address(southCastleController);
         NorthNFTs northNFTs = new NorthNFTs(northMinters);
         southCastleController.setCastle(address(southCastle));
         southCastleController.setTroops(address(northNFTs));
 
-        for (uint i = 0; i < completeTraits2.payloads.length; i++) {
-            for (uint j = 0; j < completeTraits2.payloads[i].length; j++) {
+        for (uint i = 0; i < completeTraitsNorth2.payloads.length; i++) {
+            for (uint j = 0; j < completeTraitsNorth2.payloads[i].length; j++) {
                 northNFTs.addTraits(
                     uint8(i),
-                    completeTraits2.payloads[i][j],
-                    completeTraits2.rarities[i][j]
+                    completeTraitsNorth2.payloads[i][j],
+                    completeTraitsNorth2.rarities[i][j]
                 );
             }
         }

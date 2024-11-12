@@ -59,6 +59,11 @@ export const NFTViewer = ({ contractName }: any) => {
             <p className="m-0">{nft.name}</p>
           </div>
 
+          <div className="flex flex-col text-center">
+            <p className="m-0 text-sm">Description</p>
+            <p className="m-0 text-xs">{nft.description}</p>
+          </div>
+
           <p className="text-center m-0 mt-4">Attributes</p>
 
           {nft.attributes.map((attribute: any, attributeIndex: number) => (
