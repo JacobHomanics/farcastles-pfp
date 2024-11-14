@@ -5,9 +5,9 @@
 import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 
 const deployedContracts = {
-  31337: {
+  84532: {
     NorthCastleController: {
-      address: "0xd664e1c34ee09e554111d7e40ba3058065a38d6f",
+      address: "0x53fe54d0e9ea761a4b4bcab9032bbcf01d160a02",
       abi: [
         {
           type: "constructor",
@@ -345,7 +345,7 @@ const deployedContracts = {
       },
     },
     NorthCastle: {
-      address: "0xb1896f598d5b3c244fefa32b96b85016bb389e4d",
+      address: "0x47eab550ccd248188626fe84920a1921ba5244c4",
       abi: [
         {
           type: "constructor",
@@ -641,7 +641,7 @@ const deployedContracts = {
       },
     },
     SouthNFTs: {
-      address: "0x4cd67ea4f1a724cbcf5b8ff5218105bede2e67e8",
+      address: "0x68e1caf35c80738f4da6df9945b5bbaac39935fc",
       abi: [
         {
           type: "constructor",
@@ -1434,6 +1434,31 @@ const deployedContracts = {
         },
         {
           type: "event",
+          name: "Mint",
+          inputs: [
+            {
+              name: "to",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "startIndex",
+              type: "uint256",
+              indexed: false,
+              internalType: "uint256",
+            },
+            {
+              name: "amount",
+              type: "uint256",
+              indexed: false,
+              internalType: "uint256",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
           name: "RoleAdminChanged",
           inputs: [
             {
@@ -1685,7 +1710,7 @@ const deployedContracts = {
       },
     },
     SouthCastleController: {
-      address: "0x0926f72bb91d9b1979f15045496f53782b6c154a",
+      address: "0xa785b54254cd7ef4220c5b803c92068952289c3f",
       abi: [
         {
           type: "constructor",
@@ -2023,7 +2048,7 @@ const deployedContracts = {
       },
     },
     SouthCastle: {
-      address: "0xa93c4b006c8c43cf59f995f1fd0b8414012ad8f9",
+      address: "0x04e56af66ed91e4163d3b19c0ff72dacfb900e3a",
       abi: [
         {
           type: "constructor",
@@ -2319,7 +2344,7 @@ const deployedContracts = {
       },
     },
     NorthNFTs: {
-      address: "0x03b3f1d3e462aa169a41cc92004dd2aa02658f6d",
+      address: "0xff6329b6b116618f4a7b8ee6e89bf9d977e87eb4",
       abi: [
         {
           type: "constructor",
@@ -3106,6 +3131,31 @@ const deployedContracts = {
               type: "address",
               indexed: true,
               internalType: "address",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "Mint",
+          inputs: [
+            {
+              name: "to",
+              type: "address",
+              indexed: true,
+              internalType: "address",
+            },
+            {
+              name: "startIndex",
+              type: "uint256",
+              indexed: false,
+              internalType: "uint256",
+            },
+            {
+              name: "amount",
+              type: "uint256",
+              indexed: false,
+              internalType: "uint256",
             },
           ],
           anonymous: false,

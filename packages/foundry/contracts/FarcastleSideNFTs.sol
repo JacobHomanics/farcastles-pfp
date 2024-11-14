@@ -61,8 +61,11 @@ contract FarcastleSideNFTs is ERC721A, AccessControl {
     // PUBLIC WRITE FUNCTIONS
     // ********************************
 
+    event Mint(address indexed to, uint256 startIndex, uint256 amount);
+
     function mint(address to, uint256 amount) public onlyRole(MINTER_ROLE) {
         uint256 minted = _totalMinted();
+        emit Mint(to, minted, amount);
         _setTokenTraits(minted, amount);
         _safeMint(to, amount, "");
     }

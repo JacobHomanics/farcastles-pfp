@@ -141,7 +141,7 @@ contract DeployFarcastle is ScaffoldETHDeploy {
         return allTraits;
     }
 
-    uint256 batchAmount = 10;
+    uint256 batchAmount = 60;
 
     struct CompleteTraits2 {
         uint16[][][] rarities;
@@ -211,8 +211,7 @@ contract DeployFarcastle is ScaffoldETHDeploy {
     address[] southMinters = new address[](1);
 
     // use `deployer` from `ScaffoldETHDeploy`
-    function run() external //ScaffoldEthDeployerRunner
-    {
+    function run() external ScaffoldEthDeployerRunner {
         Traits[] memory allTraits = getTraits("1337.json");
         Traits[] memory allNorthTraits = getTraits("1337-blue.json");
         CompleteTraits2 memory completeTraitsNorth2 = yes1(allNorthTraits);
@@ -234,12 +233,12 @@ contract DeployFarcastle is ScaffoldETHDeploy {
         // #2 [] - Batch
         // #3 [] - Value
 
-        startBroadcast();
+        // startBroadcast();
 
         (, address _deployer, ) = vm.readCallers();
 
         NorthCastleController northCastleController = new NorthCastleController(
-            .1 ether,
+            .00001 ether,
             _deployer
         );
 
@@ -264,7 +263,7 @@ contract DeployFarcastle is ScaffoldETHDeploy {
         }
 
         SouthCastleController southCastleController = new SouthCastleController(
-            .1 ether,
+            .00001 ether,
             _deployer
         );
 
@@ -290,7 +289,7 @@ contract DeployFarcastle is ScaffoldETHDeploy {
         // deployNorth(batchedPayloadsByLayer, batchedRaritiesByLayer);
         // deploySouth(batchedPayloadsByLayer, batchedRaritiesByLayer);
 
-        vm.stopBroadcast();
+        // vm.stopBroadcast();
     }
 
     // function deployNorth(
